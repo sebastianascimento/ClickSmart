@@ -1,14 +1,12 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
 
 interface NewsItem {
   id: string;
   title: string;
   content: string;
-  imageUrl: string;
   isFake: boolean;
   explanation: string;
 }
@@ -28,7 +26,6 @@ export default function FactCheckGame({ onComplete }: { onComplete: (score: numb
       id: 'news1',
       title: factcheckT('news.news1.title'),
       content: factcheckT('news.news1.content'),
-      imageUrl: '/images/games/factcheck/news1.jpg',
       isFake: true,
       explanation: factcheckT('news.news1.explanation')
     },
@@ -36,7 +33,6 @@ export default function FactCheckGame({ onComplete }: { onComplete: (score: numb
       id: 'news2',
       title: factcheckT('news.news2.title'),
       content: factcheckT('news.news2.content'),
-      imageUrl: '/images/games/factcheck/news2.jpg',
       isFake: false,
       explanation: factcheckT('news.news2.explanation')
     },
@@ -44,7 +40,6 @@ export default function FactCheckGame({ onComplete }: { onComplete: (score: numb
       id: 'news3',
       title: factcheckT('news.news3.title'),
       content: factcheckT('news.news3.content'),
-      imageUrl: '/images/games/factcheck/news3.jpg',
       isFake: true,
       explanation: factcheckT('news.news3.explanation')
     },
@@ -52,7 +47,6 @@ export default function FactCheckGame({ onComplete }: { onComplete: (score: numb
       id: 'news4',
       title: factcheckT('news.news4.title'),
       content: factcheckT('news.news4.content'),
-      imageUrl: '/images/games/factcheck/news4.jpg',
       isFake: false,
       explanation: factcheckT('news.news4.explanation')
     },
@@ -60,7 +54,6 @@ export default function FactCheckGame({ onComplete }: { onComplete: (score: numb
       id: 'news5',
       title: factcheckT('news.news5.title'),
       content: factcheckT('news.news5.content'),
-      imageUrl: '/images/games/factcheck/news5.jpg',
       isFake: true,
       explanation: factcheckT('news.news5.explanation')
     }
@@ -159,21 +152,6 @@ export default function FactCheckGame({ onComplete }: { onComplete: (score: numb
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        {/* Image */}
-        <div className="h-48 w-full bg-gray-300 relative">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-gray-500">
-              {factcheckT('imageNotLoaded')}
-            </span>
-          </div>
-          {/* Note: you'll need to add actual images to this path */}
-          <img 
-            src={`https://placehold.co/600x400?text=${currentNews.id}`} 
-            alt={currentNews.title}
-            className="w-full h-full object-cover"
-          />
-        </div>
-        
         {/* News content */}
         <div className="p-4">
           <h3 className="text-lg font-bold text-gray-900 mb-2">{currentNews.title}</h3>
@@ -204,7 +182,7 @@ export default function FactCheckGame({ onComplete }: { onComplete: (score: numb
             </p>
             <button
               onClick={handleNext}
-              className="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition"
+              className="mt-4 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition"
             >
               {currentNewsIndex === newsItems.length - 1 ? factcheckT('finishGame') : factcheckT('nextNews')}
             </button>
@@ -239,16 +217,16 @@ export default function FactCheckGame({ onComplete }: { onComplete: (score: numb
       {/* Progress indicator */}
       <div className="mt-6">
         <div className="flex justify-between items-center">
-          <span className="text-sm font-medium text-gray-700">
+          <span className="text-sm font-medium text-green-700">
             {factcheckT('progress')}: {currentNewsIndex + 1}/{newsItems.length}
           </span>
-          <span className="text-sm font-medium text-gray-700">
+          <span className="text-sm font-medium text-green-700">
             {factcheckT('score')}: {score}
           </span>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-2.5 mt-2">
           <div 
-            className="bg-blue-600 h-2.5 rounded-full" 
+            className="bg-green-500 h-2.5 rounded-full" 
             style={{ width: `${((currentNewsIndex + (showFeedback ? 1 : 0)) / newsItems.length) * 100}%` }}
           ></div>
         </div>

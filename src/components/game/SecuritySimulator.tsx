@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 
 interface SecuritySimulatorProps {
   onComplete: (score: number) => void;
@@ -22,98 +23,102 @@ interface Scenario {
 }
 
 const SecuritySimulator: React.FC<SecuritySimulatorProps> = ({ onComplete }) => {
+  const t = useTranslations('securitySimulator');
   const [score, setScore] = useState(0);
   const [currentScenario, setCurrentScenario] = useState(0);
   const [showConsequence, setShowConsequence] = useState(false);
   const [selectedChoice, setSelectedChoice] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   
-  const scenarios: Scenario[] = [
+  // Adaptar para usar a estrutura de tradução existente
+  const getScenarios = (): Scenario[] => [
     {
       id: 'phishing',
-      title: 'Suspicious Website',
-      description: "You receive an email that appears to be from your bank, asking you to update your account information. The link leads to a site that looks like your bank's site, but the URL is 'my-secure-bank.com' instead of the official 'mybank.com'.",
+      title: t('scenarios.phishing.title'),
+      description: t('scenarios.phishing.description'),
       choices: [
         {
           id: 'fill',
-          text: 'Fill in your details as requested',
+          text: t('scenarios.phishing.choices.fill'),
           isGood: false,
-          consequence: 'Your login credentials were captured by cybercriminals. They accessed your account and transferred money to their account.',
-          lesson: 'Always check the URL of websites where you enter sensitive information. Look for https:// and the padlock icon, and carefully verify the domain name.'
+          consequence: t('scenarios.phishing.consequences.fill'),
+          lesson: t('scenarios.phishing.lessons.fill')
         },
         {
           id: 'check',
-          text: 'Check the URL and security certificate',
+          text: t('scenarios.phishing.choices.check'),
           isGood: true,
-          consequence: "You noticed that the URL is not official and the site doesn't have the secure padlock icon. You avoided a phishing attempt.",
-          lesson: 'Great job! Checking the URL and security certificate is a crucial step before entering sensitive information online.'
+          consequence: t('scenarios.phishing.consequences.check'),
+          lesson: t('scenarios.phishing.lessons.check')
         },
         {
           id: 'close',
-          text: 'Close the site immediately',
+          text: t('scenarios.phishing.choices.close'),
           isGood: true,
-          consequence: 'You avoided entering any data on the suspicious site. This protected you from the phishing attempt.',
-          lesson: "Good instinct! When in doubt about a site's legitimacy, it's safer to close it and contact the company directly through official channels."
+          consequence: t('scenarios.phishing.consequences.close'),
+          lesson: t('scenarios.phishing.lessons.close')
         }
       ]
     },
     {
       id: 'password',
-      title: 'Creating a Password',
-      description: "You're creating a new account for an important service and need to set a password. What kind of password would you choose?",
+      title: t('scenarios.password.title'),
+      description: t('scenarios.password.description'),
       choices: [
         {
           id: 'simple',
-          text: 'A simple, easy-to-remember password like "123456" or "password"',
+          text: t('scenarios.password.choices.simple'),
           isGood: false,
-          consequence: 'Your simple password was cracked in seconds by an automated program. Your account was compromised.',
-          lesson: 'Simple passwords are incredibly vulnerable to brute force attacks. Even adding a few unusual characters makes a password exponentially more secure.'
+          consequence: t('scenarios.password.consequences.simple'),
+          lesson: t('scenarios.password.lessons.simple')
         },
         {
           id: 'strong',
-          text: 'A complex password with letters, numbers, and symbols like "K7%j9@Lp2$xR"',
+          text: t('scenarios.password.choices.strong'),
           isGood: true,
-          consequence: 'Your complex password would take thousands of years to crack with current technology, keeping your account secure.',
-          lesson: 'Strong passwords that mix character types are much more secure. Consider using a password manager to create and store complex passwords.'
+          consequence: t('scenarios.password.consequences.strong'),
+          lesson: t('scenarios.password.lessons.strong')
         },
         {
           id: 'reuse',
-          text: 'Reuse a password you already use for other accounts',
+          text: t('scenarios.password.choices.reuse'),
           isGood: false,
-          consequence: 'One of your other accounts was breached, and hackers tried the same password on multiple services. They gained access to all accounts with the same password.',
-          lesson: 'Using unique passwords for each account is essential. If one service is breached, your other accounts remain protected.'
+          consequence: t('scenarios.password.consequences.reuse'),
+          lesson: t('scenarios.password.lessons.reuse')
         }
       ]
     },
     {
       id: 'publicWifi',
-      title: 'Public Wi-Fi',
-      description: "You're at a coffee shop and need to check your bank account balance. The coffee shop offers free, open Wi-Fi with no password.",
+      title: t('scenarios.publicWifi.title'),
+      description: t('scenarios.publicWifi.description'),
       choices: [
         {
           id: 'useVPN',
-          text: 'Connect using a VPN before accessing your bank account',
+          text: t('scenarios.publicWifi.choices.useVPN'),
           isGood: true,
-          consequence: 'Your connection was encrypted through the VPN, protecting your data from potential snoopers on the public network.',
-          lesson: 'Using a VPN creates an encrypted tunnel for your data, making public Wi-Fi much safer for sensitive transactions.'
+          consequence: t('scenarios.publicWifi.consequences.useVPN'),
+          lesson: t('scenarios.publicWifi.lessons.useVPN')
         },
         {
           id: 'login',
-          text: 'Connect directly to the Wi-Fi and log into your bank',
+          text: t('scenarios.publicWifi.choices.login'),
           isGood: false,
-          consequence: 'Someone on the same network was using packet-sniffing software and captured your login credentials when you entered them.',
-          lesson: 'Public Wi-Fi networks are often unencrypted, making it possible for others to intercept data you send or receive.'
+          consequence: t('scenarios.publicWifi.consequences.login'),
+          lesson: t('scenarios.publicWifi.lessons.login')
         },
         {
           id: 'wait',
-          text: 'Wait until you get home to use your secure network',
+          text: t('scenarios.publicWifi.choices.wait'),
           isGood: true,
-          consequence: 'You avoided connecting to your sensitive accounts on an insecure network, protecting your data.',
-          lesson: 'For highly sensitive actions like banking, using a trusted network is always the safest option.'
+          consequence: t('scenarios.publicWifi.consequences.wait'),
+          lesson: t('scenarios.publicWifi.lessons.wait')
         }
       ]
     }
   ];
+  
+  const scenarios = getScenarios();
 
   useEffect(() => {
     // Simulate loading
@@ -153,10 +158,13 @@ const SecuritySimulator: React.FC<SecuritySimulatorProps> = ({ onComplete }) => 
 
   if (loading) {
     return (
-      <div className="bg-white shadow-md rounded-lg p-8 text-center">
-        <h2 className="text-xl font-semibold mb-4 text-center text-gray-900">Starting Simulation...</h2>
+      <div className="bg-white shadow-md rounded-lg p-8 text-center animate-fadeIn">
+        <h2 className="text-xl font-bold mb-6 text-center text-gray-800 pb-3 relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-24 after:h-[3px] after:bg-green-600 after:rounded-md">
+          {/* Removido o segundo parâmetro para corrigir erro de tipagem */}
+          {t('loading')}
+        </h2>
         <div className="flex justify-center items-center h-32">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-green-500"></div>
         </div>
       </div>
     );
@@ -168,27 +176,42 @@ const SecuritySimulator: React.FC<SecuritySimulatorProps> = ({ onComplete }) => 
     : null;
 
   return (
-    <div className="bg-white shadow-md rounded-lg p-6">
+    <div className="bg-white rounded-lg shadow-md p-8 animate-fadeIn">
       <div className="mb-6">
-        <div className="flex justify-between items-center mb-4">
-          <h2 className="text-2xl font-semibold text-gray-900">Security Simulation: What If...</h2>
-          <div className="text-xl text-gray-900">Score: {score}</div>
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="text-2xl font-bold text-gray-800 pb-3 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-[3px] after:bg-green-600 after:rounded-md">
+            {t('gameTitle')}
+          </h2>
+          <div className="text-green-600 font-bold text-lg">
+            {t('score')}: {score}
+          </div>
         </div>
         
-        <div className="border-t border-b border-gray-200 py-4 mb-6">
-          <h3 className="text-xl font-semibold mb-2 text-gray-900">Scenario {currentScenario + 1}/{scenarios.length}: {currentScenarioData.title}</h3>
-          <p className="text-gray-700">{currentScenarioData.description}</p>
+        <div className="bg-gray-50 p-5 rounded-lg border border-gray-100 mb-6">
+          <div className="flex items-center gap-2 mb-4">
+            <div className="bg-green-100 text-green-600 w-7 h-7 rounded-full flex items-center justify-center font-bold">
+              {currentScenario + 1}
+            </div>
+            <h3 className="text-xl font-medium text-gray-800">
+              {currentScenarioData.title}
+            </h3>
+          </div>
+          <p className="text-gray-700 leading-relaxed">
+            {currentScenarioData.description}
+          </p>
         </div>
         
         {!showConsequence ? (
           <div>
-            <h4 className="text-lg font-medium mb-4 text-gray-900">What would you do?</h4>
+            <h4 className="text-lg font-medium mb-4 text-gray-800">
+              {t('whatWouldYouDo')}
+            </h4>
             <div className="space-y-3">
               {currentScenarioData.choices.map((choice) => (
                 <button
                   key={choice.id}
                   onClick={() => handleChoiceSelect(choice.id)}
-                  className="w-full bg-gray-100 hover:bg-gray-200 text-left p-4 rounded-lg transition text-gray-900 font-medium"
+                  className="w-full bg-gray-50 hover:bg-gray-100 text-left p-4 rounded-lg transition-all border border-gray-200 hover:border-green-200 hover:shadow-sm text-gray-800 font-medium"
                 >
                   {choice.text}
                 </button>
@@ -196,26 +219,32 @@ const SecuritySimulator: React.FC<SecuritySimulatorProps> = ({ onComplete }) => 
             </div>
           </div>
         ) : (
-          <div className="bg-gray-100 p-5 rounded-lg">
-            <div className={`text-lg font-semibold mb-3 ${selectedChoiceData?.isGood ? 'text-green-600' : 'text-red-600'}`}>
-              {selectedChoiceData?.isGood ? 'Good security choice!' : 'Security risk detected!'}
+          <div className={`p-5 rounded-lg border ${
+            selectedChoiceData?.isGood 
+              ? 'bg-green-50 border-green-100' 
+              : 'bg-red-50 border-red-100'
+          }`}>
+            <div className={`text-lg font-semibold mb-3 ${
+              selectedChoiceData?.isGood ? 'text-green-600' : 'text-red-600'
+            }`}>
+              {selectedChoiceData?.isGood ? t('goodChoice') : t('riskyChoice')}
             </div>
             
             <div className="mb-4">
-              <h5 className="font-medium mb-2 text-gray-900">Consequence:</h5>
-              <p className="text-gray-700">{selectedChoiceData?.consequence}</p>
+              <h5 className="font-medium mb-2 text-gray-800">{t('consequence')}:</h5>
+              <p className="text-gray-700 leading-relaxed">{selectedChoiceData?.consequence}</p>
             </div>
             
             <div className="mb-6">
-              <h5 className="font-medium mb-2 text-gray-900">Security lesson:</h5>
-              <p className="text-gray-700">{selectedChoiceData?.lesson}</p>
+              <h5 className="font-medium mb-2 text-gray-800">{t('securityLesson')}:</h5>
+              <p className="text-gray-700 leading-relaxed">{selectedChoiceData?.lesson}</p>
             </div>
             
             <button 
               onClick={handleNextScenario} 
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition"
+              className="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-lg transition-all font-semibold hover:shadow-lg active:translate-y-0.5"
             >
-              {currentScenario < scenarios.length - 1 ? 'Next scenario' : 'Finish simulation'}
+              {currentScenario < scenarios.length - 1 ? t('nextScenario') : t('finishGame')}
             </button>
           </div>
         )}

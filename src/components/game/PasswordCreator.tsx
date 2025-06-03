@@ -13,6 +13,7 @@ interface PasswordRule {
 export default function PasswordCreator({ onComplete }: { onComplete: (score: number) => void }) {
   const t = useTranslations('passwordCreator');
   const [password, setPassword] = useState<string>('');
+  const [showPassword, setShowPassword] = useState<boolean>(false); // Estado para mostrar/ocultar senha
   const [strength, setStrength] = useState<'weak' | 'medium' | 'strong'>('weak');
   const [score, setScore] = useState<number>(0);
   const [showInstructions, setShowInstructions] = useState(true);
@@ -145,22 +146,34 @@ export default function PasswordCreator({ onComplete }: { onComplete: (score: nu
   // Render instructions screen
   if (showInstructions) {
     return (
-      <div className="bg-white shadow-md rounded-lg p-6">
-        <h2 className="text-2xl font-semibold mb-4 text-gray-900">{t('gameTitle')}</h2>
+      <div className="bg-white rounded-lg shadow-md p-8 animate-fadeIn">
+        <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-3 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-[3px] after:bg-green-600 after:rounded-md">
+          {t('gameTitle')}
+        </h2>
         
-        <div className="bg-blue-50 p-6 rounded-lg mb-6">
-          <h3 className="font-semibold text-lg text-blue-800 mb-3">{t('instructions.title')}</h3>
-          <ul className="list-disc pl-5 mb-4 text-gray-700 space-y-2">
-            <li>{t('instructions.point1')}</li>
-            <li>{t('instructions.point2')}</li>
-            <li>{t('instructions.point3')}</li>
+        <div className="bg-gradient-to-b from-green-50 to-green-50/30 rounded-lg p-8 mb-8 border border-green-100">
+          <h3 className="font-bold text-lg text-green-600 mb-4">
+            {t('instructions.title')}
+          </h3>
+          <ul className="space-y-3 mb-6">
+            <li className="pl-7 text-gray-700 leading-relaxed relative before:content-['→'] before:absolute before:left-0 before:text-green-500 before:font-bold">
+              {t('instructions.point1')}
+            </li>
+            <li className="pl-7 text-gray-700 leading-relaxed relative before:content-['→'] before:absolute before:left-0 before:text-green-500 before:font-bold">
+              {t('instructions.point2')}
+            </li>
+            <li className="pl-7 text-gray-700 leading-relaxed relative before:content-['→'] before:absolute before:left-0 before:text-green-500 before:font-bold">
+              {t('instructions.point3')}
+            </li>
           </ul>
-          <p className="text-gray-700 italic mt-4">{t('instructions.remember')}</p>
+          <p className="text-gray-700 italic mt-4">
+            {t('instructions.remember')}
+          </p>
         </div>
         
         <button 
           onClick={() => setShowInstructions(false)} 
-          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition w-full">
+          className="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-lg transition-all font-semibold hover:shadow-lg active:translate-y-0.5">
           {t('startGame')}
         </button>
       </div>
@@ -170,20 +183,27 @@ export default function PasswordCreator({ onComplete }: { onComplete: (score: nu
   // Game complete screen
   if (gameCompleted) {
     return (
-      <div className="bg-white shadow-md rounded-lg p-6">
-        <h2 className="text-2xl font-semibold mb-4 text-gray-900">{t('gameOver.title')}</h2>
-        <div className="bg-blue-50 p-6 rounded-lg mb-6 text-center">
+      <div className="bg-white rounded-lg shadow-md p-8 animate-fadeIn">
+        <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-3 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-[3px] after:bg-green-600 after:rounded-md">
+          {t('gameOver.title')}
+        </h2>
+        
+        <div className="bg-green-50 p-6 rounded-lg mb-6 text-center border border-green-100">
           <div className="flex justify-center mb-4">
-            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-              <span role="img" aria-label="key" className="text-2xl">🔑</span>
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-2xl">
+              🔑
             </div>
           </div>
-          <p className="text-gray-700 mb-4">{t('gameOver.message')}</p>
-          <div className="text-xl font-bold text-blue-600 mb-2">
+          <p className="text-gray-700 mb-4">
+            {t('gameOver.message')}
+          </p>
+          <div className="flex items-center justify-center gap-2 font-bold text-green-600 text-xl before:content-['🏆']">
             {t('gameOver.finalScore')}: {score}
           </div>
-          <div className="bg-white p-4 rounded-lg border border-blue-100 text-left">
-            <h4 className="font-medium mb-2">{t('passwordTips.title')}</h4>
+          <div className="bg-white p-4 rounded-lg border border-green-100 text-left mt-4">
+            <h4 className="font-medium mb-2 text-gray-800">
+              {t('passwordTips.title')}
+            </h4>
             <ul className="list-disc pl-5 text-sm text-gray-700 space-y-1">
               <li>{t('passwordTips.tip1')}</li>
               <li>{t('passwordTips.tip2')}</li>
@@ -199,50 +219,76 @@ export default function PasswordCreator({ onComplete }: { onComplete: (score: nu
   const currentChallenge = challenges[challengeIndex];
 
   return (
-    <div className="bg-white shadow-md rounded-lg p-6">
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-2xl font-semibold text-gray-900">{t('gameTitle')}</h2>
+    <div className="bg-white rounded-lg shadow-md p-8 animate-fadeIn">
+      <div className="flex justify-between items-center mb-6">
+        <h2 className="text-2xl font-bold text-gray-800 pb-3 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-[3px] after:bg-green-600 after:rounded-md">
+          {t('gameTitle')}
+        </h2>
         <div>
-          <span className="text-gray-700 font-semibold">{t('score')}: {score}</span>
+          <span className="text-green-600 font-bold text-lg">
+            {t('score')}: {score}
+          </span>
         </div>
       </div>
       
-      <div className="bg-gray-50 p-1 rounded-lg mb-4">
-        <div className="flex justify-between text-sm text-gray-500 px-2">
+      <div className="bg-gray-50 p-2 rounded-lg mb-6 border border-gray-100">
+        <div className="flex justify-between text-sm text-gray-500 px-2 mb-1">
           <span>{t('challenge')}: {challengeIndex + 1}/{challenges.length}</span>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-2.5">
-          <div 
-            className="bg-blue-600 h-2.5 rounded-full" 
+          <motion.div 
+            className="bg-green-500 h-2.5 rounded-full" 
             style={{ width: `${((challengeIndex + 1) / challenges.length) * 100}%` }}
-          ></div>
+            initial={{ width: 0 }}
+            animate={{ width: `${((challengeIndex + 1) / challenges.length) * 100}%` }}
+            transition={{ duration: 0.5 }}
+          ></motion.div>
         </div>
       </div>
       
       <div className="mb-6">
-        <h3 className="text-xl font-medium mb-2 text-gray-900">{currentChallenge.name}</h3>
-        <p className="text-gray-600 mb-4">{currentChallenge.description}</p>
+        <h3 className="text-xl font-medium mb-2 text-gray-800">
+          {currentChallenge.name}
+        </h3>
+        <p className="text-gray-600 mb-4 leading-relaxed">
+          {currentChallenge.description}
+        </p>
         
         {showTip && (
-          <div className="bg-yellow-50 p-4 rounded-lg mb-4 border border-yellow-200">
+          <motion.div 
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-yellow-50 p-4 rounded-lg mb-4 border border-yellow-200"
+          >
             <div className="flex items-start">
               <span className="text-yellow-500 mr-2">💡</span>
               <p className="text-gray-700">{currentTip}</p>
             </div>
-          </div>
+          </motion.div>
         )}
         
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="password-input" className="block text-sm font-medium text-gray-700 mb-1">
             {t('createPassword')}
           </label>
           <div className="relative">
             <input 
-              type="text" 
+              id="password-input"
+              type={showPassword ? "text" : "password"}
               value={password} 
-              readOnly
-              className="w-full py-2 px-3 border border-gray-300 bg-gray-50 rounded-md shadow-sm focus:outline-none"
+              onChange={(e) => handlePasswordChange(e.target.value)}
+              className="w-full py-2 px-3 border border-gray-300 bg-gray-50 rounded-md shadow-sm focus:outline-none text-black"
+              placeholder={t('enterPassword') || "Type your password..."}
+              autoFocus
             />
+            <button 
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute right-10 top-2 text-gray-500 hover:text-gray-700"
+              aria-label={showPassword ? "Hide password" : "Show password"}
+            >
+              {showPassword ? "👁️" : "👁️‍🗨️"}
+            </button>
             {password && (
               <button 
                 onClick={handleClearPassword}
@@ -257,13 +303,19 @@ export default function PasswordCreator({ onComplete }: { onComplete: (score: nu
         <div className="mb-4">
           <div className="flex items-center mb-2">
             <div className="h-2 flex-grow rounded-full bg-gray-200 overflow-hidden">
-              <div 
+              <motion.div 
                 className={`h-full rounded-full ${
-                  strength === 'weak' ? 'bg-red-500 w-1/3' : 
-                  strength === 'medium' ? 'bg-yellow-500 w-2/3' : 
-                  'bg-green-500 w-full'
+                  strength === 'weak' ? 'bg-red-500' : 
+                  strength === 'medium' ? 'bg-yellow-500' : 
+                  'bg-green-500'
                 }`}
-              ></div>
+                initial={{ width: '0%' }}
+                animate={{ 
+                  width: strength === 'weak' ? '33%' : 
+                         strength === 'medium' ? '67%' : '100%' 
+                }}
+                transition={{ duration: 0.5 }}
+              ></motion.div>
             </div>
             <span className={`ml-2 text-sm font-medium ${
               strength === 'weak' ? 'text-red-600' : 
@@ -277,8 +329,10 @@ export default function PasswordCreator({ onComplete }: { onComplete: (score: nu
           </div>
         </div>
         
-        <div className="mb-6">
-          <h4 className="font-medium text-sm mb-2 text-gray-700">{t('passwordRules')}</h4>
+        <div className="mb-6 bg-gray-50 p-3 rounded-lg border border-gray-100">
+          <h4 className="font-medium text-sm mb-2 text-gray-700">
+            {t('passwordRules')}
+          </h4>
           <ul className="space-y-1">
             {rules.map(rule => (
               <li 
@@ -297,14 +351,14 @@ export default function PasswordCreator({ onComplete }: { onComplete: (score: nu
             <button 
               onClick={() => !showTip && handleShowTip()}
               disabled={showTip}
-              className={`py-2 px-4 rounded-lg border ${showTip ? 'bg-gray-100 text-gray-400 border-gray-200' : 'bg-yellow-50 text-yellow-700 border-yellow-200 hover:bg-yellow-100'}`}
+              className={`py-2 px-4 rounded-lg border transition-all ${showTip ? 'bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed' : 'bg-yellow-50 text-yellow-700 border-yellow-200 hover:bg-yellow-100'}`}
             >
               {t('showTip')}
             </button>
             <button 
               onClick={handleSubmitPassword}
               disabled={strength !== 'strong'}
-              className={`py-2 px-4 rounded-lg ${strength === 'strong' ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-gray-200 text-gray-400'}`}
+              className={`py-2 px-4 rounded-lg transition-all ${strength === 'strong' ? 'bg-green-500 text-white hover:bg-green-600 hover:shadow-md active:translate-y-0.5' : 'bg-gray-200 text-gray-400 cursor-not-allowed'}`}
             >
               {t('submit')}
             </button>
@@ -312,16 +366,20 @@ export default function PasswordCreator({ onComplete }: { onComplete: (score: nu
         </div>
         
         <div className="mb-6">
-          <h4 className="font-medium text-sm mb-2 text-gray-700">{t('characterSets.title')}</h4>
+          <h4 className="font-medium text-sm mb-2 text-gray-700">
+            {t('characterSets.title')}
+          </h4>
           
           <div className="mb-2">
-            <p className="text-xs text-gray-500 mb-1">{t('characterSets.lowercase')}</p>
+            <p className="text-xs text-gray-500 mb-1">
+              {t('characterSets.lowercase')}
+            </p>
             <div className="flex flex-wrap gap-1">
               {characterSets.lowercase.split('').map(char => (
                 <button 
                   key={`lower-${char}`}
                   onClick={() => handleAddCharacter(char)}
-                  className="w-8 h-8 flex items-center justify-center border border-gray-300 rounded bg-white hover:bg-gray-100"
+                  className="w-8 h-8 flex items-center justify-center border border-gray-300 rounded bg-white text-black hover:bg-gray-100 hover:border-green-300 transition-colors"
                 >
                   {char}
                 </button>
@@ -330,13 +388,15 @@ export default function PasswordCreator({ onComplete }: { onComplete: (score: nu
           </div>
           
           <div className="mb-2">
-            <p className="text-xs text-gray-500 mb-1">{t('characterSets.uppercase')}</p>
+            <p className="text-xs text-gray-500 mb-1">
+              {t('characterSets.uppercase')}
+            </p>
             <div className="flex flex-wrap gap-1">
               {characterSets.uppercase.split('').map(char => (
                 <button 
                   key={`upper-${char}`}
                   onClick={() => handleAddCharacter(char)}
-                  className="w-8 h-8 flex items-center justify-center border border-gray-300 rounded bg-white hover:bg-gray-100"
+                  className="w-8 h-8 flex items-center justify-center border border-gray-300 rounded bg-white text-black hover:bg-gray-100 hover:border-green-300 transition-colors"
                 >
                   {char}
                 </button>
@@ -345,13 +405,15 @@ export default function PasswordCreator({ onComplete }: { onComplete: (score: nu
           </div>
           
           <div className="mb-2">
-            <p className="text-xs text-gray-500 mb-1">{t('characterSets.numbers')}</p>
+            <p className="text-xs text-gray-500 mb-1">
+              {t('characterSets.numbers')}
+            </p>
             <div className="flex flex-wrap gap-1">
               {characterSets.numbers.split('').map(char => (
                 <button 
                   key={`num-${char}`}
                   onClick={() => handleAddCharacter(char)}
-                  className="w-8 h-8 flex items-center justify-center border border-gray-300 rounded bg-white hover:bg-gray-100"
+                  className="w-8 h-8 flex items-center justify-center border border-gray-300 rounded bg-white text-black hover:bg-gray-100 hover:border-green-300 transition-colors"
                 >
                   {char}
                 </button>
@@ -360,13 +422,15 @@ export default function PasswordCreator({ onComplete }: { onComplete: (score: nu
           </div>
           
           <div className="mb-4">
-            <p className="text-xs text-gray-500 mb-1">{t('characterSets.symbols')}</p>
+            <p className="text-xs text-gray-500 mb-1">
+              {t('characterSets.symbols')}
+            </p>
             <div className="flex flex-wrap gap-1">
               {characterSets.symbols.split('').map(char => (
                 <button 
                   key={`sym-${char}`}
                   onClick={() => handleAddCharacter(char)}
-                  className="w-8 h-8 flex items-center justify-center border border-gray-300 rounded bg-white hover:bg-gray-100"
+                  className="w-8 h-8 flex items-center justify-center border border-gray-300 rounded bg-white text-black hover:bg-gray-100 hover:border-green-300 transition-colors"
                 >
                   {char}
                 </button>
@@ -378,14 +442,14 @@ export default function PasswordCreator({ onComplete }: { onComplete: (score: nu
             <button 
               onClick={handleRemoveLastCharacter}
               disabled={!password}
-              className={`flex-1 py-2 rounded-lg border ${password ? 'border-red-300 bg-red-50 text-red-700 hover:bg-red-100' : 'bg-gray-100 text-gray-400 border-gray-200'}`}
+              className={`flex-1 py-2 rounded-lg border transition-all ${password ? 'border-red-300 bg-red-50 text-red-700 hover:bg-red-100' : 'bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed'}`}
             >
               {t('backspace')}
             </button>
             <button 
               onClick={handleClearPassword}
               disabled={!password}
-              className={`flex-1 py-2 rounded-lg border ${password ? 'border-gray-300 bg-gray-50 text-gray-700 hover:bg-gray-100' : 'bg-gray-100 text-gray-400 border-gray-200'}`}
+              className={`flex-1 py-2 rounded-lg border transition-all ${password ? 'border-gray-300 bg-gray-50 text-gray-700 hover:bg-gray-100' : 'bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed'}`}
             >
               {t('clear')}
             </button>

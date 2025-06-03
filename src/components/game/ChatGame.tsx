@@ -110,6 +110,14 @@ export default function ChatGame({ onComplete }: { onComplete: (score: number) =
     }
   ];
   
+  // Opções de resposta predefinidas
+  const responseOptions = {
+    defend1: "Parem com isso! O João não merece esse tipo de comentário. Vamos respeitar todos, por favor.",
+    defend2: "Isso não é legal. João, não liga para esses comentários, eles não te definem.",
+    join: "Hahaha, realmente estranho esse projecto! Não sei como conseguiste fazer isso...",
+    ignore: "✓✓ Visualizado"
+  };
+  
   // Scroll to bottom of chat
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -152,7 +160,7 @@ export default function ChatGame({ onComplete }: { onComplete: (score: number) =
   }, [nextMessageIndex, waitingForResponse, currentScenarioIndex, gameOver, scenarios]);
   
   // Handle user reaction to offensive message
-  const handleReaction = (reaction: 'report' | 'defend' | 'ignore' | 'join') => {
+  const handleReaction = (reaction: 'report' | 'defend' | 'ignore' | 'join', customText: string) => {
     if (!waitingForResponse) return;
     
     // Find the current offensive message
@@ -164,6 +172,37 @@ export default function ChatGame({ onComplete }: { onComplete: (score: number) =
         msg.id === currentMessage.id ? { ...msg, userReaction: reaction } : msg
       )
     );
+    
+    // Add user's message (except for ignore)
+    if (reaction !== 'ignore' || customText !== responseOptions.ignore) {
+      const currentTime = new Date();
+      const timeString = `${currentTime.getHours()}:${currentTime.getMinutes().toString().padStart(2, '0')}`;
+      
+      setDisplayedMessages(prev => [
+        ...prev, 
+        {
+          id: `response-${currentMessage.id}`,
+          from: 'Você',
+          text: customText,
+          isOffensive: false,
+          time: timeString,
+          type: 'message'
+        }
+      ]);
+    } else {
+      // Para "visualizado", adicionar uma mensagem de info
+      setDisplayedMessages(prev => [
+        ...prev, 
+        {
+          id: `response-${currentMessage.id}`,
+          from: 'System',
+          text: customText,
+          isOffensive: false,
+          time: '',
+          type: 'info'
+        }
+      ]);
+    }
     
     // Calculate points based on reaction
     let points = 0;
@@ -263,7 +302,7 @@ export default function ChatGame({ onComplete }: { onComplete: (score: number) =
     
     // Regular messages
     return message.from === 'Você' 
-      ? 'bg-blue-100 ml-auto' 
+      ? 'bg-green-100 ml-auto' 
       : 'bg-white mr-auto';
   };
   
@@ -301,111 +340,128 @@ export default function ChatGame({ onComplete }: { onComplete: (score: number) =
         <p className="text-gray-700">{currentScenario.context}</p>
       </div>
       
-      {/* Chat Window */}
-      <div className="border rounded-lg h-96 flex flex-col bg-gray-50 relative overflow-hidden">
-        {/* Chat Header */}
-        <div className="bg-green-500 text-white px-4 py-3 flex items-center">
-          <div className="h-10 w-10 bg-white rounded-full flex items-center justify-center mr-3">
-            <span className="text-green-500 font-bold">👥</span>
-          </div>
-          <div>
-            <h3 className="font-semibold">{currentScenario.name}</h3>
-            <p className="text-xs">{chatT('participants')}: 8</p>
-          </div>
-        </div>
-        
-        {/* Messages Area */}
-        <div className="flex-1 p-4 overflow-y-auto">
-          <div className="space-y-3">
-            <AnimatePresence>
-              {displayedMessages.map((message, index) => (
-                <motion.div
-                  key={message.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  {message.type === 'consequence' ? (
-                    <div className="bg-indigo-100 py-2 px-4 rounded-lg mt-2 mb-4 text-center">
-                      <p className="text-indigo-800 text-sm">{message.consequenceText}</p>
-                    </div>
-                  ) : (
-                    <div className="flex flex-col max-w-[75%]">
-                      {message.from !== 'Você' && message.type !== 'info' && (
-                        <span className="text-xs text-gray-500 font-semibold ml-2 mb-1">
-                          {message.from}
-                        </span>
-                      )}
-                      <div 
-                        className={`rounded-lg py-2 px-4 ${getMessageClass(message)} ${getMessageBorder(message)}`}
-                      >
-                        <p className="text-gray-800">{message.text}</p>
-                        <div className="text-right">
-                          <span className="text-gray-500 text-xs">{message.time}</span>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </motion.div>
-              ))}
-            </AnimatePresence>
-            <div ref={messagesEndRef} />
-          </div>
-        </div>
-        
-        {/* Reaction Options */}
-        {waitingForResponse && (
-          <div className="bg-white p-3 border-t">
-            <p className="text-sm text-gray-600 mb-2">{chatT('chooseAction')}</p>
-            <div className="grid grid-cols-2 gap-2">
-              <button
-                onClick={() => handleReaction('report')}
-                className="bg-red-100 hover:bg-red-200 text-red-700 py-2 px-3 rounded-lg flex items-center"
-              >
-                <span className="text-xl mr-2">🚨</span>
-                <span className="text-sm font-medium">{chatT('reactions.report.text')}</span>
-              </button>
-              <button
-                onClick={() => handleReaction('defend')}
-                className="bg-blue-100 hover:bg-blue-200 text-blue-700 py-2 px-3 rounded-lg flex items-center"
-              >
-                <span className="text-xl mr-2">🛡️</span>
-                <span className="text-sm font-medium">{chatT('reactions.defend.text')}</span>
-              </button>
-              <button
-                onClick={() => handleReaction('ignore')}
-                className="bg-gray-100 hover:bg-gray-200 text-gray-700 py-2 px-3 rounded-lg flex items-center"
-              >
-                <span className="text-xl mr-2">😶</span>
-                <span className="text-sm font-medium">{chatT('reactions.ignore.text')}</span>
-              </button>
-              <button
-                onClick={() => handleReaction('join')}
-                className="bg-yellow-100 hover:bg-yellow-200 text-yellow-700 py-2 px-3 rounded-lg flex items-center"
-              >
-                <span className="text-xl mr-2">😬</span>
-                <span className="text-sm font-medium">{chatT('reactions.join.text')}</span>
-              </button>
+      {/* Layout com dois painéis: chat e respostas */}
+      <div className="flex flex-col h-[600px]">
+        {/* Chat Window */}
+        <div className="border rounded-t-lg flex-1 flex flex-col bg-gray-50 relative overflow-hidden">
+          {/* Chat Header */}
+          <div className="bg-green-500 text-white px-4 py-3 flex items-center">
+            <div className="h-10 w-10 bg-white rounded-full flex items-center justify-center mr-3">
+              <span className="text-green-500 font-bold">👥</span>
+            </div>
+            <div>
+              <h3 className="font-semibold">{currentScenario.name}</h3>
+              <p className="text-xs">{chatT('participants')}: 8</p>
+            </div>
+            
+            {/* Pontuação no cabeçalho */}
+            <div className="ml-auto">
+              <span className="text-white text-sm font-semibold">
+                {chatT('score')}: {score}
+              </span>
             </div>
           </div>
-        )}
-      </div>
-      
-      {/* Instructions and Score */}
-      <div className="mt-4 flex justify-between items-center">
-        <div className="text-sm text-gray-600">
-          {chatT('instructions')}
+          
+          {/* Messages Area - Espaço maior para as mensagens */}
+          <div className="flex-1 p-4 overflow-y-auto">
+            <div className="space-y-3">
+              <AnimatePresence>
+                {displayedMessages.map((message, index) => (
+                  <motion.div
+                    key={message.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {message.type === 'consequence' ? (
+                      <div className="bg-green-100 py-2 px-4 rounded-lg mt-2 mb-4 text-center">
+                        <p className="text-green-800 text-sm">{message.consequenceText}</p>
+                      </div>
+                    ) : (
+                      <div className="flex flex-col max-w-[75%]">
+                        {message.from !== 'Você' && message.type !== 'info' && (
+                          <span className="text-xs text-gray-500 font-semibold ml-2 mb-1">
+                            {message.from}
+                          </span>
+                        )}
+                        <div 
+                          className={`rounded-lg py-2 px-4 ${getMessageClass(message)} ${getMessageBorder(message)}`}
+                        >
+                          <p className="text-gray-800">{message.text}</p>
+                          <div className="text-right">
+                            <span className="text-gray-500 text-xs">{message.time}</span>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+              <div ref={messagesEndRef} />
+            </div>
+          </div>
         </div>
-        <div className="font-semibold">
-          {chatT('score')}: {score}
+        
+        {/* Painel de instruções e respostas - Separado do chat */}
+        <div className="border-t-0 border rounded-b-lg bg-white">
+          {/* Instruções */}
+          <div className="bg-green-50 p-3 border-b border-green-100">
+            <p className="text-sm text-green-800 text-center">
+              Responda às mensagens de cyberbullying no chat. Suas escolhas fazem diferença!
+            </p>
+          </div>
+          
+          {/* Opções de resposta como mensagens */}
+          {waitingForResponse ? (
+            <div className="p-4">
+              <p className="text-sm font-medium text-gray-700 mb-3">Escolha uma mensagem:</p>
+              <div className="space-y-3">
+                {/* Defender João (opção 1) */}
+                <div 
+                  onClick={() => handleReaction('defend', responseOptions.defend1)}
+                  className="border border-gray-200 hover:bg-gray-100 text-gray-700 py-3 px-4 rounded-lg flex items-center cursor-pointer"
+                >
+                  <span className="text-sm">{responseOptions.defend1}</span>
+                </div>
+                
+                {/* Defender João (opção 2) */}
+                <div 
+                  onClick={() => handleReaction('defend', responseOptions.defend2)}
+                  className="border border-gray-200 hover:bg-gray-100 text-gray-700 py-3 px-4 rounded-lg flex items-center cursor-pointer"
+                >
+                  <span className="text-sm">{responseOptions.defend2}</span>
+                </div>
+                
+                {/* Juntar aos comentários */}
+                <div 
+                  onClick={() => handleReaction('join', responseOptions.join)}
+                  className="border border-gray-200 hover:bg-gray-100 text-gray-700 py-3 px-4 rounded-lg flex items-center cursor-pointer"
+                >
+                  <span className="text-sm">{responseOptions.join}</span>
+                </div>
+                
+                {/* Visualizar/Ignorar */}
+                <div 
+                  onClick={() => handleReaction('ignore', responseOptions.ignore)}
+                  className="border border-gray-200 hover:bg-gray-100 text-gray-700 py-3 px-4 rounded-lg flex items-center justify-center cursor-pointer"
+                >
+                  <span className="text-sm font-medium">{responseOptions.ignore}</span>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="p-4 flex justify-center items-center h-40">
+              <p className="text-gray-500 italic">Aguardando novas mensagens no chat...</p>
+            </div>
+          )}
         </div>
       </div>
       
       {/* Game Over Feedback */}
       {gameOver && (
-        <div className="mt-4 p-4 bg-blue-50 rounded-lg">
-          <h3 className="font-semibold text-lg text-blue-800 mb-2">
+        <div className="mt-4 p-4 bg-green-50 rounded-lg">
+          <h3 className="font-semibold text-lg text-green-800 mb-2">
             {chatT('scenarioComplete')}
           </h3>
           <p className="text-gray-700">{feedback}</p>

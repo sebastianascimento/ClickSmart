@@ -107,22 +107,34 @@ export default function PhishingSimulator({ onComplete }: { onComplete: (score: 
   // Renderizar instruções iniciais
   if (showInstructions) {
     return (
-      <div className="bg-white shadow-md rounded-lg p-6">
-        <h2 className="text-2xl font-semibold mb-4 text-gray-900">{t('gameTitle')}</h2>
+      <div className="bg-white rounded-lg shadow-md p-8 animate-fadeIn">
+        <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-3 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-[3px] after:bg-green-600 after:rounded-md">
+          {t('gameTitle')}
+        </h2>
         
-        <div className="bg-blue-50 p-6 rounded-lg mb-6">
-          <h3 className="font-semibold text-lg text-blue-800 mb-3">{t('instructions.title')}</h3>
-          <ul className="list-disc pl-5 mb-4 text-gray-700 space-y-2">
-            <li>{t('instructions.point1')}</li>
-            <li>{t('instructions.point2')}</li>
-            <li>{t('instructions.point3')}</li>
+        <div className="bg-gradient-to-b from-green-50 to-green-50/30 rounded-lg p-8 mb-8 border border-green-100">
+          <h3 className="font-bold text-lg text-green-600 mb-4">
+            {t('instructions.title')}
+          </h3>
+          <ul className="space-y-3 mb-6">
+            <li className="pl-7 text-gray-700 leading-relaxed relative before:content-['→'] before:absolute before:left-0 before:text-green-500 before:font-bold">
+              {t('instructions.point1')}
+            </li>
+            <li className="pl-7 text-gray-700 leading-relaxed relative before:content-['→'] before:absolute before:left-0 before:text-green-500 before:font-bold">
+              {t('instructions.point2')}
+            </li>
+            <li className="pl-7 text-gray-700 leading-relaxed relative before:content-['→'] before:absolute before:left-0 before:text-green-500 before:font-bold">
+              {t('instructions.point3')}
+            </li>
           </ul>
-          <p className="text-gray-700 italic mt-4">{t('instructions.remember')}</p>
+          <p className="text-gray-700 italic mt-4">
+            {t('instructions.remember')}
+          </p>
         </div>
         
         <button 
           onClick={() => setShowInstructions(false)} 
-          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition w-full">
+          className="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-lg transition-all font-semibold hover:shadow-lg active:translate-y-0.5">
           {t('startGame')}
         </button>
       </div>
@@ -132,17 +144,21 @@ export default function PhishingSimulator({ onComplete }: { onComplete: (score: 
   // Tela de jogo concluído
   if (gameCompleted) {
     return (
-      <div className="bg-white shadow-md rounded-lg p-6">
-        <h2 className="text-2xl font-semibold mb-4 text-gray-900">{t('gameOver.title')}</h2>
+      <div className="bg-white rounded-lg shadow-md p-8 animate-fadeIn">
+        <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-3 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-[3px] after:bg-green-600 after:rounded-md">
+          {t('gameOver.title')}
+        </h2>
         
-        <div className="bg-blue-50 p-6 rounded-lg mb-6 text-center">
+        <div className="bg-green-50 p-6 rounded-lg mb-6 text-center border border-green-100">
           <div className="flex justify-center mb-4">
-            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-              <span role="img" aria-label="shield" className="text-2xl">🛡️</span>
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-2xl">
+              🛡️
             </div>
           </div>
-          <p className="text-gray-700 mb-4">{t('gameOver.message')}</p>
-          <div className="text-xl font-bold text-blue-600 mb-2">
+          <p className="text-gray-700 mb-4">
+            {t('gameOver.message')}
+          </p>
+          <div className="flex items-center justify-center gap-2 font-bold text-green-600 text-xl before:content-['🏆']">
             {t('gameOver.finalScore')}: {score}
           </div>
         </div>
@@ -155,29 +171,31 @@ export default function PhishingSimulator({ onComplete }: { onComplete: (score: 
   // Mostrar resultado da escolha
   if (showResult) {
     return (
-      <div className="bg-white shadow-md rounded-lg p-6">
-        <h2 className="text-2xl font-semibold mb-4 text-gray-900">
+      <div className="bg-white rounded-lg shadow-md p-8 animate-fadeIn">
+        <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-3 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-[3px] after:bg-green-600 after:rounded-md">
           {isCorrect ? t('feedback.correctTitle') : t('feedback.incorrectTitle')}
         </h2>
         
-        <div className={`${isCorrect ? 'bg-green-50' : 'bg-red-50'} p-6 rounded-lg mb-6`}>
+        <div className={`${isCorrect ? 'bg-green-50' : 'bg-red-50'} p-6 rounded-lg mb-6 border ${isCorrect ? 'border-green-100' : 'border-red-100'}`}>
           <div className="flex justify-center mb-4">
-            <div className={`w-16 h-16 ${isCorrect ? 'bg-green-100' : 'bg-red-100'} rounded-full flex items-center justify-center`}>
-              <span className="text-2xl">{isCorrect ? '✓' : '✗'}</span>
+            <div className={`w-16 h-16 ${isCorrect ? 'bg-green-100' : 'bg-red-100'} rounded-full flex items-center justify-center text-2xl`}>
+              {isCorrect ? '✓' : '✗'}
             </div>
           </div>
           
-          <h3 className="text-center font-medium text-lg mb-3">
+          <h3 className="text-center font-medium text-lg mb-3 text-gray-800">
             {currentExample.isPhishing ? t('feedback.isPhishing') : t('feedback.isSafe')}
           </h3>
           
-          <p className="text-center text-gray-700 mb-4">{currentExample.explanation}</p>
+          <p className="text-center text-gray-700 mb-4">
+            {currentExample.explanation}
+          </p>
           
           <div className={`bg-white p-4 rounded-lg mb-2 ${currentExample.isPhishing ? 'border border-red-200' : 'border border-green-200'}`}>
-            <h4 className="font-medium mb-1">
+            <h4 className="font-medium mb-1 text-gray-800">
               {currentExample.isPhishing ? t('tips.phishingSignsTitle') : t('tips.safeSignsTitle')}
             </h4>
-            <ul className="list-disc pl-5 text-gray-700 text-sm">
+            <ul className="list-disc pl-5 text-gray-700 text-sm space-y-1">
               {currentExample.isPhishing ? (
                 <>
                   <li>{t('tips.phishingSigns.1')}</li>
@@ -197,7 +215,7 @@ export default function PhishingSimulator({ onComplete }: { onComplete: (score: 
         
         <button 
           onClick={handleContinue}
-          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition w-full">
+          className="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-lg transition-all font-semibold hover:shadow-lg active:translate-y-0.5">
           {currentIndex < examples.length - 1 ? t('nextExample') : t('finishGame')}
         </button>
       </div>
@@ -206,19 +224,23 @@ export default function PhishingSimulator({ onComplete }: { onComplete: (score: 
 
   // Renderizar exemplo atual
   return (
-    <div className="bg-white shadow-md rounded-lg p-6">
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-2xl font-semibold text-gray-900">{t('gameTitle')}</h2>
-        <div className="text-gray-700 font-semibold">{t('score')}: {score}</div>
+    <div className="bg-white rounded-lg shadow-md p-8 animate-fadeIn">
+      <div className="flex justify-between items-center mb-6">
+        <h2 className="text-2xl font-bold text-gray-800 pb-3 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-[3px] after:bg-green-600 after:rounded-md">
+          {t('gameTitle')}
+        </h2>
+        <div className="text-green-600 font-bold text-lg">
+          {t('score')}: {score}
+        </div>
       </div>
       
-      <div className="bg-gray-50 p-1 rounded-lg mb-4">
-        <div className="flex justify-between text-sm text-gray-500 px-2">
+      <div className="bg-gray-50 p-2 rounded-lg mb-6 border border-gray-100">
+        <div className="flex justify-between text-sm text-gray-500 px-2 mb-1">
           <span>{t('progress')}: {currentIndex + 1}/{examples.length}</span>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-2.5">
           <div 
-            className="bg-blue-600 h-2.5 rounded-full" 
+            className="bg-green-500 h-2.5 rounded-full transition-all duration-300" 
             style={{ width: `${((currentIndex + 1) / examples.length) * 100}%` }}
           ></div>
         </div>
@@ -226,16 +248,16 @@ export default function PhishingSimulator({ onComplete }: { onComplete: (score: 
 
       {/* E-mail simulado */}
       {currentExample.type === 'email' && (
-        <div className="border rounded-lg overflow-hidden mb-6 bg-white">
+        <div className="border border-gray-200 rounded-lg overflow-hidden mb-6 bg-white shadow-sm">
           <div className="bg-gray-100 border-b px-4 py-2 flex justify-between items-center">
             <div>
-              <p className="font-medium text-black">De: {currentExample.sender}</p>
+              <p className="font-medium text-gray-900">De: {currentExample.sender}</p>
               <p className="text-sm text-gray-500">Assunto: {currentExample.title}</p>
             </div>
           </div>
           
-          <div className="p-4">
-            <div className="text-gray-800 whitespace-pre-wrap">
+          <div className="p-5">
+            <div className="text-gray-800 whitespace-pre-wrap leading-relaxed">
               {currentExample.content}
             </div>
           </div>
@@ -244,15 +266,15 @@ export default function PhishingSimulator({ onComplete }: { onComplete: (score: 
 
       {/* Website simulado */}
       {currentExample.type === 'website' && (
-        <div className="border rounded-lg overflow-hidden mb-6 bg-white">
+        <div className="border border-gray-200 rounded-lg overflow-hidden mb-6 bg-white shadow-sm">
           <div className="bg-gray-100 border-b px-4 py-2 flex items-center">
             <span className="text-xs bg-gray-200 px-1 rounded mr-2">🔒</span>
             <span className="text-sm text-gray-800 truncate flex-1">{currentExample.url}</span>
           </div>
           
-          <div className="p-4">
-            <h3 className="text-xl font-medium mb-3">{currentExample.title}</h3>
-            <div className="text-gray-800 whitespace-pre-wrap">
+          <div className="p-5">
+            <h3 className="text-xl font-medium mb-3 text-gray-800">{currentExample.title}</h3>
+            <div className="text-gray-800 whitespace-pre-wrap leading-relaxed">
               {currentExample.content}
             </div>
           </div>
@@ -263,17 +285,17 @@ export default function PhishingSimulator({ onComplete }: { onComplete: (score: 
       {currentExample.type === 'popup' && (
         <div className="border-2 border-gray-300 shadow-lg rounded-lg overflow-hidden mb-6 bg-white mx-auto max-w-md">
           <div className="bg-gray-100 border-b px-4 py-2 flex justify-between items-center">
-            <div className="text-lg font-bold">{currentExample.title}</div>
-            <div>✕</div>
+            <div className="text-lg font-bold text-gray-800">{currentExample.title}</div>
+            <div className="text-gray-600 cursor-pointer">✕</div>
           </div>
           
-          <div className="p-4 text-center">
-            <div className="text-gray-800 mb-4 whitespace-pre-wrap">
+          <div className="p-5 text-center">
+            <div className="text-gray-800 mb-4 whitespace-pre-wrap leading-relaxed">
               {currentExample.content}
             </div>
-            <div className="flex justify-center gap-2">
+            <div className="flex justify-center gap-3">
               <button className="bg-green-500 text-white px-4 py-2 rounded">OK</button>
-              <button className="border border-gray-300 px-4 py-2 rounded">Cancelar</button>
+              <button className="border border-gray-300 px-4 py-2 rounded text-gray-700">Cancelar</button>
             </div>
           </div>
         </div>
@@ -287,13 +309,13 @@ export default function PhishingSimulator({ onComplete }: { onComplete: (score: 
       <div className="grid grid-cols-2 gap-4">
         <button 
           onClick={() => handleChoice(false)}
-          className="py-4 px-6 bg-green-100 hover:bg-green-200 text-green-800 font-medium rounded-lg transition flex items-center justify-center"
+          className="py-4 px-6 bg-green-100 hover:bg-green-200 text-green-800 font-medium rounded-lg transition flex items-center justify-center shadow-sm hover:shadow"
         >
           <span className="text-2xl mr-2">✅</span> {t('buttons.safe')}
         </button>
         <button 
           onClick={() => handleChoice(true)}
-          className="py-4 px-6 bg-red-100 hover:bg-red-200 text-red-800 font-medium rounded-lg transition flex items-center justify-center"
+          className="py-4 px-6 bg-red-100 hover:bg-red-200 text-red-800 font-medium rounded-lg transition flex items-center justify-center shadow-sm hover:shadow"
         >
           <span className="text-2xl mr-2">🚫</span> {t('buttons.phishing')}
         </button>

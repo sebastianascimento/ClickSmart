@@ -11,7 +11,7 @@ enum ReportStep {
   DETAILS = 'details',
   CONFIRMATION = 'confirmation',
   COMPLETED = 'completed',
-  WRONG_ACTION = 'wrong_action' // Nova etapa para mostrar feedback educativo
+  WRONG_ACTION = 'wrong_action'
 }
 
 interface Post {
@@ -32,7 +32,7 @@ export default function ReportSimulator({ onComplete }: { onComplete: (score: nu
   const [mistake, setMistake] = useState(false);
   const [currentPostIndex, setCurrentPostIndex] = useState(0);
   const [completedPosts, setCompletedPosts] = useState<string[]>([]);
-  const [wrongAction, setWrongAction] = useState<string>(''); // Para armazenar qual ação incorreta foi tomada
+  const [wrongAction, setWrongAction] = useState<string>('');
 
   // Exemplo de posts ofensivos para reportar
   const posts: Post[] = [
@@ -132,22 +132,35 @@ export default function ReportSimulator({ onComplete }: { onComplete: (score: nu
   // Renderização das instruções iniciais
   if (showInstructions) {
     return (
-      <div className="bg-white shadow-md rounded-lg p-6">
-        <h2 className="text-2xl font-semibold mb-4 text-gray-900">{t('gameTitle')}</h2>
+      <div className="bg-white rounded-lg shadow-md p-8 animate-fadeIn">
+        <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-3 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-[3px] after:bg-green-600 after:rounded-md">
+          {t('gameTitle')}
+        </h2>
         
-        <div className="bg-blue-50 p-6 rounded-lg mb-6">
-          <h3 className="font-semibold text-lg text-blue-800 mb-3">{t('instructions.title')}</h3>
-          <ul className="list-disc pl-5 mb-4 text-gray-700 space-y-2">
-            <li>{t('instructions.point1')}</li>
-            <li>{t('instructions.point2')}</li>
-            <li>{t('instructions.point3')}</li>
+        <div className="bg-gradient-to-b from-green-50 to-green-50/30 rounded-lg p-8 mb-8 border border-green-100">
+          <h3 className="font-bold text-lg text-green-600 mb-4">
+            {t('instructions.title')}
+          </h3>
+          <ul className="space-y-3 mb-6">
+            <li className="pl-7 text-gray-700 leading-relaxed relative before:content-['→'] before:absolute before:left-0 before:text-green-500 before:font-bold">
+              {t('instructions.point1')}
+            </li>
+            <li className="pl-7 text-gray-700 leading-relaxed relative before:content-['→'] before:absolute before:left-0 before:text-green-500 before:font-bold">
+              {t('instructions.point2')}
+            </li>
+            <li className="pl-7 text-gray-700 leading-relaxed relative before:content-['→'] before:absolute before:left-0 before:text-green-500 before:font-bold">
+              {t('instructions.point3')}
+            </li>
           </ul>
-          <p className="text-gray-700 italic mt-4">{t('instructions.remember')}</p>
+          <p className="text-gray-700 italic mt-4">
+            {t('instructions.remember')}
+          </p>
         </div>
         
-        <button 
-          onClick={() => setShowInstructions(false)} 
-          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition w-full">
+        <button
+          onClick={() => setShowInstructions(false)}
+          className="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-lg transition-all font-semibold hover:shadow-lg active:translate-y-0.5"
+        >
           {t('startGame')}
         </button>
       </div>
@@ -161,30 +174,40 @@ export default function ReportSimulator({ onComplete }: { onComplete: (score: nu
   // Se o post atual já foi reportado com sucesso
   if (isPostCompleted) {
     return (
-      <div className="bg-white shadow-md rounded-lg p-6">
-        <h2 className="text-2xl font-semibold mb-4 text-gray-900">{t('postCompleted.title')}</h2>
+      <div className="bg-white rounded-lg shadow-md p-8 animate-fadeIn">
+        <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-3 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-[3px] after:bg-green-600 after:rounded-md">
+          {t('postCompleted.title')}
+        </h2>
         
-        <div className="bg-green-50 p-6 rounded-lg mb-6">
+        <div className="bg-green-50 p-6 rounded-lg mb-6 text-center border border-green-200">
           <div className="flex justify-center mb-4">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
-              <span className="text-2xl">✓</span>
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-2xl">
+              ✓
             </div>
           </div>
-          <p className="text-center text-gray-700">{t('postCompleted.message')}</p>
-          <p className="text-center font-medium mt-4">{t('score')}: {score}</p>
+          <p className="text-gray-700 mb-4">
+            {t('postCompleted.message')}
+          </p>
+          <p className="font-medium text-gray-800 mt-4">
+            {t('score')}: {score}
+          </p>
         </div>
 
         {currentPostIndex < posts.length - 1 ? (
           <button 
             onClick={handleNextPost} 
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition w-full">
+            className="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-lg transition-all font-semibold hover:shadow-lg active:translate-y-0.5">
             {t('nextPost')}
           </button>
         ) : (
-          <div className="bg-blue-50 p-6 rounded-lg mb-6 text-center">
-            <h3 className="font-semibold text-lg text-blue-800 mb-3">{t('gameOver.title')}</h3>
-            <p className="text-gray-700 mb-4">{t('gameOver.message')}</p>
-            <div className="text-xl font-bold text-blue-600 mb-2">
+          <div className="bg-gradient-to-b from-green-50 to-green-50/30 rounded-lg p-6 mb-6 text-center border border-green-100">
+            <h3 className="font-bold text-lg text-green-600 mb-3">
+              {t('gameOver.title')}
+            </h3>
+            <p className="text-gray-700 mb-4">
+              {t('gameOver.message')}
+            </p>
+            <div className="text-xl font-bold text-green-600 mb-2">
               {t('gameOver.finalScore')}: {score}
             </div>
           </div>
@@ -196,8 +219,10 @@ export default function ReportSimulator({ onComplete }: { onComplete: (score: nu
   // Tela de feedback para ação incorreta
   if (currentStep === ReportStep.WRONG_ACTION) {
     return (
-      <div className="bg-white shadow-md rounded-lg p-6">
-        <h2 className="text-2xl font-semibold mb-4 text-gray-900">Ação Inadequada</h2>
+      <div className="bg-white rounded-lg shadow-md p-8 animate-fadeIn">
+        <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-3 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-[3px] after:bg-green-600 after:rounded-md">
+          Ação Inadequada
+        </h2>
         
         <div className="bg-amber-50 p-6 rounded-lg mb-6 border border-amber-200">
           <div className="flex mb-4 text-amber-800">
@@ -237,7 +262,7 @@ export default function ReportSimulator({ onComplete }: { onComplete: (score: nu
         
         <button
           onClick={handleContinueAfterWrongAction}
-          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition w-full"
+          className="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-lg transition-all font-semibold hover:shadow-lg active:translate-y-0.5"
         >
           Entendi, vou tentar novamente
         </button>
@@ -247,11 +272,15 @@ export default function ReportSimulator({ onComplete }: { onComplete: (score: nu
 
   // Renderização do post e opções de denúncia
   return (
-    <div className="bg-white shadow-md rounded-lg p-6">
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-2xl font-semibold text-gray-900">{t('gameTitle')}</h2>
+    <div className="bg-white rounded-lg shadow-md p-8 animate-fadeIn">
+      <div className="flex justify-between items-center mb-6">
+        <h2 className="text-2xl font-bold text-gray-800 pb-3 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-[3px] after:bg-green-600 after:rounded-md">
+          {t('gameTitle')}
+        </h2>
         <div>
-          <span className="text-gray-700 font-semibold">{t('score')}: {score}</span>
+          <span className="text-green-600 font-bold text-lg">
+            {t('score')}: {score}
+          </span>
         </div>
       </div>
 
@@ -267,16 +296,14 @@ export default function ReportSimulator({ onComplete }: { onComplete: (score: nu
       )}
 
       {/* Simulação de post de rede social */}
-      <div className="border rounded-lg overflow-hidden mb-6">
+      <div className="border border-gray-200 rounded-lg overflow-hidden mb-6 shadow-sm">
         {/* Cabeçalho do post */}
-        <div className="flex items-center p-3 border-b bg-white">
-          <div className="h-10 w-10 bg-gray-200 rounded-full mr-3 overflow-hidden">
-            <div className="h-full w-full flex items-center justify-center text-gray-500 text-xs font-bold">
-              {currentPost.author.charAt(0).toUpperCase()}
-            </div>
+        <div className="flex items-center p-4 border-b border-gray-200 bg-white">
+          <div className="h-10 w-10 bg-green-400 rounded-full mr-3 flex items-center justify-center text-white font-semibold text-lg">
+            {currentPost.author.charAt(0).toUpperCase()}
           </div>
           <div className="flex-1">
-            <h3 className="font-semibold">{currentPost.author}</h3>
+            <h3 className="font-semibold text-gray-900">{currentPost.author}</h3>
             <p className="text-xs text-gray-500">{currentPost.timeAgo}</p>
           </div>
           
@@ -293,7 +320,7 @@ export default function ReportSimulator({ onComplete }: { onComplete: (score: nu
         
         {/* Conteúdo do post */}
         <div className="p-4 bg-white">
-          <p className="text-gray-800 mb-4">{currentPost.content}</p>
+          <p className="text-gray-800 mb-4 leading-relaxed">{currentPost.content}</p>
           
           {/* Footer do post */}
           <div className="flex items-center text-gray-500 text-sm">
@@ -305,28 +332,28 @@ export default function ReportSimulator({ onComplete }: { onComplete: (score: nu
 
       {/* Menu de opções */}
       {currentStep === ReportStep.OPTIONS && (
-        <div className="border rounded-lg overflow-hidden mb-6 bg-white">
+        <div className="border border-gray-200 rounded-lg overflow-hidden mb-6 bg-white">
           <button 
             onClick={() => handleWrongAction('save')}
-            className="w-full p-3 text-left border-b hover:bg-gray-50 text-black"
+            className="w-full p-3 text-left border-b hover:bg-gray-50 text-gray-800 transition"
           >
             {t('options.save')}
           </button>
           <button 
             onClick={() => handleWrongAction('share')}
-            className="w-full p-3 text-left border-b hover:bg-gray-50 text-black"
+            className="w-full p-3 text-left border-b hover:bg-gray-50 text-gray-800 transition"
           >
             {t('options.share')}
           </button>
           <button 
             onClick={handleSelectReport}
-            className="w-full p-3 text-left border-b hover:bg-gray-50 text-black"
+            className="w-full p-3 text-left border-b hover:bg-gray-50 text-gray-800 transition"
           >
             {t('options.report')}
           </button>
           <button 
             onClick={() => handleWrongAction('cancel')}
-            className="w-full p-3 text-left hover:bg-gray-50 text-black"
+            className="w-full p-3 text-left hover:bg-gray-50 text-gray-800 transition"
           >
             {t('options.cancel')}
           </button>
@@ -335,35 +362,37 @@ export default function ReportSimulator({ onComplete }: { onComplete: (score: nu
 
       {/* Razões para denúncia */}
       {currentStep === ReportStep.REASON && (
-        <div className="border rounded-lg overflow-hidden mb-6 bg-white">
-          <h3 className="p-3 border-b font-medium text-black">{t('reportReasons.title')}</h3>
+        <div className="border border-gray-200 rounded-lg overflow-hidden mb-6 bg-white">
+          <h3 className="p-3 border-b font-medium text-gray-900">
+            {t('reportReasons.title')}
+          </h3>
           <button 
             onClick={() => handleSelectReason('hate')}
-            className="w-full p-3 text-left border-b hover:bg-gray-50 text-black font-medium"
+            className="w-full p-3 text-left border-b hover:bg-gray-50 text-gray-800 font-medium transition"
           >
             {t('reportReasons.hate')}
           </button>
           <button 
             onClick={() => handleSelectReason('harassment')}
-            className="w-full p-3 text-left border-b hover:bg-gray-50 text-black font-medium"
+            className="w-full p-3 text-left border-b hover:bg-gray-50 text-gray-800 font-medium transition"
           >
             {t('reportReasons.harassment')}
           </button>
           <button 
             onClick={() => handleSelectReason('violence')}
-            className="w-full p-3 text-left border-b hover:bg-gray-50 text-black font-medium"
+            className="w-full p-3 text-left border-b hover:bg-gray-50 text-gray-800 font-medium transition"
           >
             {t('reportReasons.violence')}
           </button>
           <button 
             onClick={() => handleSelectReason('falseInfo')}
-            className="w-full p-3 text-left border-b hover:bg-gray-50 text-black font-medium"
+            className="w-full p-3 text-left border-b hover:bg-gray-50 text-gray-800 font-medium transition"
           >
             {t('reportReasons.falseInfo')}
           </button>
           <button 
             onClick={() => handleWrongAction('cancel')}
-            className="w-full p-3 text-left hover:bg-gray-50 text-black"
+            className="w-full p-3 text-left hover:bg-gray-50 text-gray-800 transition"
           >
             {t('options.cancel')}
           </button>
@@ -372,25 +401,29 @@ export default function ReportSimulator({ onComplete }: { onComplete: (score: nu
 
       {/* Detalhes adicionais */}
       {currentStep === ReportStep.DETAILS && (
-        <div className="border rounded-lg overflow-hidden mb-6 bg-white">
-          <h3 className="p-3 border-b font-medium text-black">{t('reportDetails.title')}</h3>
+        <div className="border border-gray-200 rounded-lg overflow-hidden mb-6 bg-white">
+          <h3 className="p-3 border-b font-medium text-gray-900">
+            {t('reportDetails.title')}
+          </h3>
           <div className="p-4">
-            <p className="text-black mb-3">{t('reportDetails.description')}</p>
+            <p className="text-gray-800 mb-3">
+              {t('reportDetails.description')}
+            </p>
             <textarea 
-              className="w-full border rounded p-2 mb-4 text-black"
+              className="w-full border border-gray-300 rounded p-3 mb-4 text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
               rows={3}
               placeholder={t('reportDetails.placeholder')}
-            ></textarea>
+            />
             <div className="flex justify-end gap-3">
               <button 
                 onClick={() => handleWrongAction('cancel')}
-                className="px-4 py-2 rounded text-gray-700 hover:bg-gray-100"
+                className="px-4 py-2 rounded text-gray-700 hover:bg-gray-100 transition"
               >
                 {t('options.cancel')}
               </button>
               <button 
                 onClick={handleConfirmReport}
-                className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition"
               >
                 {t('reportDetails.submit')}
               </button>
@@ -401,20 +434,24 @@ export default function ReportSimulator({ onComplete }: { onComplete: (score: nu
 
       {/* Confirmação final */}
       {currentStep === ReportStep.CONFIRMATION && (
-        <div className="border rounded-lg overflow-hidden mb-6 bg-white">
+        <div className="border border-gray-200 rounded-lg overflow-hidden mb-6 bg-white">
           <div className="p-4">
-            <h3 className="font-medium mb-2 text-black">{t('reportConfirmation.title')}</h3>
-            <p className="text-black mb-4">{t('reportConfirmation.description')}</p>
+            <h3 className="font-medium mb-2 text-gray-900">
+              {t('reportConfirmation.title')}
+            </h3>
+            <p className="text-gray-800 mb-4">
+              {t('reportConfirmation.description')}
+            </p>
             <div className="flex justify-end gap-3">
               <button 
                 onClick={() => handleWrongAction('cancel')}
-                className="px-4 py-2 rounded text-gray-700 hover:bg-gray-100"
+                className="px-4 py-2 rounded text-gray-700 hover:bg-gray-100 transition"
               >
                 {t('options.cancel')}
               </button>
               <button 
                 onClick={handleCompleteReport}
-                className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition"
               >
                 {t('reportConfirmation.confirm')}
               </button>
@@ -425,18 +462,22 @@ export default function ReportSimulator({ onComplete }: { onComplete: (score: nu
 
       {/* Conclusão da denúncia */}
       {currentStep === ReportStep.COMPLETED && (
-        <div className="bg-green-50 p-6 rounded-lg mb-6">
+        <div className="bg-green-50 p-6 rounded-lg mb-6 text-center border border-green-200">
           <div className="flex justify-center mb-4">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
-              <span className="text-2xl">✓</span>
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-2xl">
+              ✓
             </div>
           </div>
-          <h3 className="text-xl font-medium text-center mb-2">{t('reportSuccess.title')}</h3>
-          <p className="text-center text-gray-700">{t('reportSuccess.message')}</p>
+          <h3 className="text-xl font-medium text-center mb-2">
+            {t('reportSuccess.title')}
+          </h3>
+          <p className="text-center text-gray-700">
+            {t('reportSuccess.message')}
+          </p>
           <div className="mt-6 flex justify-center">
             <button 
               onClick={handleNextPost}
-              className="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700"
+              className="px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors shadow-sm hover:shadow"
             >
               {currentPostIndex < posts.length - 1 ? t('nextPost') : t('finishGame')}
             </button>

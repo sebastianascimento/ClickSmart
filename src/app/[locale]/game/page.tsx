@@ -7,7 +7,6 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
-// Importar todos os componentes de jogo
 import DetectiveGame from '@/components/game/DetectiveGame';
 import FactCheckGame from '@/components/game/FactCheckGame';
 import ChatGame from '@/components/game/ChatGame';
@@ -21,7 +20,6 @@ import SecuritySimulator from '@/components/game/SecuritySimulator';
 import FakenewsCreator from '@/components/game/FakenewsCreator';
 import GameLayout from '@/components/game/GameLayout';
 
-// Tipos para os jogos
 interface Game {
   id: string;
   icon: string;
@@ -167,10 +165,16 @@ export default function GamePage() {
     setGameCompleted(true);
   };
   
-  // Função para reiniciar um jogo
-  const restartGame = () => {
+  // Função para resetar o estado do jogo
+  const resetGameState = () => {
     setGameCompleted(false);
-    router.push(pathname);
+    setGameScore(0);
+  };
+  
+  // Função para escolher outro jogo (com reset de estado)
+  const chooseAnotherGame = () => {
+    resetGameState();
+    router.push(`/${locale}/game`);
   };
   
   // Obter o componente do jogo atual com base no tipo de URL
@@ -180,8 +184,9 @@ export default function GamePage() {
     const game = games.find(g => g.id === gameTypeFromUrl);
     if (!game) return null;
     
+    // Crie uma nova instância do componente para cada renderização com uma key única
     const GameComponent = game.component;
-    return <GameComponent onComplete={handleGameComplete} />;
+    return <GameComponent key={gameTypeFromUrl} onComplete={handleGameComplete} />;
   };
   
   useEffect(() => {
@@ -189,6 +194,9 @@ export default function GamePage() {
     if (gameTypeFromUrl) {
       setSelectedGame(gameTypeFromUrl);
     }
+    
+    // Resetar o estado do jogo quando o tipo de jogo muda
+    resetGameState();
     
     // Simulate loading game resources
     const timer = setTimeout(() => {
@@ -211,6 +219,7 @@ export default function GamePage() {
         <Link 
           href={`/${locale}/game`}
           className="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg transition"
+          onClick={resetGameState}
         >
           {locale === 'pt' ? 'Voltar' : 'Back'}
         </Link>
@@ -224,19 +233,13 @@ export default function GamePage() {
           <p className="text-gray-700 mb-6">
             {gameT('finalScore')}: {gameScore}
           </p>
-          <div className="flex gap-4 justify-center">
+          <div className="flex justify-center">
             <button 
-              onClick={restartGame}
+              onClick={chooseAnotherGame}
               className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg transition"
             >
-              {gameT('playAgain')}
-            </button>
-            <Link 
-              href={`/${locale}/game`}
-              className="bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-3 rounded-lg transition"
-            >
               {gameT('chooseAnotherGame') || (locale === 'pt' ? 'Escolher outro jogo' : 'Choose another game')}
-            </Link>
+            </button>
           </div>
         </div>
       ) : (
@@ -273,7 +276,7 @@ export default function GamePage() {
               {/* Featured Game Section */}
               <div className="bg-white shadow-xl rounded-2xl overflow-hidden border border-green-100">
                 <div className="p-8">
-                  <h2 className="text-3xl font-bold text-green-700 mb-6">{t('game.gameCompleted')}</h2>
+                  <h2 className="text-3xl font-bold text-green-700 mb-6">{t('game.whatWouldYouDo')}</h2>
                   
                   <div className="grid md:grid-cols-2 gap-8">
                     <div>
@@ -305,7 +308,7 @@ export default function GamePage() {
                       >
                         <div>
                           <div className="text-6xl mb-4">🎮</div>
-                          <h3 className="text-2xl font-bold mb-2">{t('game.gameCompleted')}</h3>
+                          <h3 className="text-2xl font-bold mb-2">{t('game.whatWouldYouDo')}</h3>
                           <p>{t('game.whatWouldYouDo')}</p>
                           <p className="mt-4 text-sm opacity-90">
                             {selectedGame ? (
@@ -358,6 +361,7 @@ export default function GamePage() {
                             className="bg-white/80 backdrop-blur-sm hover:bg-white text-gray-800 px-4 py-2 rounded-lg shadow-sm hover:shadow transition self-start"
                             onClick={(e) => {
                               e.stopPropagation();
+                              resetGameState(); // Resetar estado antes de navegar
                               router.push(`/${locale}/game?type=${game.id}`);
                             }}
                           >
@@ -380,12 +384,12 @@ export default function GamePage() {
                 <h3 className="text-xl font-bold mb-4 text-green-700">{t('game.progress')}</h3>
                 
                 <div className="w-full bg-gray-200 rounded-full h-4 mb-6">
-                  <div className="bg-green-600 h-4 rounded-full" style={{ width: '30%' }}></div>
+                  <div className="bg-green-600 h-4 rounded-full" style={{ width: '0%' }}></div>
                 </div>
                 
                 <div className="flex justify-between items-center">
                   <div>
-                    <p className="text-gray-600">{t('game.score')}: <span className="font-bold">300</span></p>
+                    <p className="text-gray-600">{t('game.score')}: <span className="font-bold">0</span></p>
                   </div>
                   <Link 
                     href={`/${locale}`}
