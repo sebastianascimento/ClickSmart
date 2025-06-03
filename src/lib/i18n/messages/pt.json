@@ -88,6 +88,7 @@
     "progress": "Progresso",
     "gameCompleted": "Jogo Concluído!",
     "finalScore": "Sua pontuação final",
+    "chooseAnotherGame": "Escolher outro jogo",
     "playAgain": "Jogar Novamente",
     "gameTypes": {
       "choice": "Jogo de Escolhas",
@@ -110,6 +111,8 @@
     "score": "Pontuação",
     "challenge": "Desafio",
     "createPassword": "Crie sua palavra-passe",
+    "enterPassword": "Digite sua palavra-passe aqui...",
+    "passwordInputHelp": "Digite diretamente aqui ou use os botões abaixo para criar sua palavra-passe.",
     "passwordRules": "Requisitos da Palavra-Passe",
     "showTip": "Mostrar Dica",
     "submit": "Enviar Palavra-Passe",
@@ -243,6 +246,7 @@
     }
   },
   "fakenewsCreator": {
+    "loading": "Carregando...",
     "gameTitle": "Cria a Tua Notícia",
     "startGame": "Iniciar Jogo",
     "score": "Pontuação",
@@ -510,8 +514,8 @@
   },
   "factcheck": {
     "gameTitle": "Fake ou Facto",
-    "instructions": "Decida se a notícia é verdadeira ou falsa! Deslize para a direita para verdadeira, esquerda para falsa - ou use os botões abaixo.",
-    "swipeInstructions": "Deslize para a direita para notícias reais, para a esquerda para notícias falsas",
+    "instructions": "Decida se a notícia é verdadeira ou falsa! Use os botões abaixo.",
+    "swipeInstructions": "Use os botões abaixo",
     "fakeBtnText": "Fake",
     "realBtnText": "Real",
     "correctAnswer": "Correto!",
@@ -551,6 +555,7 @@
       }
     }
   },
+  
   "chat": {
     "gameTitle": "Escolhe a Resposta",
     "instructions": "Responda às mensagens de cyberbullying no chat. Suas escolhas fazem diferença!",
@@ -684,76 +689,75 @@
     "writeYourOwn": "Escrever sua própria mensagem",
     "orChooseOne": "Ou escolha uma das opções:",
     "submitMessage": "Enviar Mensagem",
+    "messagePlaceholder": "Escreva um comentário positivo aqui...",
+    "score": "Pontuação",
+    "tryAnother": "Tentar outro cenário",
+    "finishGame": "Finalizar jogo",
+    "postedTime": "2 horas atrás",
+    "continue": "Continuar",
+    "presetMessages": {
+      "positive1": "Adorei seu estilo único! É ótimo ver alguém com personalidade!",
+      "negative1": "Não sei se esse visual combina com você... talvez algo mais tradicional?",
+      "positive2": "Você está incrível! Continue sendo autêntico.",
+      "negative2": "Honestamente, eu não teria coragem de usar isso em público.",
+      "positive3": "Eu realmente admiro sua coragem de expressar seu próprio estilo.",
+      "negative3": "Essa moda é tão estranha, você deveria tentar algo mais normal.",
+      "positive4": "Seu visual é inspirador! Não ligue para comentários negativos.",
+      "negative4": "É uma escolha... interessante. Mas não é para todos, né?"
+    },
     "scenarios": {
       "fashion": {
         "title": "Estilo Único",
         "context": "Lucas postou uma foto com seu novo visual e está recebendo comentários negativos sobre sua roupa diferente.",
+        "victim": "Lucas",
+        "victimMessage": "Só queria mostrar meu novo estilo... 😔",
         "negativeComments": [
           "Que roupa ridícula! 😂",
           "Você realmente saiu de casa assim? 🤮",
           "Parece que você se vestiu no escuro hahaha"
-        ],
-        "victim": "Lucas",
-        "victimMessage": "Só queria mostrar meu novo estilo... 😔"
+        ]
       },
       "hobby": {
         "title": "Hobby Incomum",
         "context": "Ana compartilhou seu hobby de colecionar insetos e está sendo ridicularizada por isso.",
+        "victim": "Ana",
+        "victimMessage": "Amo estudar entomologia, mas talvez não devesse ter compartilhado...",
         "negativeComments": [
           "Isso é tão estranho! 🐛",
           "Quem gosta de insetos? Que nojo!",
           "Meu Deus que menina bizarra 🤣"
-        ],
-        "victim": "Ana",
-        "victimMessage": "Amo estudar entomologia, mas talvez não devesse ter compartilhado..."
+        ]
       },
       "grade": {
         "title": "Nota Baixa",
         "context": "Miguel está sendo zombado depois que sua nota baixa em matemática foi revelada por um colega.",
+        "victim": "Miguel",
+        "victimMessage": "Estudei muito, mas matemática é difícil para mim...",
         "negativeComments": [
           "Olha o gênio que tirou 3 em matemática! 🤓",
           "Como alguém consegue ir tão mal? 😆",
           "Acho que temos um futuro varredor de ruas aqui!"
-        ],
-        "victim": "Miguel",
-        "victimMessage": "Estudei muito, mas matemática é difícil para mim..."
+        ]
       }
-    },
-    "presetMessages": {
-      "fashion": [
-        "Adorei seu estilo único! É ótimo ver alguém com personalidade!",
-        "Você está incrível! Continue sendo autêntico.",
-        "Eu realmente admiro sua coragem de expressar seu próprio estilo.",
-        "Seu visual é inspirador! Não ligue para comentários negativos."
-      ],
-      "hobby": [
-        "Sua coleção de insetos é fascinante! Adoraria saber mais sobre isso.",
-        "Que hobby interessante! Deve exigir muita dedicação e conhecimento.",
-        "É muito legal ver alguém apaixonado pelo que faz. Continue assim!",
-        "Isso é super interessante! Você já pensou em seguir carreira em biologia?"
-      ],
-      "grade": [
-        "Todos temos dificuldades em algumas matérias. Se precisar de ajuda, podemos estudar juntos!",
-        "Tirar uma nota baixa não define quem você é. Você é muito mais que isso!",
-        "Matemática pode ser difícil. Na próxima você vai melhorar!",
-        "Isso acontece com todos nós. Não desista, você consegue melhorar!"
-      ]
     },
     "impact": {
       "title": "Impacto Positivo",
+      "titleNegative": "Impacto Negativo",
       "description": "Sua mensagem de apoio fez toda a diferença! Quando alguém está sendo alvo de comentários negativos, um único apoio pode mudar completamente o dia dessa pessoa.",
+      "descriptionNegative": "Seu comentário pode ter aumentado o ambiente negativo. Vamos tentar elevar as pessoas online, não rebaixá-las.",
       "victimResponse": "Muito obrigado(a) pela sua mensagem! Isso significou muito para mim. 😊",
+      "victimResponseNegative": "Ah... Eu pensei que alguém me entenderia. 😔",
       "stats": {
         "title": "Você sabia?",
         "fact1": "70% dos jovens que recebem mensagens de apoio relatam melhor bem-estar emocional",
         "fact2": "Uma única mensagem positiva pode anular o efeito de até cinco comentários negativos",
-        "fact3": "Pessoas que recebem apoio online têm 3x mais chance de ajudar outros no futuro"
+        "fact3": "Pessoas que recebem apoio online têm 3x mais chance de ajudar outros no futuro",
+        "negFact1": "Comentários negativos podem afetar a saúde mental de alguém por dias.",
+        "negFact2": "40% dos adolescentes relatam se sentir mal consigo mesmos devido a comentários online.",
+        "negFact3": "Feedback negativo pode desencorajar as pessoas de compartilharem seus interesses.",
+        "negFact4": "Até brincadeiras aparentemente inofensivas podem prejudicar a autoestima de alguém."
       }
     },
-    "continue": "Continuar",
-    "tryAnother": "Tentar outro cenário",
-    "finishGame": "Finalizar jogo",
-    "score": "Pontuação",
     "gameOver": {
       "title": "Jogo Completo!",
       "description": "Você aprendeu como suas palavras podem ter um impacto positivo na vida dos outros. Continue compartilhando positividade no mundo digital!",
@@ -973,6 +977,112 @@
         },
         "explanation": "Ofertas boas demais para serem verdadeiras, como prêmios extraordinários sem motivo aparente, são frequentemente sinais de sites fraudulentos ou tentativas de phishing. Sempre desconfie de ofertas que parecem boas demais para serem verdadeiras."
       }
+    }
+  },
+  "securitySimulator": {
+    "loading": "Iniciando simulação...",
+    "gameTitle": "Simulação de Segurança: E Se...",
+    "startGame": "Iniciar Simulação",
+    "score": "Pontuação",
+    "scenario": "Cenário",
+    "whatWouldYouDo": "O que você faria?",
+    "simulationSafe": "Veja o que acontece quando você faz uma escolha segura...",
+    "simulationDanger": "Veja o que acontece com esta escolha...",
+    "goodChoice": "Boa escolha de segurança!",
+    "riskyChoice": "Risco de segurança detectado!",
+    "consequence": "Consequência",
+    "securityLesson": "Lição de segurança",
+    "nextScenario": "Próximo cenário",
+    "finishGame": "Terminar simulação",
+    "cracked": "Senha quebrada",
+    "timeToBreak": "Tempo para quebrar",
+    "years": "anos",
+    "strong": "Senha forte",
+    "encrypted": "Conexão criptografada",
+    "intercepted": "Dados interceptados",
+    "secureConnection": "Wi-Fi doméstico seguro",
+    "waitedForSecureNetwork": "Você esperou para se conectar a uma rede segura",
+
+    "instructions": {
+      "title": "Como Jogar",
+      "point1": "Você será apresentado a diferentes cenários de cibersegurança onde deverá tomar decisões.",
+      "point2": "Cada escolha tem consequências que serão mostradas através de animações.",
+      "point3": "Você aprenderá o que acontece quando toma diferentes decisões de segurança.",
+      "remember": "Lembre-se: Na vida real, escolhas ruins de segurança podem levar a consequências reais para seus dados e privacidade!"
+    },
+
+    "scenarios": {
+      "phishing": {
+        "title": "Site Suspeito",
+        "description": "Você recebe um email que parece ser do seu banco, pedindo que você atualize as informações da sua conta. O link leva para um site que parece ser do seu banco, mas o URL é 'my-secure-bank.com' em vez do oficial 'mybank.com'.",
+        "choices": {
+          "fill": "Preencher seus dados conforme solicitado",
+          "check": "Verificar o URL e o certificado de segurança",
+          "close": "Fechar o site imediatamente"
+        },
+        "consequences": {
+          "fill": "Suas credenciais de login foram capturadas por cibercriminosos. Eles acessaram sua conta e transferiram dinheiro para a conta deles.",
+          "check": "Você percebeu que o URL não é oficial e o site não tem o ícone de cadeado seguro. Você evitou uma tentativa de phishing.",
+          "close": "Você evitou inserir qualquer dado no site suspeito. Isso o protegeu da tentativa de phishing."
+        },
+        "lessons": {
+          "fill": "Sempre verifique o URL dos sites onde você insere informações sensíveis. Procure por https:// e o ícone de cadeado, e verifique cuidadosamente o nome de domínio.",
+          "check": "Ótimo trabalho! Verificar o URL e o certificado de segurança é uma etapa crucial antes de inserir informações sensíveis online.",
+          "close": "Bom instinto! Quando em dúvida sobre a legitimidade de um site, é mais seguro fechá-lo e entrar em contato com a empresa diretamente pelos canais oficiais."
+        }
+      },
+      "password": {
+        "title": "Criando uma Palavra-passe",
+        "description": "Você está criando uma nova conta para um serviço importante e precisa definir uma palavra-passe. Que tipo de palavra-passe você escolheria?",
+        "choices": {
+          "simple": "Uma palavra-passe simples e fácil de lembrar como '123456' ou 'password'",
+          "strong": "Uma palavra-passe complexa com letras, números e símbolos como 'K7%j9@Lp2$xR'",
+          "reuse": "Reutilizar uma palavra-passe que você já usa para outras contas"
+        },
+        "consequences": {
+          "simple": "Sua palavra-passe simples foi descoberta em segundos por um programa automatizado. Sua conta foi comprometida.",
+          "strong": "Sua palavra-passe complexa levaria milhares de anos para ser quebrada com a tecnologia atual, mantendo sua conta segura.",
+          "reuse": "Uma de suas outras contas foi violada, e os hackers tentaram a mesma palavra-passe em vários serviços. Eles ganharam acesso a todas as contas com a mesma palavra-passe."
+        },
+        "lessons": {
+          "simple": "Palavras-passe simples são incrivelmente vulneráveis a ataques de força bruta. Mesmo adicionar alguns caracteres incomuns torna uma palavra-passe exponencialmente mais segura.",
+          "strong": "Palavras-passe fortes que misturam tipos de caracteres são muito mais seguras. Considere usar um gerenciador de palavras-passe para criar e armazenar palavras-passe complexas.",
+          "reuse": "Usar palavras-passe únicas para cada conta é essencial. Se um serviço for violado, suas outras contas permanecem protegidas."
+        }
+      },
+      "publicWifi": {
+        "title": "Wi-Fi Público",
+        "description": "Você está em uma cafetaria e precisa verificar o saldo da sua conta bancária. A cafetaria oferece Wi-Fi gratuito e aberto sem palavra-passe.",
+        "choices": {
+          "useVPN": "Conectar usando uma VPN antes de acessar sua conta bancária",
+          "login": "Conectar diretamente ao Wi-Fi e entrar no seu banco",
+          "wait": "Esperar até chegar em casa para usar sua rede segura"
+        },
+        "consequences": {
+          "useVPN": "Sua conexão foi criptografada através da VPN, protegendo seus dados de possíveis bisbilhoteiros na rede pública.",
+          "login": "Alguém na mesma rede estava usando software de captura de pacotes e capturou suas credenciais de login quando você as inseriu.",
+          "wait": "Você evitou conectar-se às suas contas sensíveis em uma rede insegura, protegendo seus dados."
+        },
+        "lessons": {
+          "useVPN": "Usar uma VPN cria um túnel criptografado para seus dados, tornando o Wi-Fi público muito mais seguro para transações sensíveis.",
+          "login": "Redes Wi-Fi públicas geralmente não são criptografadas, tornando possível que outras pessoas interceptem dados que você envia ou recebe.",
+          "wait": "Para ações altamente sensíveis como operações bancárias, usar uma rede confiável é sempre a opção mais segura."
+        }
+      }
+    },
+
+    "gameOver": {
+      "title": "Simulação Concluída!",
+      "message": "Você aprendeu sobre as consequências reais de diferentes escolhas de segurança. Continue aplicando estas lições online!",
+      "finalScore": "Pontuação final"
+    },
+
+    "securityTips": {
+      "title": "Dicas Essenciais de Segurança:",
+      "tip1": "Sempre verifique o URL antes de inserir informações sensíveis",
+      "tip2": "Use palavras-passe fortes e únicas para cada conta importante",
+      "tip3": "Tenha cuidado ao usar redes Wi-Fi públicas para atividades sensíveis",
+      "tip4": "Mantenha seu software e dispositivos atualizados com patches de segurança"
     }
   },
   "footer": {

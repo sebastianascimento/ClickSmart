@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
-// REMOVIDO: import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { usePathname, useRouter } from "next/navigation";
@@ -17,6 +16,11 @@ export default function GameLayout({ children }: GameLayoutProps) {
   const pathname = usePathname();
   const router = useRouter();
   const [scrolled, setScrolled] = useState(false);
+  
+  // Verificar qual página está ativa com base no pathname
+  const isHomePage = pathname === `/${locale}` || pathname === '/';
+  const isAboutPage = pathname.includes('/about');
+  const isGamePage = pathname.includes('/game');
   
   useEffect(() => {
     const handleScroll = () => {
@@ -34,6 +38,10 @@ export default function GameLayout({ children }: GameLayoutProps) {
     // Redireciona para o mesmo caminho com o novo locale
     router.push(`/${newLocale}${pathWithoutLocale}`);
   };
+
+  // Estilos para os links do menu
+  const defaultLinkStyle = "text-gray-700 hover:text-green-600 transition px-3 py-2 rounded-lg hover:bg-green-50";
+  const activeLinkStyle = "bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition shadow-sm";
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
@@ -55,7 +63,7 @@ export default function GameLayout({ children }: GameLayoutProps) {
                 <li>
                   <Link
                     href={`/${locale}`}
-                    className="text-gray-700 hover:text-green-600 transition px-3 py-2 rounded-lg hover:bg-green-50"
+                    className={isHomePage ? activeLinkStyle : defaultLinkStyle}
                   >
                     {t("navigation.home")}
                   </Link>
@@ -63,7 +71,7 @@ export default function GameLayout({ children }: GameLayoutProps) {
                 <li>
                   <Link
                     href={`/${locale}/about`}
-                    className="text-gray-700 hover:text-green-600 transition px-3 py-2 rounded-lg hover:bg-green-50"
+                    className={isAboutPage ? activeLinkStyle : defaultLinkStyle}
                   >
                     {locale === "pt" ? "Sobre" : "About"}
                   </Link>
@@ -71,7 +79,7 @@ export default function GameLayout({ children }: GameLayoutProps) {
                 <li>
                   <Link
                     href={`/${locale}/game`}
-                    className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition shadow-sm"
+                    className={isGamePage ? activeLinkStyle : defaultLinkStyle}
                   >
                     {locale === "pt" ? "Jogos" : "Games"}
                   </Link>
@@ -79,7 +87,6 @@ export default function GameLayout({ children }: GameLayoutProps) {
               </ul>
             </nav>
             
-            {/* APENAS ESTE SELETOR DE IDIOMA - O COMPONENTE LANGUAGE SWITCHER FOI REMOVIDO */}
             <div className="bg-white shadow-sm rounded-lg flex overflow-hidden border border-gray-200">
               <button
                 onClick={() => switchLanguage('pt')}
@@ -102,8 +109,6 @@ export default function GameLayout({ children }: GameLayoutProps) {
                 EN
               </button>
             </div>
-            
-            {/* REMOVIDO: <LanguageSwitcher /> */}
           </div>
         </div>
       </header>

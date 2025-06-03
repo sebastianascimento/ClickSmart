@@ -89,6 +89,7 @@
     "checkAnswer": "Check Answer",
     "progress": "Progress",
     "gameCompleted": "Game Completed!",
+    "chooseAnotherGame": "Choose another game",
     "finalScore": "Your final score",
     "playAgain": "Play Again",
     "gameTypes": {
@@ -112,6 +113,7 @@
     "score": "Score",
     "challenge": "Challenge",
     "createPassword": "Create your password",
+    "enterPassword": "Type your password here...",
     "passwordRules": "Password Requirements",
     "showTip": "Show Tip",
     "submit": "Submit Password",
@@ -172,7 +174,8 @@
       "tip2": "Consider using a password manager to keep track of your passwords",
       "tip3": "Change your passwords regularly, especially for sensitive accounts",
       "tip4": "Never share your passwords with others or store them in plaintext"
-    }
+    },
+    "passwordInputHelp": "Type directly here or use the buttons below to create your password."
   },
   "linkHunter": {
     "gameTitle": "Secure Link Hunter",
@@ -242,206 +245,6 @@
       "tip2": "Look for HTTPS and a lock icon in your browser's address bar",
       "tip3": "Be wary of URLs with unusual subdomains or domain extensions",
       "tip4": "When in doubt, type the website address directly in your browser instead of clicking links"
-    }
-  },
-  "securitySimulator": {
-    "gameTitle": "Security Simulation: What If...",
-    "startGame": "Start Simulation",
-    "score": "Score",
-    "scenario": "Scenario",
-    "whatWouldYouDo": "What would you do?",
-    "simulationSafe": "See what happens when you make a safe choice...",
-    "simulationDanger": "See what happens with this choice...",
-    "goodChoice": "Good security choice!",
-    "riskyChoice": "Security risk detected!",
-    "consequence": "Consequence",
-    "securityLesson": "Security lesson",
-    "nextScenario": "Next scenario",
-    "finishGame": "Finish simulation",
-    "cracked": "Password cracked",
-    "timeToBreak": "Time to break",
-    "years": "years",
-    "strong": "Strong password",
-    "encrypted": "Encrypted connection",
-    "intercepted": "Data intercepted",
-    "secureConnection": "Secure home Wi-Fi",
-    "waitedForSecureNetwork": "You waited to connect to a secure network",
-
-    "instructions": {
-      "title": "How to Play",
-      "point1": "You'll be presented with different cybersecurity scenarios where you have to make choices.",
-      "point2": "Each choice has consequences that will be shown through animations.",
-      "point3": "You'll learn what happens when you make different security decisions.",
-      "remember": "Remember: In real life, poor security choices can lead to real consequences for your data and privacy!"
-    },
-
-    "scenarios": {
-      "phishing": {
-        "title": "Suspicious Website",
-        "description": "You receive an email that appears to be from your bank, asking you to update your account information. The link leads to a website that looks like your bank's site but the URL is 'my-secure-bank.com' instead of the official 'mybank.com'.",
-        "choices": {
-          "fill": "Fill in your data as requested",
-          "check": "Check the URL and security certificate",
-          "close": "Close the site immediately"
-        },
-        "consequences": {
-          "fill": "Your login credentials were captured by cybercriminals. They accessed your account and transferred money to their account.",
-          "check": "You noticed that the URL isn't official and the site doesn't have the secure padlock icon. You avoided a phishing attempt.",
-          "close": "You avoided entering any data on the suspicious site. This protected you from the phishing attempt."
-        },
-        "lessons": {
-          "fill": "Always verify the URL of websites where you enter sensitive information. Look for https:// and the padlock icon, and check the domain name carefully.",
-          "check": "Great job! Checking the URL and security certificate is a crucial step before entering sensitive information online.",
-          "close": "Good instinct! When in doubt about a website's legitimacy, it's safer to close it and contact the company directly through official channels."
-        }
-      },
-      "password": {
-        "title": "Creating a Password",
-        "description": "You're creating a new account for an important service and need to set a password. What type of password would you choose?",
-        "choices": {
-          "simple": "A simple, easy-to-remember password like '123456' or 'password'",
-          "strong": "A complex password with letters, numbers and symbols like 'K7%j9@Lp2$xR'",
-          "reuse": "Reuse a password you already use for other accounts"
-        },
-        "consequences": {
-          "simple": "Your simple password was cracked in seconds by an automated program. Your account was compromised.",
-          "strong": "Your complex password would take thousands of years to crack with current technology, keeping your account secure.",
-          "reuse": "One of your other accounts was breached, and hackers tried the same password on multiple services. They gained access to all accounts with the same password."
-        },
-        "lessons": {
-          "simple": "Simple passwords are incredibly vulnerable to brute force attacks. Even adding a few unusual characters makes a password exponentially more secure.",
-          "strong": "Strong passwords that mix character types are much more secure. Consider using a password manager to create and store complex passwords.",
-          "reuse": "Using unique passwords for each account is essential. If one service is breached, your other accounts remain protected."
-        }
-      },
-      "publicWifi": {
-        "title": "Public Wi-Fi",
-        "description": "You're at a coffee shop and need to check your bank account balance. The coffee shop offers free, open Wi-Fi with no password required.",
-        "choices": {
-          "useVPN": "Connect using a VPN before accessing your bank account",
-          "login": "Connect directly to the Wi-Fi and login to your bank",
-          "wait": "Wait until you get home to use your secure network"
-        },
-        "consequences": {
-          "useVPN": "Your connection was encrypted through the VPN, protecting your data from potential eavesdroppers on the public network.",
-          "login": "Someone on the same network was using packet sniffing software and captured your login credentials when you entered them.",
-          "wait": "You avoided connecting to your sensitive accounts on an insecure network, protecting your data."
-        },
-        "lessons": {
-          "useVPN": "Using a VPN creates an encrypted tunnel for your data, making public Wi-Fi much safer for sensitive transactions.",
-          "login": "Public Wi-Fi networks are often unencrypted, making it possible for others to intercept data you send or receive.",
-          "wait": "For highly sensitive actions like banking, using a trusted network is always the safest option."
-        }
-      },
-      "fakenewsCreator": {
-        "gameTitle": "Create Your News",
-        "startGame": "Start Game",
-        "score": "Score",
-        "instructions": {
-          "title": "How to Play",
-          "point1": "Create a fake news story by choosing headline, image, date, and content.",
-          "point2": "After creating your news, see how people might react to it.",
-          "point3": "Learn about the risks of creating and sharing fake news.",
-          "remember": "Remember: In real life, creating fake news can harm many people!"
-        },
-        "createSection": {
-          "title": "Create Your News",
-          "headlineLabel": "Choose a Headline",
-          "headlineOptions": {
-            "option1": "URGENT! Mysterious Creature Discovered in City Park!",
-            "option2": "AMAZING! 10-Year-Old Invents Robot That Does Homework!",
-            "option3": "ALERT! Schools Planning to End Summer Vacation!",
-            "option4": "BREAKING NEWS! Famous Soccer Player to Coach Local Team!"
-          },
-          "imageLabel": "Choose an Image",
-          "dateLabel": "Choose a Date",
-          "datePlaceholder": "Today",
-          "dateOptions": {
-            "today": "Today",
-            "yesterday": "Yesterday",
-            "lastWeek": "Last week",
-            "madeUp": "Made-up date"
-          },
-          "contentLabel": "Choose the Content",
-          "contentOptions": {
-            "option1": "Multiple witnesses claim to have seen a strange creature in the city park last night. Some say it looked like an alien, others think it was an unknown animal. Authorities have not confirmed the information.",
-            "option2": "A young student has created a robot that does all homework by itself! Teachers are concerned and say they'll ban the invention in schools. Parents are divided about the issue.",
-            "option3": "Anonymous sources indicate that schools are planning to end summer vacation to improve students' grades. The measure would be implemented starting next school year!",
-            "option4": "According to exclusive information, a world football star is in secret negotiations to coach the local team. The official announcement should happen in the next few days!"
-          },
-          "preview": "Preview",
-          "publish": "Publish News"
-        },
-        "previewSection": {
-          "title": "Your News",
-          "source": "Source: MadeUpNews.com",
-          "shares": "Shares:",
-          "comments": "Comments:",
-          "edit": "Edit",
-          "publish": "Publish"
-        },
-        "reactionSection": {
-          "title": "Reactions to Your News",
-          "shareCount": "people shared",
-          "reactionTypes": {
-            "fear": "Fear",
-            "confusion": "Confusion",
-            "anger": "Anger",
-            "excitement": "Excitement"
-          },
-          "exampleComments": {
-            "comment1": "This can't be true! I'm sharing it with everyone!",
-            "comment2": "My cousin said they saw it too! It's true!",
-            "comment3": "Don't believe everything you read on the internet...",
-            "comment4": "Has anyone verified this information?",
-            "comment5": "I KNEW THIS WOULD HAPPEN!!!"
-          },
-          "impact": {
-            "title": "Impact of Your News",
-            "description": "See how your fake news could spread quickly and cause strong reactions in people. In real life, fake news can:",
-            "effect1": "Cause unnecessary fear or panic",
-            "effect2": "Damage the reputation of innocent people",
-            "effect3": "Lead to wrong decisions based on false information",
-            "effect4": "Decrease trust in sources of true information",
-            "message": "See how dangerous it can be?"
-          }
-        },
-        "lessonSection": {
-          "title": "Lesson Learned",
-          "message": "Creating fake news might seem fun, but in real life it can have serious consequences.",
-          "factTitle": "Important facts:",
-          "fact1": "More than 50% of people don't check if news is true before sharing",
-          "fact2": "Fake news spreads 6 times faster than real news on social media",
-          "fact3": "Fake news has caused real panic, violence, and even influenced elections",
-          "whatToDo": "What to do before sharing news:",
-          "tip1": "Check the source of the news",
-          "tip2": "Look for the same information on reliable sites",
-          "tip3": "Check the publication date",
-          "tip4": "Question if the content seems too incredible to be true"
-        },
-        "continue": "Continue",
-        "createNew": "Create New Story",
-        "finishGame": "Finish Game",
-        "gameOver": {
-          "title": "Game Complete!",
-          "description": "Now you know how fake news is created and the impact it can have! Always remember to verify information before believing or sharing it.",
-          "finalScore": "Final score"
-        }
-      }
-    },
-
-    "gameOver": {
-      "title": "Simulation Complete!",
-      "message": "You've learned about the real consequences of different security choices. Keep applying these lessons online!",
-      "finalScore": "Final score"
-    },
-
-    "securityTips": {
-      "title": "Key Security Tips:",
-      "tip1": "Always verify the URL before entering sensitive information",
-      "tip2": "Use strong, unique passwords for each important account",
-      "tip3": "Be cautious when using public Wi-Fi for sensitive activities",
-      "tip4": "Keep your software and devices updated with security patches"
     }
   },
   "phishingSimulator": {
@@ -617,8 +420,8 @@
   },
   "factcheck": {
     "gameTitle": "Fake or Fact",
-    "instructions": "Decide if the news is real or fake! Swipe right for real, left for fake - or use the buttons below.",
-    "swipeInstructions": "Swipe right for real news, left for fake news",
+    "instructions": "Decide if the news is real or fake! Use the buttons below.",
+    "swipeInstructions": "Use the buttons below.",
     "fakeBtnText": "Fake",
     "realBtnText": "Real",
     "correctAnswer": "Correct!",
@@ -656,6 +459,102 @@
         "content": "Anonymous sources have revealed that the government has been using secret satellites to control weather patterns and cause natural disasters in enemy countries.",
         "explanation": "This has hallmarks of conspiracy theories - anonymous sources, extraordinary claims about government capabilities, and lack of scientific consensus or evidence."
       }
+    }
+  },
+  "fakenewsCreator": {
+    "gameTitle": "Create Your News",
+    "startGame": "Start Game",
+    "score": "Score",
+    "loading": "Loading...",
+    "instructions": {
+      "title": "How to Play",
+      "point1": "Create a fake news story by choosing headline, image, date, and content.",
+      "point2": "After creating your news, see how people might react to it.",
+      "point3": "Learn about the risks of creating and sharing fake news.",
+      "remember": "Remember: In real life, creating fake news can harm many people!"
+    },
+    "createSection": {
+      "title": "Create Your News",
+      "headlineLabel": "Choose a Headline",
+      "headlineOptions": {
+        "option1": "URGENT! Mysterious Creature Discovered in City Park!",
+        "option2": "AMAZING! 10-Year-Old Invents Robot That Does Homework!",
+        "option3": "ALERT! Schools Planning to End Summer Vacation!",
+        "option4": "BREAKING NEWS! Famous Soccer Player to Coach Local Team!"
+      },
+      "imageLabel": "Choose an Image",
+      "dateLabel": "Choose a Date",
+      "datePlaceholder": "Today",
+      "dateOptions": {
+        "today": "Today",
+        "yesterday": "Yesterday",
+        "lastWeek": "Last week",
+        "madeUp": "Made-up date"
+      },
+      "contentLabel": "Choose the Content",
+      "contentOptions": {
+        "option1": "Multiple witnesses claim to have seen a strange creature in the city park last night. Some say it looked like an alien, others think it was an unknown animal. Authorities have not confirmed the information.",
+        "option2": "A young student has created a robot that does all homework by itself! Teachers are concerned and say they'll ban the invention in schools. Parents are divided about the issue.",
+        "option3": "Anonymous sources indicate that schools are planning to end summer vacation to improve students' grades. The measure would be implemented starting next school year!",
+        "option4": "According to exclusive information, a world football star is in secret negotiations to coach the local team. The official announcement should happen in the next few days!"
+      },
+      "preview": "Preview",
+      "publish": "Publish News"
+    },
+    "previewSection": {
+      "title": "Your News",
+      "source": "Source: MadeUpNews.com",
+      "shares": "Shares:",
+      "comments": "Comments:",
+      "edit": "Edit",
+      "publish": "Publish"
+    },
+    "reactionSection": {
+      "title": "Reactions to Your News",
+      "shareCount": "people shared",
+      "reactionTypes": {
+        "fear": "Fear",
+        "confusion": "Confusion",
+        "anger": "Anger",
+        "excitement": "Excitement"
+      },
+      "exampleComments": {
+        "comment1": "This can't be true! I'm sharing it with everyone!",
+        "comment2": "My cousin said they saw it too! It's true!",
+        "comment3": "Don't believe everything you read on the internet...",
+        "comment4": "Has anyone verified this information?",
+        "comment5": "I KNEW THIS WOULD HAPPEN!!!"
+      },
+      "impact": {
+        "title": "Impact of Your News",
+        "description": "See how your fake news could spread quickly and cause strong reactions in people. In real life, fake news can:",
+        "effect1": "Cause unnecessary fear or panic",
+        "effect2": "Damage the reputation of innocent people",
+        "effect3": "Lead to wrong decisions based on false information",
+        "effect4": "Decrease trust in sources of true information",
+        "message": "See how dangerous it can be?"
+      }
+    },
+    "lessonSection": {
+      "title": "Lesson Learned",
+      "message": "Creating fake news might seem fun, but in real life it can have serious consequences.",
+      "factTitle": "Important facts:",
+      "fact1": "More than 50% of people don't check if news is true before sharing",
+      "fact2": "Fake news spreads 6 times faster than real news on social media",
+      "fact3": "Fake news has caused real panic, violence, and even influenced elections",
+      "whatToDo": "What to do before sharing news:",
+      "tip1": "Check the source of the news",
+      "tip2": "Look for the same information on reliable sites",
+      "tip3": "Check the publication date",
+      "tip4": "Question if the content seems too incredible to be true"
+    },
+    "continue": "Continue",
+    "createNew": "Create New Story",
+    "finishGame": "Finish Game",
+    "gameOver": {
+      "title": "Game Complete!",
+      "description": "Now you know how fake news is created and the impact it can have! Always remember to verify information before believing or sharing.",
+      "finalScore": "Final score"
     }
   },
   "chat": {
@@ -791,84 +690,78 @@
     "writeYourOwn": "Write your own message",
     "orChooseOne": "Or choose one of these options:",
     "submitMessage": "Submit Message",
+    "messagePlaceholder": "Write a positive comment here...",
+    "score": "Score",
+    "tryAnother": "Try Another Scenario",
+    "finishGame": "Finish Game",
+    "postedTime": "2 hours ago",
+    "presetMessages": {
+      "positive1": "I love your unique style! It's great to see someone with personality!",
+      "negative1": "I'm not sure if this look suits you... maybe something more traditional?",
+      "positive2": "You look amazing! Keep being authentic.",
+      "negative2": "Honestly, I wouldn't have the courage to wear that in public.",
+      "positive3": "I really admire your courage to express your own style.",
+      "negative3": "This fashion is so strange, you should try something more normal.",
+      "positive4": "Your look is inspiring! Don't mind the negative comments.",
+      "negative4": "It's an... interesting choice. But it's not for everyone, right?"
+    },
     "scenarios": {
       "fashion": {
         "title": "Unique Style",
         "context": "Lucas posted a photo with his new look and is receiving negative comments about his different clothing style.",
+        "victim": "Lucas",
+        "victimMessage": "Trying a new style today! What do you think? #BeingMyself #NewLook",
         "negativeComments": [
           "What a ridiculous outfit! 😂",
           "You really left home looking like that? 🤮",
           "Looks like you got dressed in the dark hahaha"
-        ],
-        "victim": "Lucas",
-        "victimMessage": "I just wanted to show my new style... 😔"
+        ]
       },
       "hobby": {
         "title": "Unusual Hobby",
-        "context": "Ana shared her hobby of collecting insects and is being ridiculed for it.",
+        "context": "Emma shared a video of her unusual hobby (collecting vintage action figures) and some people are making fun of her.",
+        "victim": "Emma",
+        "victimMessage": "Just added this rare figure to my collection! Been searching for it for months! #VintageCollector #Hobby",
         "negativeComments": [
-          "That's so weird! 🐛",
-          "Who likes insects? Gross!",
-          "OMG what a bizarre girl 🤣"
-        ],
-        "victim": "Ana",
-        "victimMessage": "I love studying entomology, but maybe I shouldn't have shared..."
+          "Aren't you too old for toys? Grow up! 🙄",
+          "What a waste of money and time...",
+          "This is so weird! No wonder you're single!"
+        ]
       },
       "grade": {
-        "title": "Low Grade",
-        "context": "Miguel is being mocked after his low math grade was revealed by a classmate.",
+        "title": "Academic Struggles",
+        "context": "Michael posted about failing a test and is receiving harsh comments from classmates.",
+        "victim": "Michael",
+        "victimMessage": "Failed my math test today... feeling really down. Need to study harder next time. 📚😔",
         "negativeComments": [
-          "Look at the genius who got a D in math! 🤓",
-          "How can someone do so badly? 😆",
-          "I think we have a future street sweeper here!"
-        ],
-        "victim": "Miguel",
-        "victimMessage": "I studied hard, but math is difficult for me..."
-      },
-      "fakenews": {
-        "title": "Create Your News",
-        "description": "Learn how fake news is created and the impact it can have by safely creating a fake news story in an educational setting."
+          "Maybe you're just not smart enough for this class",
+          "My little brother could pass that test! 🤣",
+          "Some people just aren't meant for academics..."
+        ]
       }
-    },
-    "presetMessages": {
-      "fashion": [
-        "I love your unique style! It's great to see someone with personality!",
-        "You look amazing! Keep being authentic.",
-        "I really admire your courage to express your own style.",
-        "Your look is inspiring! Don't mind the negative comments."
-      ],
-      "hobby": [
-        "Your insect collection is fascinating! I'd love to learn more about it.",
-        "What an interesting hobby! It must require a lot of dedication and knowledge.",
-        "It's really cool to see someone passionate about what they do. Keep it up!",
-        "That's super interesting! Have you thought about pursuing a career in biology?"
-      ],
-      "grade": [
-        "We all struggle with certain subjects. If you need help, we could study together!",
-        "Getting a low grade doesn't define who you are. You're much more than that!",
-        "Math can be tough. You'll do better next time!",
-        "This happens to all of us. Don't give up, you can improve!"
-      ]
     },
     "impact": {
       "title": "Positive Impact",
-      "description": "Your supportive message made all the difference! When someone is being targeted by negative comments, a single supportive voice can completely change their day.",
-      "victimResponse": "Thank you so much for your message! It meant a lot to me. 😊",
+      "titleNegative": "Negative Impact",
+      "description": "Great job! Your supportive comment can make a real difference to someone experiencing online negativity.",
+      "descriptionNegative": "Your comment may have unintentionally added to the negative environment. Let's try to lift others up online.",
+      "victimResponse": "Thank you so much for your kind words! It really means a lot to me. ❤️",
+      "victimResponseNegative": "Oh... I thought someone would understand me. 😔",
       "stats": {
         "title": "Did you know?",
-        "fact1": "70% of young people who receive supportive messages report better emotional well-being",
-        "fact2": "A single positive message can neutralize the effect of up to five negative comments",
-        "fact3": "People who receive online support are 3x more likely to help others in the future"
+        "fact1": "Positive comments can improve someone's mood for an entire day.",
+        "fact2": "Online support can reduce feelings of isolation by up to 80%.",
+        "fact3": "A single kind comment can inspire someone to be kind to others.",
+        "negFact1": "Negative comments can affect someone's mental health for days.",
+        "negFact2": "40% of teens report feeling bad about themselves due to online comments.",
+        "negFact3": "Negative feedback can discourage people from sharing their interests.",
+        "negFact4": "Even seemingly harmless jokes can hurt someone's self-esteem."
       }
     },
-    "continue": "Continue",
-    "tryAnother": "Try another scenario",
-    "finishGame": "Finish game",
-    "score": "Score",
     "gameOver": {
       "title": "Game Complete!",
-      "description": "You've learned how your words can have a positive impact on others' lives. Keep spreading positivity in the digital world!",
-      "finalScore": "Your final score"
+      "description": "You've learned how positive comments can impact people online. Remember this when interacting on social media!",
+      "finalScore": "Your Final Score"
     }
   },
   "feedback": {
@@ -905,10 +798,10 @@
     "playAgain": "Play Again"
   },
   "about": {
-    "title": "About Digital Citizen",
+    "title": "About ClickSmart",
     "project": {
       "title": "The Project",
-      "description1": "\"Digital Citizen\" is an educational game developed to help young people navigate safely and responsibly in the digital world. Through interactive scenarios and meaningful choices, players learn about misinformation, cyberbullying, and data security in an engaging and practical way.",
+      "description1": "\"ClickSmart\" is an educational game developed to help young people navigate safely and responsibly in the digital world. Through interactive scenarios and meaningful choices, players learn about misinformation, cyberbullying, and data security in an engaging and practical way.",
       "description2": "The project was created with the mission of promoting digital literacy and forming conscious digital citizens, capable of making ethical and safe choices online."
     },
     "digitalCitizenship": {
@@ -924,7 +817,7 @@
     },
     "howItWorks": {
       "title": "How the Game Works",
-      "description": "When playing \"Digital Citizen\", you face three thematic levels:",
+      "description": "When playing \"ClickSmarts\", you face three thematic levels:",
       "levels": {
         "misinformation": {
           "title": "Misinformation",
@@ -1085,7 +978,113 @@
       }
     }
   },
+  "securitySimulator": {
+    "loading": "Starting Simulation...",
+    "gameTitle": "Security Simulation: What If...",
+    "startGame": "Start Simulation",
+    "score": "Score",
+    "scenario": "Scenario",
+    "whatWouldYouDo": "What would you do?",
+    "simulationSafe": "See what happens when you make a safe choice...",
+    "simulationDanger": "See what happens with this choice...",
+    "goodChoice": "Good security choice!",
+    "riskyChoice": "Security risk detected!",
+    "consequence": "Consequence",
+    "securityLesson": "Security lesson",
+    "nextScenario": "Next scenario",
+    "finishGame": "Finish simulation",
+    "cracked": "Password cracked",
+    "timeToBreak": "Time to break",
+    "years": "years",
+    "strong": "Strong password",
+    "encrypted": "Encrypted connection",
+    "intercepted": "Data intercepted",
+    "secureConnection": "Secure home Wi-Fi",
+    "waitedForSecureNetwork": "You waited to connect to a secure network",
+
+    "instructions": {
+      "title": "How to Play",
+      "point1": "You'll be presented with different cybersecurity scenarios where you need to make decisions.",
+      "point2": "Each choice has consequences that will be shown through animations.",
+      "point3": "You'll learn what happens when you make different security decisions.",
+      "remember": "Remember: In real life, poor security choices can lead to real consequences for your data and privacy!"
+    },
+
+    "scenarios": {
+      "phishing": {
+        "title": "Suspicious Website",
+        "description": "You receive an email that appears to be from your bank, asking you to update your account information. The link leads to a website that looks like your bank's site but the URL is 'my-secure-bank.com' instead of the official 'mybank.com'.",
+        "choices": {
+          "fill": "Fill in your data as requested",
+          "check": "Check the URL and security certificate",
+          "close": "Close the site immediately"
+        },
+        "consequences": {
+          "fill": "Your login credentials were captured by cybercriminals. They accessed your account and transferred money to their account.",
+          "check": "You noticed that the URL isn't official and the site doesn't have the secure padlock icon. You avoided a phishing attempt.",
+          "close": "You avoided entering any data on the suspicious site. This protected you from the phishing attempt."
+        },
+        "lessons": {
+          "fill": "Always verify the URL of websites where you enter sensitive information. Look for https:// and the padlock icon, and check the domain name carefully.",
+          "check": "Great job! Checking the URL and security certificate is a crucial step before entering sensitive information online.",
+          "close": "Good instinct! When in doubt about a website's legitimacy, it's safer to close it and contact the company directly through official channels."
+        }
+      },
+      "password": {
+        "title": "Creating a Password",
+        "description": "You're creating a new account for an important service and need to set a password. What type of password would you choose?",
+        "choices": {
+          "simple": "A simple, easy-to-remember password like '123456' or 'password'",
+          "strong": "A complex password with letters, numbers and symbols like 'K7%j9@Lp2$xR'",
+          "reuse": "Reuse a password you already use for other accounts"
+        },
+        "consequences": {
+          "simple": "Your simple password was cracked in seconds by an automated program. Your account was compromised.",
+          "strong": "Your complex password would take thousands of years to crack with current technology, keeping your account secure.",
+          "reuse": "One of your other accounts was breached, and hackers tried the same password on multiple services. They gained access to all accounts with the same password."
+        },
+        "lessons": {
+          "simple": "Simple passwords are incredibly vulnerable to brute force attacks. Even adding a few unusual characters makes a password exponentially more secure.",
+          "strong": "Strong passwords that mix character types are much more secure. Consider using a password manager to create and store complex passwords.",
+          "reuse": "Using unique passwords for each account is essential. If one service is breached, your other accounts remain protected."
+        }
+      },
+      "publicWifi": {
+        "title": "Public Wi-Fi",
+        "description": "You're at a coffee shop and need to check your bank account balance. The coffee shop offers free, open Wi-Fi with no password required.",
+        "choices": {
+          "useVPN": "Connect using a VPN before accessing your bank account",
+          "login": "Connect directly to the Wi-Fi and login to your bank",
+          "wait": "Wait until you get home to use your secure network"
+        },
+        "consequences": {
+          "useVPN": "Your connection was encrypted through the VPN, protecting your data from potential eavesdroppers on the public network.",
+          "login": "Someone on the same network was using packet sniffing software and captured your login credentials when you entered them.",
+          "wait": "You avoided connecting to your sensitive accounts on an insecure network, protecting your data."
+        },
+        "lessons": {
+          "useVPN": "Using a VPN creates an encrypted tunnel for your data, making public Wi-Fi much safer for sensitive transactions.",
+          "login": "Public Wi-Fi networks are often unencrypted, making it possible for others to intercept data you send or receive.",
+          "wait": "For highly sensitive actions like banking, using a trusted network is always the safest option."
+        }
+      }
+    },
+
+    "gameOver": {
+      "title": "Simulation Complete!",
+      "message": "You've learned about the real consequences of different security choices. Keep applying these lessons online!",
+      "finalScore": "Final score"
+    },
+
+    "securityTips": {
+      "title": "Key Security Tips:",
+      "tip1": "Always verify the URL before entering sensitive information",
+      "tip2": "Use strong, unique passwords for each important account",
+      "tip3": "Be cautious when using public Wi-Fi for sensitive activities",
+      "tip4": "Keep your software and devices updated with security patches"
+    }
+  },
   "footer": {
-    "copyright": "© {year} Digital Citizen - Educational Project"
+    "copyright": "© {year} ClickSmart - Educational Project"
   }
 }

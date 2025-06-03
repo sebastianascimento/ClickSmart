@@ -108,15 +108,13 @@ export default function BullyingDetector({ onComplete }: { onComplete: (score: n
 
   // Handle clicking on a post
   const handlePostClick = (id: string) => {
-    console.log('Post clicked:', id); // Debug log
-    
     if (gameOver) return;
 
     // Find the post
     const clickedPost = posts.find(post => post.id === id);
     if (!clickedPost) return;
     
-    // Se já está selecionado, desmarque
+    // Toggle selection
     if (clickedPost.checked) {
       setSelectedPosts(prev => prev.filter(postId => postId !== id));
       
@@ -134,7 +132,6 @@ export default function BullyingDetector({ onComplete }: { onComplete: (score: n
       
       setPostsChecked(prev => prev - 1);
     } else {
-      // Se não está selecionado, marque
       setSelectedPosts(prev => [...prev, id]);
       
       setPosts(prevPosts => 
@@ -152,7 +149,7 @@ export default function BullyingDetector({ onComplete }: { onComplete: (score: n
       setPostsChecked(prev => prev + 1);
     }
     
-    // Mostrar botão de finalizar assim que houver pelo menos uma seleção
+    // Toggle results button visibility
     if (postsChecked > 0 || !clickedPost.checked) {
       setShowResults(true);
     } else if (postsChecked === 1 && clickedPost.checked) {
@@ -164,60 +161,65 @@ export default function BullyingDetector({ onComplete }: { onComplete: (score: n
   const finishGame = () => {
     setGameOver(true);
     
-    // Calculate score based on correct identifications
+    // Calculate score
     let newScore = 0;
     let correctlyIdentified = 0;
     const totalBullyingPosts = posts.filter(post => post.isBullying).length;
     
-    // Calculate which selected posts were actually bullying (correct identifications)
     posts.forEach(post => {
       if (selectedPosts.includes(post.id)) {
         if (post.isBullying) {
-          // Correctly identified bullying post
           newScore += 10;
           correctlyIdentified++;
         } else {
-          // Incorrectly identified non-bullying post
           newScore = Math.max(0, newScore - 5);
         }
       }
     });
     
-    // Bonus for accuracy
     const accuracyScore = totalBullyingPosts > 0 ? Math.round((correctlyIdentified / totalBullyingPosts) * 20) : 0;
     const finalScore = newScore + accuracyScore;
     
     setScore(finalScore);
     
-    // Wait a bit to show results before completing
     setTimeout(() => {
       onComplete(finalScore);
-    }, 5000); // Longer time to allow reading the results
+    }, 5000);
   };
 
   if (showInstructions) {
     return (
-      <div className="bg-white shadow-md rounded-lg p-6">
-        <h2 className="text-2xl font-semibold mb-4 text-gray-900">
+      <div className="bg-white rounded-lg shadow-md p-8 animate-fadeIn">
+        <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-3 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-[3px] after:bg-green-600 after:rounded-md">
           {bullyingT('gameTitle')}
         </h2>
         
-        <div className="bg-blue-50 p-6 rounded-lg mb-6">
-          <h3 className="font-semibold text-lg text-blue-800 mb-3">
+        <div className="bg-gradient-to-b from-green-50 to-green-50/30 rounded-lg p-8 mb-8 border border-green-100">
+          <h3 className="font-bold text-lg text-green-600 mb-4">
             {bullyingT('instructions.title')}
           </h3>
-          <ul className="list-disc pl-5 mb-4 text-gray-700 space-y-2">
-            <li>{bullyingT('instructions.point1')}</li>
-            <li>{bullyingT('instructions.point2')}</li>
-            <li>{bullyingT('instructions.point3')}</li>
+          <ul className="space-y-3 mb-6">
+            <li className="pl-7 text-gray-800 leading-relaxed relative before:content-['→'] before:absolute before:left-0 before:text-green-500 before:font-bold">
+              {bullyingT('instructions.point1')}
+            </li>
+            <li className="pl-7 text-gray-800 leading-relaxed relative before:content-['→'] before:absolute before:left-0 before:text-green-500 before:font-bold">
+              {bullyingT('instructions.point2')}
+            </li>
+            <li className="pl-7 text-gray-800 leading-relaxed relative before:content-['→'] before:absolute before:left-0 before:text-green-500 before:font-bold">
+              {bullyingT('instructions.point3')}
+            </li>
           </ul>
-          <p className="text-gray-700 mb-4">{bullyingT('instructions.remember')}</p>
-          <p className="text-gray-700 font-medium">{bullyingT('instructions.selectAll')}</p>
+          <p className="text-gray-800 mb-4 leading-relaxed">
+            {bullyingT('instructions.remember')}
+          </p>
+          <p className="text-green-600 font-semibold">
+            {bullyingT('instructions.selectAll')}
+          </p>
         </div>
         
-        <button
+        <button 
           onClick={() => setShowInstructions(false)}
-          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition w-full"
+          className="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-lg transition-all font-semibold hover:shadow-lg active:translate-y-0.5"
         >
           {bullyingT('startGame')}
         </button>
@@ -226,77 +228,71 @@ export default function BullyingDetector({ onComplete }: { onComplete: (score: n
   }
 
   return (
-    <div className="bg-white shadow-md rounded-lg p-6">
-      <h2 className="text-2xl font-semibold mb-4 text-gray-900">
+    <div className="bg-white rounded-lg shadow-md p-8 animate-fadeIn">
+      <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-3 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-[3px] after:bg-green-600 after:rounded-md">
         {bullyingT('gameTitle')}
       </h2>
       
       {/* Game Status */}
-      <div className="flex justify-between items-center mb-4">
-        <div>
-          <span className="text-gray-700">
-            {bullyingT('status.postsChecked')}: {postsChecked} / {posts.length}
-          </span>
-        </div>
+      <div className="flex justify-between items-center mb-6 p-3 bg-gray-50 rounded-lg border border-gray-200">
+        <span className="text-gray-800 font-medium text-sm">
+          {bullyingT('status.postsChecked')}: {postsChecked} / {posts.length}
+        </span>
         {gameOver && (
-          <div>
-            <span className="text-gray-700 font-semibold">
-              {bullyingT('status.score')}: {score}
-            </span>
-          </div>
+          <span className="text-green-600 font-bold text-lg">
+            {bullyingT('status.score')}: {score}
+          </span>
         )}
       </div>
       
       {/* Social Media Wall */}
-      <div className="space-y-4 mb-6">
+      <div className="flex flex-col gap-5 mb-8">
         {posts.map(post => (
           <div
             key={post.id}
-            className={`border rounded-lg overflow-hidden transition cursor-pointer
-              ${post.checked && !gameOver ? 'border-blue-500 bg-blue-50' : ''}
-              ${gameOver && post.checked && post.isBullying ? 'border-red-500 bg-red-50' : ''}
-              ${gameOver && post.checked && !post.isBullying ? 'border-green-500 bg-green-50' : ''}
-              ${!post.checked ? 'hover:border-blue-300 border-gray-200' : ''}
-            `}
             onClick={(e) => {
               e.stopPropagation();
               if (!gameOver) handlePostClick(post.id);
             }}
+            className={`
+              rounded-lg overflow-hidden border transition-all duration-200 cursor-pointer shadow-sm
+              ${gameOver && post.checked && post.isBullying ? 'border-red-600 shadow-red-100' : ''}
+              ${gameOver && post.checked && !post.isBullying ? 'border-green-600 shadow-green-100' : ''}
+              ${!gameOver && post.checked ? 'border-green-500 shadow-green-100 -translate-y-1' : 'border-gray-200'}
+              ${!gameOver && !post.checked ? 'hover:border-green-300 hover:-translate-y-1' : ''}
+            `}
           >
             {/* Post Header */}
-            <div className="flex items-center p-3 border-b">
-              <div className="h-10 w-10 bg-gray-300 rounded-full mr-3 overflow-hidden">
-                {/* Placeholder for avatar */}
-                <div className="h-full w-full flex items-center justify-center text-gray-500 text-xs font-bold">
-                  {post.author.charAt(0)}
-                </div>
+            <div className="flex items-center p-4 border-b border-gray-200">
+              <div className="h-10 w-10 bg-green-400 rounded-full mr-4 flex items-center justify-center text-white font-semibold text-lg">
+                {post.author.charAt(0).toUpperCase()}
               </div>
               <div>
-                <h3 className="font-semibold">{post.author}</h3>
+                <h3 className="font-semibold text-gray-900">{post.author}</h3>
                 <p className="text-xs text-gray-500">{post.timestamp}</p>
               </div>
             </div>
             
             {/* Post Content */}
-            <div className="p-4">
-              <p className="text-gray-800">{post.content}</p>
+            <div className="p-5 bg-white">
+              <p className="text-gray-800 leading-relaxed">{post.content}</p>
             </div>
             
             {/* Post Footer */}
-            <div className="flex items-center p-3 border-t bg-gray-50">
-              <div className="text-gray-500 flex items-center mr-4">
-                <span className="mr-1">👍</span>
+            <div className="flex items-center p-3 bg-gray-50 border-t border-gray-200">
+              <div className="flex items-center text-gray-500 mr-6">
+                <span className="mr-1.5" role="img" aria-label="like">👍</span>
                 <span>{post.likes}</span>
               </div>
-              <div className="text-gray-500 flex items-center">
-                <span className="mr-1">💬</span>
+              <div className="flex items-center text-gray-500">
+                <span className="mr-1.5" role="img" aria-label="comment">💬</span>
                 <span>{Math.floor(Math.random() * 5) + 1}</span>
               </div>
             </div>
             
             {/* Simple feedback during game */}
             {post.checked && !gameOver && (
-              <div className="p-3 bg-blue-100 text-blue-800">
+              <div className="p-4 bg-green-50 text-green-600 border-t border-green-200">
                 <p className="font-medium">
                   {bullyingT('feedback.selected')}
                 </p>
@@ -305,25 +301,31 @@ export default function BullyingDetector({ onComplete }: { onComplete: (score: n
             
             {/* Complete feedback only after game is over */}
             {gameOver && post.checked && (
-              <div className={`p-3 ${post.isBullying ? 'bg-red-100 text-red-800' : 'bg-green-100 text-green-800'}`}>
-                <p className="font-semibold">
+              <div className={`p-4 border-t ${post.isBullying 
+                ? 'bg-red-50 text-red-700 border-red-200' 
+                : 'bg-green-50 text-green-600 border-green-200'}`}
+              >
+                <p className="font-semibold mb-2">
                   {post.isBullying 
                     ? bullyingT('feedback.correct') 
                     : bullyingT('feedback.incorrect')}
                 </p>
-                <p className="text-sm mt-1">{post.explanation}</p>
+                <p className="text-sm opacity-90">{post.explanation}</p>
               </div>
             )}
             
             {/* Show explanation for non-selected posts after game over */}
             {gameOver && !post.checked && (
-              <div className={`p-3 ${post.isBullying ? 'bg-red-100 text-red-800' : 'bg-green-100 text-green-800'}`}>
-                <p className="font-semibold">
+              <div className={`p-4 border-t ${post.isBullying 
+                ? 'bg-red-50 text-red-700 border-red-200' 
+                : 'bg-green-50 text-green-600 border-green-200'}`}
+              >
+                <p className="font-semibold mb-2">
                   {post.isBullying 
                     ? bullyingT('feedback.missedBullying') 
                     : bullyingT('feedback.correctlySkipped')}
                 </p>
-                <p className="text-sm mt-1">{post.explanation}</p>
+                <p className="text-sm opacity-90">{post.explanation}</p>
               </div>
             )}
           </div>
@@ -331,30 +333,30 @@ export default function BullyingDetector({ onComplete }: { onComplete: (score: n
       </div>
       
       {/* Action Buttons */}
-      <div className="mt-6">
+      <div>
         {postsChecked > 0 && !gameOver && (
           <>
             <button
               onClick={finishGame}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition w-full"
+              className="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-lg transition-all font-semibold hover:shadow-lg active:translate-y-0.5"
             >
               {bullyingT('finishGame')}
             </button>
-            <p className="text-center text-sm text-gray-500 mt-2">
+            <p className="text-center text-sm text-gray-500 mt-3">
               {bullyingT('selectAllBefore')} ({postsChecked}/{posts.length})
             </p>
           </>
         )}
         
         {gameOver && (
-          <div className="bg-blue-50 p-4 rounded-lg">
-            <h3 className="font-semibold text-lg text-blue-800">
+          <div className="mt-6 bg-green-50 border border-green-200 rounded-lg p-6 animate-fadeIn">
+            <h3 className="font-semibold text-lg text-green-600 mb-3">
               {bullyingT('gameOver.title')}
             </h3>
-            <p className="text-gray-700 my-2">
+            <p className="text-gray-800 mb-3 leading-relaxed">
               {bullyingT('gameOver.description')}
             </p>
-            <p className="font-medium">
+            <p className="flex items-center gap-2 font-bold text-green-600 text-lg before:content-['🏆']">
               {bullyingT('gameOver.finalScore')}: {score}
             </p>
           </div>
