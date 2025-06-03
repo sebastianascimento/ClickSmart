@@ -1,0 +1,1091 @@
+{
+  "app": {
+    "title": "ClickSmart",
+    "tagline": "Navigate the Digital World Safely"
+  },
+  "navigation": {
+    "home": "Home",
+    "game": "Play",
+    "about": "About"
+  },
+  "home": {
+    "description": "Learn to identify fake news, combat cyberbullying, and protect your data while exploring ethical decisions in the digital environment.",
+    "startGame": "Start Game",
+    "howItWorks": "How It Works",
+    "sections": {
+      "scenarios": {
+        "title": "Realistic Scenarios",
+        "description": "Face situations that young people encounter daily in the digital world."
+      },
+      "decisions": {
+        "title": "Ethical Decisions",
+        "description": "Make decisions that affect your journey and learn about responsible digital behavior."
+      },
+      "learning": {
+        "title": "Learn and Practice",
+        "description": "Test your knowledge with interactive quizzes about digital security and citizenship."
+      }
+    }
+  },
+  "landing": {
+    "heroTitle": "ClickSmart",
+    "heroSubtitle": "Navigate the digital world safely and consciously. Learn interactively how to identify fake news, avoid cyberbullying, and protect your online data.",
+    "startButton": "Start Now",
+
+    "howItWorks": "How It Works?",
+    "interactiveGames": "Interactive Games",
+    "interactiveGamesDesc": "Learn through engaging games that simulate real-world digital situations.",
+    "learnByDoing": "Learn by Doing",
+    "learnByDoingDesc": "Make decisions and see their consequences in a safe environment before real life.",
+    "acquireSkills": "Acquire Skills",
+    "acquireSkillsDesc": "Earn points, level up, and become an expert in digital citizenship.",
+
+    "educationalGames": "Educational Games",
+
+    "digitalDetective": "Digital Detective",
+    "digitalDetectiveDesc": "Investigate news and discover if they are true or false through hidden clues.",
+    "detectBullying": "Detect Bullying",
+    "detectBullyingDesc": "Learn to identify and respond appropriately to cyberbullying on social media.",
+    "chooseResponse": "Choose the Response",
+    "chooseResponseDesc": "Practice appropriate responses in digital conflict situations in chats and messages.",
+    "createStrongPassword": "Create a Strong Password",
+    "createStrongPasswordDesc": "Learn to create secure passwords and understand how to protect your information online.",
+    "createNews": "Create Your News",
+    "createNewsDesc": "Understand how fake news are created and the damage they can cause in society.",
+    "secureLink": "Hunt for Secure Links",
+    "secureLinkDesc": "Discover how to identify suspicious links and avoid phishing attacks.",
+
+    "impactTitle": "Impact on Digital Education",
+    "stat1": "of young people can't identify fake news",
+    "stat2": "have encountered cyberbullying on social media",
+    "stat3": "improved their digital skills after using ClickSmart",
+    "stat4": "feel safer online after completing the games",
+
+    "testimonials": "What People Are Saying",
+    "testimonial1": "\"The games are fun and helped me identify fake news. Now I always check my sources before sharing!\"",
+    "testimonial1Author": "Mariana, 14 years old",
+    "testimonial2": "\"As a teacher, I use ClickSmart in my computer classes. Students love it and learn essential skills for the digital world.\"",
+    "testimonial2Author": "Prof. Carlos, Middle School",
+    "testimonial3": "\"I finally understood how to identify phishing and keep my passwords secure. Essential for any young person nowadays!\"",
+    "testimonial3Author": "Pedro, 16 years old",
+
+    "ctaTitle": "Ready to navigate intelligently?",
+    "ctaDesc": "Join thousands of young people who are already learning to use the internet safely, ethically, and consciously.",
+
+    "footerTagline": "Navigate the digital world safely",
+    "about": "About",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "rights": "All rights reserved."
+  },
+  "game": {
+    "score": "Score",
+    "level": "Level",
+    "loading": "Loading the game...",
+    "error": "Error loading the game. Please try again.",
+    "tryAgain": "Try Again",
+    "whatWouldYouDo": "What would you do?",
+    "continue": "Continue",
+    "checkAnswer": "Check Answer",
+    "progress": "Progress",
+    "gameCompleted": "Game Completed!",
+    "finalScore": "Your final score",
+    "playAgain": "Play Again",
+    "gameTypes": {
+      "choice": "Choice Game",
+      "detective": "Detective Digital",
+      "factcheck": "Fake or Fact",
+      "chat": "Choose the Response",
+      "bullying": "Detect Bullying",
+      "positive": "Create a Positive Post",
+      "report": "Report Simulator",
+      "phishing": "Phishing Simulator",
+      "password": "Create Strong Password",
+      "link": "Secure Link Hunter",
+      "simulator": "Security Simulation: What If...",
+      "fakenews": "Fake News"
+    }
+  },
+  "passwordCreator": {
+    "gameTitle": "Create Strong Password",
+    "startGame": "Start Game",
+    "score": "Score",
+    "challenge": "Challenge",
+    "createPassword": "Create your password",
+    "passwordRules": "Password Requirements",
+    "showTip": "Show Tip",
+    "submit": "Submit Password",
+    "backspace": "Backspace",
+    "clear": "Clear All",
+    "strength": {
+      "weak": "Weak",
+      "medium": "Medium",
+      "strong": "Strong"
+    },
+    "instructions": {
+      "title": "How to Play",
+      "point1": "Create a strong password for different security scenarios.",
+      "point2": "Use the character buttons to build your password.",
+      "point3": "Your goal is to meet all the security requirements shown in the checklist.",
+      "remember": "Remember: A good password is easy for you to remember but difficult for others to guess!"
+    },
+    "rules": {
+      "length": "At least 8 characters long",
+      "uppercase": "Contains uppercase letter",
+      "lowercase": "Contains lowercase letter",
+      "number": "Contains number",
+      "symbol": "Contains special character",
+      "noCommon": "Avoids common patterns (123456, password, etc.)"
+    },
+    "characterSets": {
+      "title": "Select characters for your password",
+      "lowercase": "Lowercase Letters",
+      "uppercase": "Uppercase Letters",
+      "numbers": "Numbers",
+      "symbols": "Special Characters"
+    },
+    "challenges": {
+      "social": {
+        "name": "Social Media Account",
+        "description": "Create a strong password for your new social media account. Remember that this will protect all your photos and personal information.",
+        "tip": "For social media, consider using a phrase that's meaningful to you but not easy to guess, combined with special characters and numbers."
+      },
+      "bank": {
+        "name": "Online Banking",
+        "description": "Your bank requires a new secure password for online transactions. This password will have access to your financial information.",
+        "tip": "Banking passwords should be especially strong. Avoid using information related to your identity like birthdays, and use a mix of all character types."
+      },
+      "email": {
+        "name": "Email Account",
+        "description": "Create a strong password for your email account. Remember that your email can be used to reset passwords for other services.",
+        "tip": "Email accounts are often targets for hackers since they can be used to reset other passwords. Consider using a password manager for maximum security."
+      }
+    },
+    "gameOver": {
+      "title": "Game Complete!",
+      "message": "You've learned how to create strong, secure passwords for different contexts. Keep applying these principles to protect your online accounts!",
+      "finalScore": "Final score"
+    },
+    "passwordTips": {
+      "title": "Password Security Tips:",
+      "tip1": "Use a different password for each important account",
+      "tip2": "Consider using a password manager to keep track of your passwords",
+      "tip3": "Change your passwords regularly, especially for sensitive accounts",
+      "tip4": "Never share your passwords with others or store them in plaintext"
+    }
+  },
+  "linkHunter": {
+    "gameTitle": "Secure Link Hunter",
+    "startGame": "Start Game",
+    "score": "Score",
+    "level": "Level",
+    "continue": "Continue",
+    "findSafeLinks": "Click on the links that you think are secure. Look out for misleading URLs, HTTP instead of HTTPS, misspelled domain names, or suspicious domains.",
+    "status": {
+      "safeLinks": "Safe links found"
+    },
+    "instructions": {
+      "title": "How to Play",
+      "point1": "You'll see a list of URLs that might be secure or malicious.",
+      "point2": "Your goal is to identify and click only on the safe links.",
+      "point3": "Look carefully for signs of phishing, such as misspelled domains or missing https.",
+      "remember": "Remember: Always check a URL carefully before clicking on it in real life, especially when it involves sensitive information!"
+    },
+    "feedback": {
+      "safeTitle": "Good job! This link is safe.",
+      "dangerTitle": "Be careful! This is a suspicious link.",
+      "safeMessage": "You correctly identified a secure link.",
+      "dangerMessage": "This link is potentially malicious or fraudulent.",
+      "explanation": "Why this matters:"
+    },
+    "securityTips": {
+      "title": "Security Tips",
+      "tip1": "Always check for HTTPS (lock icon) in the address bar before entering sensitive information",
+      "tip2": "Be suspicious of URLs with misspelled domain names or unusual extensions"
+    },
+    "levels": {
+      "banking": {
+        "title": "Banking Websites",
+        "description": "Your bank has sent you an email with several links to update your account information. Which ones are legitimate bank websites?"
+      },
+      "shopping": {
+        "title": "Online Shopping",
+        "description": "You're looking for deals on popular retail sites. Identify which shopping website links are genuine and which ones might be scams."
+      },
+      "email": {
+        "title": "Email Recovery",
+        "description": "You need to recover your email password. Which of these password reset links would be safe to click on?"
+      }
+    },
+    "links": {
+      "bank1": "This is a secure link. It uses HTTPS and is on the official bank domain (mybank.com).",
+      "bank2": "This link is suspicious. It uses HTTP instead of HTTPS, which means your connection would not be encrypted. Also, the domain 'mybank-secure.com' is not the official bank domain.",
+      "bank3": "This is a fake link. While it uses HTTPS, the domain 'loginportal.net' is not the official bank domain. This is likely a phishing attempt.",
+      "bank4": "This is a legitimate subdomain of the bank's main website, using HTTPS for a secure connection.",
+      "shop1": "This is a scam link. 'amazonshopping.co' is not Amazon's official domain, which is amazon.com.",
+      "shop2": "This is a secure link to the real Amazon website with HTTPS protection.",
+      "shop3": "This is dangerous. It uses HTTP instead of HTTPS and 'best-deals-amazon.com' is not Amazon's official domain.",
+      "shop4": "This is a legitimate link to Samsung's official store with proper HTTPS security.",
+      "email1": "This is a legitimate Google Mail URL with proper security.",
+      "email2": "This is a phishing attempt. 'google-mail-service.com' is not an official Google domain.",
+      "email3": "This is a secure link to Google's official account recovery page.",
+      "email4": "This is a suspicious URL. The domain structure looks like a phishing attempt with multiple subdomains to confuse users."
+    },
+    "gameOver": {
+      "title": "Game Complete!",
+      "message": "You've successfully learned how to identify secure and suspicious links online. This skill will help protect your personal information!",
+      "finalScore": "Final score"
+    },
+    "linkTips": {
+      "title": "URL Safety Tips:",
+      "tip1": "Always check the domain name carefully - phishing sites often use similar-looking names",
+      "tip2": "Look for HTTPS and a lock icon in your browser's address bar",
+      "tip3": "Be wary of URLs with unusual subdomains or domain extensions",
+      "tip4": "When in doubt, type the website address directly in your browser instead of clicking links"
+    }
+  },
+  "securitySimulator": {
+    "gameTitle": "Security Simulation: What If...",
+    "startGame": "Start Simulation",
+    "score": "Score",
+    "scenario": "Scenario",
+    "whatWouldYouDo": "What would you do?",
+    "simulationSafe": "See what happens when you make a safe choice...",
+    "simulationDanger": "See what happens with this choice...",
+    "goodChoice": "Good security choice!",
+    "riskyChoice": "Security risk detected!",
+    "consequence": "Consequence",
+    "securityLesson": "Security lesson",
+    "nextScenario": "Next scenario",
+    "finishGame": "Finish simulation",
+    "cracked": "Password cracked",
+    "timeToBreak": "Time to break",
+    "years": "years",
+    "strong": "Strong password",
+    "encrypted": "Encrypted connection",
+    "intercepted": "Data intercepted",
+    "secureConnection": "Secure home Wi-Fi",
+    "waitedForSecureNetwork": "You waited to connect to a secure network",
+
+    "instructions": {
+      "title": "How to Play",
+      "point1": "You'll be presented with different cybersecurity scenarios where you have to make choices.",
+      "point2": "Each choice has consequences that will be shown through animations.",
+      "point3": "You'll learn what happens when you make different security decisions.",
+      "remember": "Remember: In real life, poor security choices can lead to real consequences for your data and privacy!"
+    },
+
+    "scenarios": {
+      "phishing": {
+        "title": "Suspicious Website",
+        "description": "You receive an email that appears to be from your bank, asking you to update your account information. The link leads to a website that looks like your bank's site but the URL is 'my-secure-bank.com' instead of the official 'mybank.com'.",
+        "choices": {
+          "fill": "Fill in your data as requested",
+          "check": "Check the URL and security certificate",
+          "close": "Close the site immediately"
+        },
+        "consequences": {
+          "fill": "Your login credentials were captured by cybercriminals. They accessed your account and transferred money to their account.",
+          "check": "You noticed that the URL isn't official and the site doesn't have the secure padlock icon. You avoided a phishing attempt.",
+          "close": "You avoided entering any data on the suspicious site. This protected you from the phishing attempt."
+        },
+        "lessons": {
+          "fill": "Always verify the URL of websites where you enter sensitive information. Look for https:// and the padlock icon, and check the domain name carefully.",
+          "check": "Great job! Checking the URL and security certificate is a crucial step before entering sensitive information online.",
+          "close": "Good instinct! When in doubt about a website's legitimacy, it's safer to close it and contact the company directly through official channels."
+        }
+      },
+      "password": {
+        "title": "Creating a Password",
+        "description": "You're creating a new account for an important service and need to set a password. What type of password would you choose?",
+        "choices": {
+          "simple": "A simple, easy-to-remember password like '123456' or 'password'",
+          "strong": "A complex password with letters, numbers and symbols like 'K7%j9@Lp2$xR'",
+          "reuse": "Reuse a password you already use for other accounts"
+        },
+        "consequences": {
+          "simple": "Your simple password was cracked in seconds by an automated program. Your account was compromised.",
+          "strong": "Your complex password would take thousands of years to crack with current technology, keeping your account secure.",
+          "reuse": "One of your other accounts was breached, and hackers tried the same password on multiple services. They gained access to all accounts with the same password."
+        },
+        "lessons": {
+          "simple": "Simple passwords are incredibly vulnerable to brute force attacks. Even adding a few unusual characters makes a password exponentially more secure.",
+          "strong": "Strong passwords that mix character types are much more secure. Consider using a password manager to create and store complex passwords.",
+          "reuse": "Using unique passwords for each account is essential. If one service is breached, your other accounts remain protected."
+        }
+      },
+      "publicWifi": {
+        "title": "Public Wi-Fi",
+        "description": "You're at a coffee shop and need to check your bank account balance. The coffee shop offers free, open Wi-Fi with no password required.",
+        "choices": {
+          "useVPN": "Connect using a VPN before accessing your bank account",
+          "login": "Connect directly to the Wi-Fi and login to your bank",
+          "wait": "Wait until you get home to use your secure network"
+        },
+        "consequences": {
+          "useVPN": "Your connection was encrypted through the VPN, protecting your data from potential eavesdroppers on the public network.",
+          "login": "Someone on the same network was using packet sniffing software and captured your login credentials when you entered them.",
+          "wait": "You avoided connecting to your sensitive accounts on an insecure network, protecting your data."
+        },
+        "lessons": {
+          "useVPN": "Using a VPN creates an encrypted tunnel for your data, making public Wi-Fi much safer for sensitive transactions.",
+          "login": "Public Wi-Fi networks are often unencrypted, making it possible for others to intercept data you send or receive.",
+          "wait": "For highly sensitive actions like banking, using a trusted network is always the safest option."
+        }
+      },
+      "fakenewsCreator": {
+        "gameTitle": "Create Your News",
+        "startGame": "Start Game",
+        "score": "Score",
+        "instructions": {
+          "title": "How to Play",
+          "point1": "Create a fake news story by choosing headline, image, date, and content.",
+          "point2": "After creating your news, see how people might react to it.",
+          "point3": "Learn about the risks of creating and sharing fake news.",
+          "remember": "Remember: In real life, creating fake news can harm many people!"
+        },
+        "createSection": {
+          "title": "Create Your News",
+          "headlineLabel": "Choose a Headline",
+          "headlineOptions": {
+            "option1": "URGENT! Mysterious Creature Discovered in City Park!",
+            "option2": "AMAZING! 10-Year-Old Invents Robot That Does Homework!",
+            "option3": "ALERT! Schools Planning to End Summer Vacation!",
+            "option4": "BREAKING NEWS! Famous Soccer Player to Coach Local Team!"
+          },
+          "imageLabel": "Choose an Image",
+          "dateLabel": "Choose a Date",
+          "datePlaceholder": "Today",
+          "dateOptions": {
+            "today": "Today",
+            "yesterday": "Yesterday",
+            "lastWeek": "Last week",
+            "madeUp": "Made-up date"
+          },
+          "contentLabel": "Choose the Content",
+          "contentOptions": {
+            "option1": "Multiple witnesses claim to have seen a strange creature in the city park last night. Some say it looked like an alien, others think it was an unknown animal. Authorities have not confirmed the information.",
+            "option2": "A young student has created a robot that does all homework by itself! Teachers are concerned and say they'll ban the invention in schools. Parents are divided about the issue.",
+            "option3": "Anonymous sources indicate that schools are planning to end summer vacation to improve students' grades. The measure would be implemented starting next school year!",
+            "option4": "According to exclusive information, a world football star is in secret negotiations to coach the local team. The official announcement should happen in the next few days!"
+          },
+          "preview": "Preview",
+          "publish": "Publish News"
+        },
+        "previewSection": {
+          "title": "Your News",
+          "source": "Source: MadeUpNews.com",
+          "shares": "Shares:",
+          "comments": "Comments:",
+          "edit": "Edit",
+          "publish": "Publish"
+        },
+        "reactionSection": {
+          "title": "Reactions to Your News",
+          "shareCount": "people shared",
+          "reactionTypes": {
+            "fear": "Fear",
+            "confusion": "Confusion",
+            "anger": "Anger",
+            "excitement": "Excitement"
+          },
+          "exampleComments": {
+            "comment1": "This can't be true! I'm sharing it with everyone!",
+            "comment2": "My cousin said they saw it too! It's true!",
+            "comment3": "Don't believe everything you read on the internet...",
+            "comment4": "Has anyone verified this information?",
+            "comment5": "I KNEW THIS WOULD HAPPEN!!!"
+          },
+          "impact": {
+            "title": "Impact of Your News",
+            "description": "See how your fake news could spread quickly and cause strong reactions in people. In real life, fake news can:",
+            "effect1": "Cause unnecessary fear or panic",
+            "effect2": "Damage the reputation of innocent people",
+            "effect3": "Lead to wrong decisions based on false information",
+            "effect4": "Decrease trust in sources of true information",
+            "message": "See how dangerous it can be?"
+          }
+        },
+        "lessonSection": {
+          "title": "Lesson Learned",
+          "message": "Creating fake news might seem fun, but in real life it can have serious consequences.",
+          "factTitle": "Important facts:",
+          "fact1": "More than 50% of people don't check if news is true before sharing",
+          "fact2": "Fake news spreads 6 times faster than real news on social media",
+          "fact3": "Fake news has caused real panic, violence, and even influenced elections",
+          "whatToDo": "What to do before sharing news:",
+          "tip1": "Check the source of the news",
+          "tip2": "Look for the same information on reliable sites",
+          "tip3": "Check the publication date",
+          "tip4": "Question if the content seems too incredible to be true"
+        },
+        "continue": "Continue",
+        "createNew": "Create New Story",
+        "finishGame": "Finish Game",
+        "gameOver": {
+          "title": "Game Complete!",
+          "description": "Now you know how fake news is created and the impact it can have! Always remember to verify information before believing or sharing it.",
+          "finalScore": "Final score"
+        }
+      }
+    },
+
+    "gameOver": {
+      "title": "Simulation Complete!",
+      "message": "You've learned about the real consequences of different security choices. Keep applying these lessons online!",
+      "finalScore": "Final score"
+    },
+
+    "securityTips": {
+      "title": "Key Security Tips:",
+      "tip1": "Always verify the URL before entering sensitive information",
+      "tip2": "Use strong, unique passwords for each important account",
+      "tip3": "Be cautious when using public Wi-Fi for sensitive activities",
+      "tip4": "Keep your software and devices updated with security patches"
+    }
+  },
+  "phishingSimulator": {
+    "gameTitle": "Phishing Simulator",
+    "startGame": "Start Game",
+    "score": "Score",
+    "progress": "Progress",
+    "question": "Is this safe or phishing?",
+    "buttons": {
+      "safe": "Safe",
+      "phishing": "Phishing"
+    },
+    "instructions": {
+      "title": "How to Play",
+      "point1": "You will be shown emails, websites and pop-ups that could be legitimate or phishing attempts.",
+      "point2": "Your task is to identify which ones are safe and which are phishing attacks.",
+      "point3": "Look for clues like suspicious URLs, spelling errors, or unusual requests for personal information.",
+      "remember": "Remember: Real organizations will never pressure you for immediate action or ask for sensitive information via email or pop-ups."
+    },
+    "feedback": {
+      "correctTitle": "Good job!",
+      "incorrectTitle": "Be careful!",
+      "isPhishing": "This is a phishing attempt!",
+      "isSafe": "This is a legitimate communication."
+    },
+    "tips": {
+      "phishingSignsTitle": "Warning signs to look for:",
+      "phishingSigns": {
+        "1": "Suspicious sender address with misspelled domain names",
+        "2": "Urgent requests or threats to create pressure",
+        "3": "Grammar or spelling errors and unprofessional presentation"
+      },
+      "safeSignsTitle": "Signs of legitimate communication:",
+      "safeSigns": {
+        "1": "Correct official domain in email address or website URL",
+        "2": "No requests for personal information or passwords",
+        "3": "Professional design and correct grammar/spelling"
+      }
+    },
+    "examples": {
+      "email1": {
+        "title": "URGENT: You've WON a Prize!",
+        "content": "Dear Customer,\n\nCONGRATULATIONS! You have been randomly selected to receive a FREE iPhone 15 Pro!\n\nTo claim your prize, you must ACT FAST and click the link below to enter your personal details within 24 HOURS or your prize will be given to someone else!\n\nWe need your full name, address, phone number, and bank details for verification purposes.\n\nClick here: www.claim-your-free-prize.com",
+        "explanation": "This is a classic phishing email with multiple red flags: urgency to create pressure, too-good-to-be-true prize, suspicious sender address, and requesting sensitive personal and financial information."
+      },
+      "email2": {
+        "title": "School Calendar Update",
+        "content": "Dear Parents and Guardians,\n\nThis is a reminder that the school calendar for the upcoming academic year has been updated on our official website.\n\nYou can view the calendar by logging into your parent portal using your existing credentials.\n\nIf you have any questions, please contact the school office.\n\nRegards,\nSchool Administration",
+        "explanation": "This is a legitimate email from an official school domain. It doesn't ask for personal information, doesn't create urgency, and directs you to use your existing login credentials on their official website."
+      },
+      "popup1": {
+        "title": "Security Alert",
+        "content": "WARNING: Virus detected on your computer!\n\nCall our technical support immediately at: +1-800-123-4567\nReference code: MS-ALERT#45692\n\nDo not turn off your computer or your data will be lost!",
+        "explanation": "This is a fake security alert. Legitimate security software doesn't use alarming pop-ups with phone numbers. This tactic is used to scare people into calling fake support numbers that will request payment or remote access to your computer."
+      },
+      "website1": {
+        "title": "Reset Your Facebook Password",
+        "content": "Please enter your email and current password to verify your identity:\n\nEmail: [                    ]\nCurrent Password: [                    ]\n\n[Reset Password]",
+        "explanation": "This is a phishing website. Notice the URL is 'faceb00k-login.com' (with zeros instead of 'o's). A legitimate site would never ask for your current password when resetting a password. Facebook's actual domain is facebook.com."
+      },
+      "email3": {
+        "title": "Your Microsoft subscription renewal",
+        "content": "Hello,\n\nThis is a confirmation that your Microsoft 365 subscription has been renewed for another year. No action is required from your side.\n\nIf you have any questions about your subscription, please visit our Help Center at https://support.microsoft.com or contact our customer service team.\n\nThank you for choosing Microsoft.\n\nMicrosoft Subscription Team",
+        "explanation": "This appears to be a legitimate email. It comes from an official Microsoft domain, doesn't ask for any personal information, includes a proper support link to the official Microsoft website, and doesn't create urgency."
+      }
+    },
+    "nextExample": "Next Example",
+    "finishGame": "Finish Game",
+    "gameOver": {
+      "title": "Game Complete!",
+      "message": "You've completed the Phishing Simulator! Remember these skills when browsing the web and checking your emails.",
+      "finalScore": "Final score"
+    }
+  },
+  "reportSimulator": {
+    "gameTitle": "Report Simulator",
+    "startGame": "Start Game",
+    "score": "Score",
+    "instructions": {
+      "title": "How to Play",
+      "point1": "You will see posts with offensive/problematic content from social media.",
+      "point2": "Your goal is to follow the correct steps to report the content.",
+      "point3": "Click on the right buttons to report the content (starting with the \"⋮\" menu).",
+      "remember": "Remember: Reporting inappropriate content is an important way to keep social media safer for everyone."
+    },
+    "options": {
+      "save": "Save",
+      "share": "Share",
+      "report": "Report",
+      "cancel": "Cancel"
+    },
+    "reportReasons": {
+      "title": "Why are you reporting this post?",
+      "hate": "Hate speech",
+      "harassment": "Harassment or bullying",
+      "violence": "Violence or threats",
+      "falseInfo": "False information"
+    },
+    "reportDetails": {
+      "title": "Add details to your report",
+      "description": "Provide any additional details that might help with the review (optional):",
+      "placeholder": "Describe why you believe this content violates guidelines...",
+      "submit": "Submit"
+    },
+    "reportConfirmation": {
+      "title": "Send this report?",
+      "description": "Your report will be reviewed by platform moderators. Thank you for helping keep the community safe.",
+      "confirm": "Confirm report"
+    },
+    "reportSuccess": {
+      "title": "Report Submitted!",
+      "message": "Thank you for your report. The moderation team will review the content as soon as possible."
+    },
+    "wrongOption": "That's not the correct option to report. Try again!",
+    "nextPost": "Next post",
+    "finishGame": "Finish game",
+    "postCompleted": {
+      "title": "Report Successful",
+      "message": "You have already successfully reported this post."
+    },
+    "gameOver": {
+      "title": "Game Complete!",
+      "message": "Congratulations! You've learned how to report problematic content on social media.",
+      "finalScore": "Final score"
+    },
+    "posts": {
+      "post1": {
+        "content": "These immigrants should go back to their countries! We don't want these people here stealing our jobs and bringing their problems!"
+      },
+      "post2": {
+        "content": "Does anyone know this loser from Central School? I heard he failed all his classes and cries in the bathroom every day. Let's tag him in the comments! 😂"
+      },
+      "post3": {
+        "content": "URGENT WARNING: This new vaccine is infecting people with a deadly virus! The government is hiding the death cases! SHARE BEFORE THEY TAKE THIS DOWN!!!"
+      }
+    }
+  },
+  "detective": {
+    "gameTitle": "Digital Detective",
+    "instructions": "You're a digital detective! Investigate this news story by clicking on the tools below. After gathering enough clues, decide if the story is real or fake.",
+    "toolsTitle": "Investigation Tools",
+    "cluesTitle": "Clues Discovered",
+    "decisionTitle": "Make Your Decision",
+    "decisionPrompt": "Based on your investigation, is this news story real or fake?",
+    "decisionFake": "It's Fake News",
+    "decisionReal": "It's Real News",
+    "resultCorrect": "Great detective work! You were right!",
+    "resultWrong": "Not quite right... let's review the evidence.",
+    "explanationFake": "This was fake news. The story has several red flags: it only appears on social media, the author isn't verifiable, and the date is suspiciously old.",
+    "explanationReal": "This was real news. The story is reported by credible sources, has a verified author, and includes recent facts that can be checked.",
+    "story": {
+      "title": "Famous Celebrity Involved in Shocking Incident!",
+      "content": "A very famous celebrity was reportedly involved in a shocking incident last night! Multiple social media accounts are sharing this breaking news. The incident happened after a private event. Sources close to the celebrity refused to comment."
+    },
+    "clues": {
+      "google": {
+        "name": "Search Online",
+        "content": "You can't find this story on any reputable news sites. It only appears in social media posts and gossip forums."
+      },
+      "author": {
+        "name": "Check Author",
+        "content": "The original post was shared by an anonymous account with no history of reporting news."
+      },
+      "comments": {
+        "name": "Read Comments",
+        "content": "Most comments express doubt about the story. Several users point out similar false stories that circulated last month."
+      },
+      "date": {
+        "name": "Check Date",
+        "content": "The original post is from three days ago, but claims the incident happened 'last night' on each day it's shared."
+      }
+    }
+  },
+  "factcheck": {
+    "gameTitle": "Fake or Fact",
+    "instructions": "Decide if the news is real or fake! Swipe right for real, left for fake - or use the buttons below.",
+    "swipeInstructions": "Swipe right for real news, left for fake news",
+    "fakeBtnText": "Fake",
+    "realBtnText": "Real",
+    "correctAnswer": "Correct!",
+    "wrongAnswer": "Oops! That's not right.",
+    "thisFake": "This news is FAKE.",
+    "thisReal": "This news is REAL.",
+    "nextNews": "Next news",
+    "finishGame": "Finish game",
+    "imageNotLoaded": "Image not loaded",
+    "progress": "Progress",
+    "score": "Score",
+    "news": {
+      "news1": {
+        "title": "Scientists Discover Chocolate Cures All Diseases",
+        "content": "In a groundbreaking study, scientists at a prestigious university have found that eating 100g of chocolate daily can prevent and cure all known diseases including cancer and diabetes.",
+        "explanation": "This is clearly exaggerated. No single food can cure all diseases. Real medical breakthroughs are reported with specific details about the research and researchers involved."
+      },
+      "news2": {
+        "title": "New Research Shows Benefits of Regular Exercise",
+        "content": "According to a study published in The Journal of Medicine, exercising for 30 minutes at least 3 times a week can reduce the risk of heart disease by up to 40%.",
+        "explanation": "This is realistic news with specific details - it mentions the publication, gives reasonable statistics, and makes claims that align with established medical knowledge."
+      },
+      "news3": {
+        "title": "Child Becomes Superhero After COVID Vaccine",
+        "content": "A 10-year-old boy has reportedly developed supernatural powers including flight and super strength after receiving a COVID-19 vaccination last month.",
+        "explanation": "This is clearly fake. Vaccines cannot give people superpowers. Such extraordinary claims would require extraordinary evidence and would be major international news if true."
+      },
+      "news4": {
+        "title": "Tech Company Announces New Smartphone Model",
+        "content": "Tech giant announces their newest smartphone model featuring longer battery life, improved camera, and faster processor. The new device will be available next month starting at $899.",
+        "explanation": "This is a realistic news item about a product launch with specific details about features and pricing that align with typical smartphone releases."
+      },
+      "news5": {
+        "title": "Secret Government Program Controlling Weather Exposed",
+        "content": "Anonymous sources have revealed that the government has been using secret satellites to control weather patterns and cause natural disasters in enemy countries.",
+        "explanation": "This has hallmarks of conspiracy theories - anonymous sources, extraordinary claims about government capabilities, and lack of scientific consensus or evidence."
+      }
+    }
+  },
+  "chat": {
+    "gameTitle": "Choose the Response",
+    "instructions": "Respond to cyberbullying messages in the chat. Your choices make a difference!",
+    "participants": "Participants",
+    "chooseAction": "How will you respond?",
+    "score": "Score",
+    "scenarioComplete": "Scenario Complete!",
+    "reactions": {
+      "report": {
+        "text": "Report Message 🚨",
+        "consequence": "You reported the offensive message. A notification has been sent to the group administrators."
+      },
+      "defend": {
+        "text": "Defend João 🛡️",
+        "consequence": "You stood up for João. Your support makes a difference in preventing cyberbullying."
+      },
+      "ignore": {
+        "text": "Ignore 😶",
+        "consequence": "You ignored the message. While you didn't make things worse, the bullying might continue without intervention."
+      },
+      "join": {
+        "text": "Join Comments 😬",
+        "consequence": "You joined in with the bullying. This makes the situation worse and encourages others to continue the bullying."
+      }
+    },
+    "scenarios": {
+      "classroom": {
+        "name": "Class Group Chat",
+        "context": "You're in a WhatsApp group with your classmates discussing a recent school project. Someone starts making fun of João's presentation.",
+        "messages": {
+          "m1": "Has everyone submitted their project presentation slides?",
+          "m2": "Yes, I sent mine yesterday. The deadline is tomorrow, right?",
+          "m3": "Did you guys see João's presentation? It was so lame! 😂",
+          "m4": "Yeah, he was so nervous he couldn't even talk properly! 🤣",
+          "m5": "I'm still working on mine. It's hard to present in front of everyone...",
+          "m6": "João should just drop out if he can't even do a simple presentation lol",
+          "m7": "Maybe we should make a meme of his stutter for the class page 📸"
+        },
+        "feedback": {
+          "good": "Excellent job! You showed how to respond positively to cyberbullying. By reporting or defending, you help create a safer digital environment.",
+          "medium": "Good effort! You took some positive actions, but remember that consistently standing up against bullying is important to stop it completely.",
+          "bad": "Think about the impact of your actions. By ignoring or participating in cyberbullying, you allow it to continue and cause real harm to others."
+        }
+      }
+    }
+  },
+  "bullying": {
+    "gameTitle": "Detect Bullying",
+    "startGame": "Start Game",
+    "instructions": {
+      "title": "How to Play",
+      "point1": "Look at the posts on the social media wall and identify bullying content.",
+      "point2": "Click on any post that you think contains bullying or offensive content.",
+      "point3": "You'll get feedback after each selection.",
+      "remember": "Remember: bullying isn't always obvious. It can be hidden in memes, seemingly harmless jokes, or passive-aggressive comments.",
+      "selectAll": "You can select as many posts as you want before finishing the game."
+    },
+    "status": {
+      "postsChecked": "Posts checked",
+      "score": "Score"
+    },
+    "feedback": {
+      "selected": "This comment has been selected",
+      "correct": "You're right! This is bullying.",
+      "incorrect": "This is actually not bullying.",
+      "missedBullying": "You missed this bullying!",
+      "correctlySkipped": "Correct! This post doesn't contain bullying."
+    },
+    "selectAllBefore": "Select all posts that contain bullying before finishing",
+    "finishGame": "Finish Game",
+    "gameOver": {
+      "title": "Game Complete!",
+      "description": "You've learned to identify different types of bullying in online posts. Remember that recognizing bullying is the first step to stopping it.",
+      "finalScore": "Your final score"
+    },
+    "posts": {
+      "post1": {
+        "author": "Alex2005",
+        "content": "Look at Mark's new profile pic! 😂 I can't believe he thinks he looks good in that shirt. #FashionDisaster #NoFilter",
+        "timestamp": "Yesterday at 15:30",
+        "explanation": "This is bullying because it publicly mocks someone's appearance and clothing choices, using hashtags to draw more attention to the ridicule."
+      },
+      "post2": {
+        "author": "SportsTeam23",
+        "content": "Great game yesterday! Our team played their hearts out. Looking forward to next week's match!",
+        "timestamp": "Today at 09:15",
+        "explanation": "This is a positive and supportive post about a sports team. It doesn't target anyone negatively or contain offensive content."
+      },
+      "post3": {
+        "author": "CoolKid2023",
+        "content": "Why is Emma even in our group chat? Nobody likes her anyway. Can someone remove her? 🙄",
+        "timestamp": "3 hours ago",
+        "explanation": "This is bullying through exclusion. The post is attempting to isolate someone from a social group and publicly stating that no one likes them."
+      },
+      "post4": {
+        "author": "SchoolNews",
+        "content": "Reminder: Science fair projects are due next Friday. Don't forget to bring your materials tomorrow for in-class work time.",
+        "timestamp": "Yesterday at 14:22",
+        "explanation": "This is a simple informational announcement with no bullying content. It's providing helpful information to students."
+      },
+      "post5": {
+        "author": "GameMaster55",
+        "content": "Just saw Lisa's exam score. Guess not everyone can be smart! 🤣 #FailedAgain #MaybeDropOut?",
+        "timestamp": "Yesterday at 16:45",
+        "explanation": "This is bullying because it publicly shames someone for their academic performance. The hashtags make it even more hurtful by suggesting they should drop out."
+      },
+      "post6": {
+        "author": "Anonymous123",
+        "content": "New group 'Everyone except David' created. Join if you're cool enough 😎 We all know why he's not invited...",
+        "timestamp": "Today at 10:30",
+        "explanation": "This is cyberbullying through deliberate exclusion and creating an environment where someone is openly left out. It can cause isolation and emotional harm."
+      },
+      "post7": {
+        "author": "ArtClub",
+        "content": "Art exhibition this Friday! Everyone is welcome to display their work. Sign up sheet is in the cafeteria.",
+        "timestamp": "Today at 11:45",
+        "explanation": "This is a positive announcement inviting everyone to participate in a school activity. It's inclusive and doesn't target anyone negatively."
+      }
+    }
+  },
+  "positivePost": {
+    "gameTitle": "Create a Positive Post",
+    "startGame": "Start Game",
+    "instructions": {
+      "title": "How to Play",
+      "point1": "You will see a scenario where someone is being targeted by negative comments.",
+      "point2": "Your mission is to create a supportive message for this person.",
+      "point3": "You can write your own message or choose from pre-defined options.",
+      "remember": "Remember: positive words make a difference in people's lives!"
+    },
+    "writeYourOwn": "Write your own message",
+    "orChooseOne": "Or choose one of these options:",
+    "submitMessage": "Submit Message",
+    "scenarios": {
+      "fashion": {
+        "title": "Unique Style",
+        "context": "Lucas posted a photo with his new look and is receiving negative comments about his different clothing style.",
+        "negativeComments": [
+          "What a ridiculous outfit! 😂",
+          "You really left home looking like that? 🤮",
+          "Looks like you got dressed in the dark hahaha"
+        ],
+        "victim": "Lucas",
+        "victimMessage": "I just wanted to show my new style... 😔"
+      },
+      "hobby": {
+        "title": "Unusual Hobby",
+        "context": "Ana shared her hobby of collecting insects and is being ridiculed for it.",
+        "negativeComments": [
+          "That's so weird! 🐛",
+          "Who likes insects? Gross!",
+          "OMG what a bizarre girl 🤣"
+        ],
+        "victim": "Ana",
+        "victimMessage": "I love studying entomology, but maybe I shouldn't have shared..."
+      },
+      "grade": {
+        "title": "Low Grade",
+        "context": "Miguel is being mocked after his low math grade was revealed by a classmate.",
+        "negativeComments": [
+          "Look at the genius who got a D in math! 🤓",
+          "How can someone do so badly? 😆",
+          "I think we have a future street sweeper here!"
+        ],
+        "victim": "Miguel",
+        "victimMessage": "I studied hard, but math is difficult for me..."
+      },
+      "fakenews": {
+        "title": "Create Your News",
+        "description": "Learn how fake news is created and the impact it can have by safely creating a fake news story in an educational setting."
+      }
+    },
+    "presetMessages": {
+      "fashion": [
+        "I love your unique style! It's great to see someone with personality!",
+        "You look amazing! Keep being authentic.",
+        "I really admire your courage to express your own style.",
+        "Your look is inspiring! Don't mind the negative comments."
+      ],
+      "hobby": [
+        "Your insect collection is fascinating! I'd love to learn more about it.",
+        "What an interesting hobby! It must require a lot of dedication and knowledge.",
+        "It's really cool to see someone passionate about what they do. Keep it up!",
+        "That's super interesting! Have you thought about pursuing a career in biology?"
+      ],
+      "grade": [
+        "We all struggle with certain subjects. If you need help, we could study together!",
+        "Getting a low grade doesn't define who you are. You're much more than that!",
+        "Math can be tough. You'll do better next time!",
+        "This happens to all of us. Don't give up, you can improve!"
+      ]
+    },
+    "impact": {
+      "title": "Positive Impact",
+      "description": "Your supportive message made all the difference! When someone is being targeted by negative comments, a single supportive voice can completely change their day.",
+      "victimResponse": "Thank you so much for your message! It meant a lot to me. 😊",
+      "stats": {
+        "title": "Did you know?",
+        "fact1": "70% of young people who receive supportive messages report better emotional well-being",
+        "fact2": "A single positive message can neutralize the effect of up to five negative comments",
+        "fact3": "People who receive online support are 3x more likely to help others in the future"
+      }
+    },
+    "continue": "Continue",
+    "tryAnother": "Try another scenario",
+    "finishGame": "Finish game",
+    "score": "Score",
+    "gameOver": {
+      "title": "Game Complete!",
+      "description": "You've learned how your words can have a positive impact on others' lives. Keep spreading positivity in the digital world!",
+      "finalScore": "Your final score"
+    }
+  },
+  "feedback": {
+    "positive": "Good choice!",
+    "negative": "Hmm, think again...",
+    "neutral": "Interesting answer...",
+    "slightlyPositive": "Good try!"
+  },
+  "results": {
+    "gameOver": "Game Over!",
+    "finalScore": "Your final score",
+    "certificates": {
+      "master": {
+        "title": "Digital Master",
+        "message": "Congratulations! You've demonstrated excellent understanding of digital citizenship."
+      },
+      "competent": {
+        "title": "Competent Digital Citizen",
+        "message": "Good job! You have good knowledge about digital citizenship."
+      },
+      "apprentice": {
+        "title": "Digital Apprentice",
+        "message": "Keep learning! The journey to become a conscious digital citizen is just beginning."
+      }
+    },
+    "learned": "What you've learned",
+    "learnedItems": [
+      "How to identify and combat fake news",
+      "The importance of intervening against cyberbullying",
+      "How to protect your personal data online",
+      "Techniques to verify the reliability of online sources"
+    ],
+    "backToHome": "Back to Home",
+    "playAgain": "Play Again"
+  },
+  "about": {
+    "title": "About Digital Citizen",
+    "project": {
+      "title": "The Project",
+      "description1": "\"Digital Citizen\" is an educational game developed to help young people navigate safely and responsibly in the digital world. Through interactive scenarios and meaningful choices, players learn about misinformation, cyberbullying, and data security in an engaging and practical way.",
+      "description2": "The project was created with the mission of promoting digital literacy and forming conscious digital citizens, capable of making ethical and safe choices online."
+    },
+    "digitalCitizenship": {
+      "title": "What is Digital Citizenship?",
+      "description": "Digital citizenship refers to the responsible, ethical, and safe use of digital technologies. This includes skills such as:",
+      "skills": [
+        "Critical thinking to evaluate online information",
+        "Ethical behavior and empathy in digital interactions",
+        "Protection of privacy and personal security",
+        "Positive participation in online communities",
+        "Understanding of digital rights and responsibilities"
+      ]
+    },
+    "howItWorks": {
+      "title": "How the Game Works",
+      "description": "When playing \"Digital Citizen\", you face three thematic levels:",
+      "levels": {
+        "misinformation": {
+          "title": "Misinformation",
+          "description": "Learn to identify fake news and verify reliable sources."
+        },
+        "cyberbullying": {
+          "title": "Cyberbullying",
+          "description": "Discover how to react and intervene in online harassment situations."
+        },
+        "security": {
+          "title": "Digital Security",
+          "description": "Practice protecting your personal data and recognize phishing attempts."
+        },
+        "detective": {
+          "title": "Detective Digital",
+          "description": "Investigate news stories and learn how to find clues that reveal if a story is true or fake."
+        },
+        "factcheck": {
+          "title": "Fake or Fact",
+          "description": "Test your ability to quickly identify fake news with visual cues and immediate feedback."
+        },
+        "chat": {
+          "title": "Choose the Response",
+          "description": "Learn how to respond to cyberbullying in an animated chat simulation."
+        },
+        "bullying": {
+          "title": "Detect Bullying",
+          "description": "Learn to identify different forms of cyberbullying in social media posts and messages."
+        },
+        "positive": {
+          "title": "Create a Positive Post",
+          "description": "Learn how to counter negativity by creating supportive messages that can make a real difference."
+        },
+        "report": {
+          "title": "Report Simulator",
+          "description": "Practice the steps to report offensive content on social media platforms and understand why reporting is important."
+        },
+        "phishing": {
+          "title": "Phishing Simulator",
+          "description": "Learn to identify phishing emails, websites, and pop-ups to protect yourself from scams and identity theft."
+        },
+        "password": {
+          "title": "Create Strong Password",
+          "description": "Learn to create strong, secure passwords and understand what makes passwords resistant to hacking attempts."
+        },
+        "link": {
+          "title": "Secure Link Hunter",
+          "description": "Train your ability to identify secure URLs from fraudulent ones to avoid phishing attacks."
+        },
+        "simulator": {
+          "title": "Security Simulation: What If...",
+          "description": "See the consequences of security decisions through interactive simulations and animations."
+        },
+        "fakenews": {
+          "title": "Fake News Challenge",
+          "description": "Learn to identify and combat false information that spreads across the internet. This module will help you develop critical thinking skills to differentiate between reliable news and misinformation."
+        }
+      },
+      "conclusion": "Each decision made affects your score and provides learning about safe and responsible digital practices."
+    },
+    "startPlaying": "Start Playing"
+  },
+  "scenarios": {
+    "misinformation": {
+      "title": "Misinformation",
+      "description": "You're in a WhatsApp group with colleagues. Someone sends a sensationalist news: \"Celebrity X died in an accident!\". There's an urgent request to share it.",
+      "choices": {
+        "share": {
+          "text": "You immediately share it with your contacts.",
+          "feedback": "Sharing information without verification can spread misinformation. It's important to confirm the veracity of news before sharing them."
+        },
+        "research": {
+          "text": "You research the news in official sources.",
+          "feedback": "Excellent decision! Verifying information in reliable sources is the best way to combat fake news."
+        },
+        "ask": {
+          "text": "You ask the person about the origin of the information.",
+          "feedback": "Questioning the source is a good start, but verifying in official sources is even more effective."
+        },
+        "ignore": {
+          "text": "You ignore the message.",
+          "feedback": "Not spreading dubious information is positive, but verifying and alerting others could be even better."
+        }
+      },
+      "quiz": {
+        "question": "Which of these sites is most reliable for verifying news?",
+        "options": {
+          "blog": "Personal blog without author identification",
+          "newspaper": "Official newspaper with editorial team",
+          "whatsapp": "Anonymous WhatsApp message",
+          "social": "Viral post on social media"
+        },
+        "explanation": "Official newspapers with editorial teams have fact-checking processes before publishing news, making them more reliable than anonymous or unverified sources."
+      }
+    },
+    "cyberbullying": {
+      "title": "Cyberbullying",
+      "description": "In a class chat, a classmate starts being insulted because of the clothes they wore. The insults increase, with offensive emojis and memes.",
+      "choices": {
+        "ignore": {
+          "text": "You ignore what's happening.",
+          "feedback": "Ignoring bullying allows it to continue. As a bystander, you have the power to intervene and make a difference."
+        },
+        "defend": {
+          "text": "You defend your classmate and report the behavior.",
+          "feedback": "Excellent choice! Defending someone who's being bullied and reporting inappropriate behavior is the best way to combat cyberbullying."
+        },
+        "joke": {
+          "text": "You make a joke to lighten the situation.",
+          "feedback": "Trying to lighten the situation might help momentarily, but it doesn't solve the problem. It would be better to report the behavior or directly defend your classmate."
+        },
+        "participate": {
+          "text": "You join in with offensive comments.",
+          "feedback": "Participating in offensive comments only worsens the situation and contributes to cyberbullying, causing more emotional damage to the victim."
+        }
+      },
+      "quiz": {
+        "question": "Which of the following actions is most effective against cyberbullying?",
+        "options": {
+          "ignore": "Completely ignoring the situation",
+          "report": "Reporting the behavior to a responsible adult or the platform",
+          "insult": "Responding to bullies with insults too",
+          "watch": "Just watching without intervening"
+        },
+        "explanation": "Reporting the behavior to responsible adults or platforms is the most effective way to combat cyberbullying, as it allows competent authorities to intervene and take necessary measures."
+      }
+    },
+    "security": {
+      "title": "Digital Security",
+      "description": "You're on a sweepstakes website that asks for your phone number, and a pop-up appears saying you've won a prize. To receive it, you need to provide your tax ID and email.",
+      "choices": {
+        "fillData": {
+          "text": "You fill in the data.",
+          "feedback": "Providing personal data to unknown sites can lead to identity theft or fraud. It's important to verify the credibility of the site before sharing sensitive information."
+        },
+        "research": {
+          "text": "You research the site online.",
+          "feedback": "Excellent choice! Researching the site before providing any data is an essential security practice to avoid scams and phishing."
+        },
+        "close": {
+          "text": "You immediately close the tab.",
+          "feedback": "Closing the site is a good initial reaction, but researching about it can help you confirm if it's legitimate or fraudulent, and gives you knowledge to alert others."
+        },
+        "askFriend": {
+          "text": "You ask a more experienced friend.",
+          "feedback": "Asking for help from someone more experienced is a good idea, but it's important to develop your own verification skills. Combine this approach with research about the site."
+        }
+      },
+      "quiz": {
+        "question": "What is a common sign that a website might be fraudulent?",
+        "options": {
+          "privacy": "The site has a detailed privacy policy",
+          "https": "The site has a security certificate (HTTPS padlock)",
+          "prizes": "The site offers extraordinary prizes or discounts without apparent reason",
+          "contact": "The site has a contact section with physical address"
+        },
+        "explanation": "Offers too good to be true, such as extraordinary prizes without apparent reason, are often signs of fraudulent sites or phishing attempts. Always be suspicious of offers that seem too good to be true."
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Digital Citizen - Educational Project"
+  }
+}

@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Modelos para o jogo
+model GameSession {
+  id          String         @id @default(uuid())
+  createdAt   DateTime       @default(now()) @map("created_at")
+  updatedAt   DateTime       @updatedAt @map("updated_at")
+  currentLevel Int           @default(1) @map("current_level")
+  completed   Boolean        @default(false)
+  score       Int            @default(0)
+  locale      String         @default("pt")
+  choices     UserChoice[]
+  quizAnswers QuizResponse[]
+
+  @@map("game_sessions")
+}
+
+model UserChoice {
+  id         String      @id @default(uuid())
+  sessionId  String      @map("session_id")
+  level      Int
+  scenarioId String      @map("scenario_id")
+  choiceId   String      @map("choice_id")
+  createdAt  DateTime    @default(now()) @map("created_at")
+  session    GameSession @relation(fields: [sessionId], references: [id])
+
+  @@map("user_choices")
+}
+
+model QuizResponse {
+  id         String      @id @default(uuid())
+  sessionId  String      @map("session_id")
+  questionId String      @map("question_id")
+  answerId   String      @map("answer_id")
+  isCorrect  Boolean     @map("is_correct")
+  createdAt  DateTime    @default(now()) @map("created_at")
+  session    GameSession @relation(fields: [sessionId], references: [id])
+
+  @@map("quiz_responses")
+}

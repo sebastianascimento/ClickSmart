@@ -1,0 +1,981 @@
+{
+  "app": {
+    "title": "ClickSmart",
+    "tagline": "Navegue no Mundo Digital com Segurança"
+  },
+  "navigation": {
+    "home": "Início",
+    "game": "Jogar"
+  },
+  "home": {
+    "description": "Aprenda a identificar notícias falsas, combater o cyberbullying e proteger seus dados enquanto explora decisões éticas no ambiente digital.",
+    "startGame": "Começar Jogo",
+    "howItWorks": "Como Funciona",
+    "sections": {
+      "scenarios": {
+        "title": "Cenários Realistas",
+        "description": "Enfrente situações que os jovens encontram diariamente no mundo digital."
+      },
+      "decisions": {
+        "title": "Decisões Éticas",
+        "description": "Tome decisões que afetam sua jornada e aprenda sobre comportamento digital responsável."
+      },
+      "learning": {
+        "title": "Aprenda e Pratique",
+        "description": "Teste seus conhecimentos com questionários interativos sobre segurança e cidadania digital."
+      }
+    }
+  },
+  "landing": {
+    "heroTitle": "ClickSmart",
+    "heroSubtitle": "Navegue no mundo digital com segurança e consciência. Aprenda de forma interativa a identificar fake news, evitar cyberbullying e proteger seus dados online.",
+    "startButton": "Começar Agora",
+
+    "howItWorks": "Como Funciona?",
+    "interactiveGames": "Jogos Interativos",
+    "interactiveGamesDesc": "Aprenda através de jogos envolventes que simulam situações do mundo real digital.",
+    "learnByDoing": "Aprenda na Prática",
+    "learnByDoingDesc": "Tome decisões e veja suas consequências em um ambiente seguro antes da vida real.",
+    "acquireSkills": "Conquiste Habilidades",
+    "acquireSkillsDesc": "Ganhe pontos, suba de nível e torne-se um especialista em cidadania digital.",
+
+    "educationalGames": "Jogos Educativos",
+
+    "impactTitle": "Impacto na Educação Digital",
+    "stat1": "dos jovens não sabem identificar notícias falsas",
+    "stat2": "já encontraram cyberbullying nas redes sociais",
+    "stat3": "melhoraram suas habilidades digitais após usar o ClickSmart",
+    "stat4": "se sentem mais seguros online após completar os jogos",
+
+    "testimonials": "O que estão dizendo",
+    "testimonial1": "\"Os jogos são divertidos e me ajudaram a identificar fake news. Agora sempre verifico minhas fontes antes de compartilhar!\"",
+    "testimonial1Author": "Mariana, 14 anos",
+    "testimonial2": "\"Como professor, uso o ClickSmart nas minhas aulas de informática. Os alunos adoram e aprendem habilidades essenciais para o mundo digital.\"",
+    "testimonial2Author": "Prof. Carlos, Escola EB 2/3",
+    "testimonial3": "\"Finalmente entendi como identificar phishing e manter minhas senhas seguras. Indispensável para qualquer jovem hoje em dia!\"",
+    "testimonial3Author": "Pedro, 16 anos",
+
+    "ctaTitle": "Pronto para navegar com inteligência?",
+    "ctaDesc": "Junte-se a milhares de jovens que já estão aprendendo a usar a internet de forma segura, ética e consciente.",
+
+    "footerTagline": "Navegue no mundo digital com segurança",
+    "about": "Sobre",
+    "contact": "Contato",
+    "privacy": "Política de Privacidade",
+    "rights": "Todos os direitos reservados.",
+    "digitalDetective": "Detetive Digital",
+    "digitalDetectiveDesc": "Investigue notícias e descubra se são verdadeiras ou falsas através de pistas escondidas.",
+    "detectBullying": "Detecta o Bullying",
+    "detectBullyingDesc": "Aprenda a identificar e reagir apropriadamente ao cyberbullying nas redes sociais.",
+    "chooseResponse": "Escolhe a Resposta",
+    "chooseResponseDesc": "Pratique respostas apropriadas em situações de conflito digital em chats e mensagens.",
+    "createStrongPassword": "Cria uma Senha Forte",
+    "createStrongPasswordDesc": "Aprenda a criar senhas seguras e entenda como proteger suas informações online.",
+    "createNews": "Cria a Tua Notícia",
+    "createNewsDesc": "Entenda como notícias falsas são criadas e os danos que podem causar na sociedade.",
+    "secureLink": "Caça ao Link Seguro",
+    "secureLinkDesc": "Descubra como identificar links suspeitos e evitar ataques de phishing."
+  },
+  "game": {
+    "score": "Pontuação",
+    "level": "Nível",
+    "loading": "Carregando o jogo...",
+    "error": "Erro ao carregar o jogo. Por favor, tente novamente.",
+    "tryAgain": "Tentar Novamente",
+    "whatWouldYouDo": "O que você faria?",
+    "continue": "Continuar",
+    "checkAnswer": "Verificar Resposta",
+    "progress": "Progresso",
+    "gameCompleted": "Jogo Concluído!",
+    "finalScore": "Sua pontuação final",
+    "playAgain": "Jogar Novamente",
+    "gameTypes": {
+      "choice": "Jogo de Escolhas",
+      "detective": "Detetive Digital",
+      "factcheck": "Fake ou Facto",
+      "chat": "Escolhe a Resposta",
+      "bullying": "Detecta o Bullying",
+      "positive": "Cria um Post Positivo",
+      "report": "Simulador de Denúncia",
+      "phishing": "Simulador de Phishing",
+      "password": "Cria uma Palavra-Passe Forte",
+      "link": "Caça ao Link Seguro",
+      "simulator": "Simulação: O Que Acontece Se...",
+      "fakenews": "Cria a Tua Notícia"
+    }
+  },
+  "passwordCreator": {
+    "gameTitle": "Cria uma Palavra-Passe Forte",
+    "startGame": "Iniciar Jogo",
+    "score": "Pontuação",
+    "challenge": "Desafio",
+    "createPassword": "Crie sua palavra-passe",
+    "passwordRules": "Requisitos da Palavra-Passe",
+    "showTip": "Mostrar Dica",
+    "submit": "Enviar Palavra-Passe",
+    "backspace": "Apagar",
+    "clear": "Limpar Tudo",
+    "strength": {
+      "weak": "Fraca",
+      "medium": "Média",
+      "strong": "Forte"
+    },
+    "instructions": {
+      "title": "Como Jogar",
+      "point1": "Crie uma palavra-passe forte para diferentes cenários de segurança.",
+      "point2": "Use os botões de caracteres para construir sua palavra-passe.",
+      "point3": "Seu objetivo é atender a todos os requisitos de segurança mostrados na lista.",
+      "remember": "Lembre-se: Uma boa palavra-passe é fácil para você lembrar, mas difícil para os outros adivinharem!"
+    },
+    "rules": {
+      "length": "Pelo menos 8 caracteres",
+      "uppercase": "Contém letra maiúscula",
+      "lowercase": "Contém letra minúscula",
+      "number": "Contém número",
+      "symbol": "Contém caractere especial",
+      "noCommon": "Evita padrões comuns (123456, password, etc.)"
+    },
+    "characterSets": {
+      "title": "Selecione caracteres para sua palavra-passe",
+      "lowercase": "Letras Minúsculas",
+      "uppercase": "Letras Maiúsculas",
+      "numbers": "Números",
+      "symbols": "Caracteres Especiais"
+    },
+    "challenges": {
+      "social": {
+        "name": "Conta de Rede Social",
+        "description": "Crie uma palavra-passe forte para sua nova conta de rede social. Lembre-se que ela protegerá todas as suas fotos e informações pessoais.",
+        "tip": "Para redes sociais, considere usar uma frase que seja significativa para você, mas não fácil de adivinhar, combinada com caracteres especiais e números."
+      },
+      "bank": {
+        "name": "Banco Online",
+        "description": "Seu banco exige uma nova palavra-passe segura para transações online. Esta palavra-passe terá acesso às suas informações financeiras.",
+        "tip": "Palavras-passe bancárias devem ser especialmente fortes. Evite usar informações relacionadas à sua identidade, como aniversários, e use uma mistura de todos os tipos de caracteres."
+      },
+      "email": {
+        "name": "Conta de Email",
+        "description": "Crie uma palavra-passe forte para sua conta de email. Lembre-se que seu email pode ser usado para redefinir palavras-passe de outros serviços.",
+        "tip": "Contas de email são frequentemente alvos de hackers, pois podem ser usadas para redefinir outras palavras-passe. Considere usar um gerenciador de palavras-passe para máxima segurança."
+      }
+    },
+    "gameOver": {
+      "title": "Jogo Completo!",
+      "message": "Você aprendeu como criar palavras-passe fortes e seguras para diferentes contextos. Continue aplicando esses princípios para proteger suas contas online!",
+      "finalScore": "Pontuação final"
+    },
+    "passwordTips": {
+      "title": "Dicas de Segurança para Palavras-Passe:",
+      "tip1": "Use uma palavra-passe diferente para cada conta importante",
+      "tip2": "Considere usar um gerenciador de palavras-passe para acompanhar suas senhas",
+      "tip3": "Mude suas palavras-passe regularmente, especialmente para contas sensíveis",
+      "tip4": "Nunca compartilhe suas palavras-passe com outras pessoas ou armazene-as em texto simples"
+    }
+  },
+  "linkHunter": {
+    "gameTitle": "Caça ao Link Seguro",
+    "startGame": "Iniciar Jogo",
+    "score": "Pontuação",
+    "level": "Nível",
+    "continue": "Continuar",
+    "findSafeLinks": "Clique nos links que você considera seguros. Fique atento a URLs enganosos, HTTP em vez de HTTPS, nomes de domínio com erros ortográficos ou domínios suspeitos.",
+    "status": {
+      "safeLinks": "Links seguros encontrados"
+    },
+    "instructions": {
+      "title": "Como Jogar",
+      "point1": "Você verá uma lista de URLs que podem ser seguros ou maliciosos.",
+      "point2": "Seu objetivo é identificar e clicar apenas nos links seguros.",
+      "point3": "Observe cuidadosamente os sinais de phishing, como domínios com erros ortográficos ou ausência de https.",
+      "remember": "Lembre-se: Na vida real, sempre verifique um URL cuidadosamente antes de clicar, especialmente quando envolve informações sensíveis!"
+    },
+    "feedback": {
+      "safeTitle": "Muito bem! Este link é seguro.",
+      "dangerTitle": "Cuidado! Este é um link suspeito.",
+      "safeMessage": "Você identificou corretamente um link seguro.",
+      "dangerMessage": "Este link é potencialmente malicioso ou fraudulento.",
+      "explanation": "Por que isso importa:"
+    },
+    "securityTips": {
+      "title": "Dicas de Segurança",
+      "tip1": "Sempre verifique se há HTTPS (ícone de cadeado) na barra de endereço antes de inserir informações sensíveis",
+      "tip2": "Desconfie de URLs com nomes de domínio com erros ortográficos ou extensões incomuns"
+    },
+    "levels": {
+      "banking": {
+        "title": "Sites Bancários",
+        "description": "Seu banco enviou um email com vários links para atualizar suas informações de conta. Quais são sites bancários legítimos?"
+      },
+      "shopping": {
+        "title": "Compras Online",
+        "description": "Você está procurando ofertas em sites populares de varejo. Identifique quais links de sites de compras são genuínos e quais podem ser golpes."
+      },
+      "email": {
+        "title": "Recuperação de Email",
+        "description": "Você precisa recuperar sua palavra-passe do email. Em quais destes links de redefinição de senha seria seguro clicar?"
+      }
+    },
+    "links": {
+      "bank1": "Este é um link seguro. Ele usa HTTPS e está no domínio oficial do banco (mybank.com).",
+      "bank2": "Este link é suspeito. Ele usa HTTP em vez de HTTPS, o que significa que sua conexão não seria criptografada. Além disso, o domínio 'mybank-secure.com' não é o domínio oficial do banco.",
+      "bank3": "Este é um link falso. Embora use HTTPS, o domínio 'loginportal.net' não é o domínio oficial do banco. Isto é provavelmente uma tentativa de phishing.",
+      "bank4": "Este é um subdomínio legítimo do site principal do banco, usando HTTPS para uma conexão segura.",
+      "shop1": "Este é um link fraudulento. 'amazonshopping.co' não é o domínio oficial da Amazon, que é amazon.com.",
+      "shop2": "Este é um link seguro para o site real da Amazon com proteção HTTPS.",
+      "shop3": "Isto é perigoso. Usa HTTP em vez de HTTPS e 'best-deals-amazon.com' não é o domínio oficial da Amazon.",
+      "shop4": "Este é um link legítimo para a loja oficial da Samsung com segurança HTTPS adequada.",
+      "email1": "Este é um URL legítimo do Google Mail com a devida segurança.",
+      "email2": "Esta é uma tentativa de phishing. 'google-mail-service.com' não é um domínio oficial do Google.",
+      "email3": "Este é um link seguro para a página oficial de recuperação de conta do Google.",
+      "email4": "Este é um URL suspeito. A estrutura do domínio parece uma tentativa de phishing com vários subdomínios para confundir os usuários."
+    },
+    "gameOver": {
+      "title": "Jogo Completo!",
+      "message": "Você aprendeu com sucesso a identificar links seguros e suspeitos online. Esta habilidade ajudará a proteger suas informações pessoais!",
+      "finalScore": "Pontuação final"
+    },
+    "linkTips": {
+      "title": "Dicas de Segurança para URLs:",
+      "tip1": "Sempre verifique o nome do domínio com cuidado - sites de phishing frequentemente usam nomes semelhantes",
+      "tip2": "Procure por HTTPS e um ícone de cadeado na barra de endereço do seu navegador",
+      "tip3": "Tenha cuidado com URLs com subdomínios incomuns ou extensões de domínio estranhas",
+      "tip4": "Em caso de dúvida, digite o endereço do site diretamente no seu navegador em vez de clicar em links"
+    }
+  },
+  "fakenewsCreator": {
+    "gameTitle": "Cria a Tua Notícia",
+    "startGame": "Iniciar Jogo",
+    "score": "Pontuação",
+    "instructions": {
+      "title": "Como Jogar",
+      "point1": "Crie uma notícia falsa escolhendo título, imagem, data e conteúdo.",
+      "point2": "Depois de criar a notícia, veja como as pessoas poderiam reagir.",
+      "point3": "Aprenda sobre os riscos de criar e partilhar notícias falsas.",
+      "remember": "Lembra-te: Na vida real, criar notícias falsas pode prejudicar muitas pessoas!"
+    },
+    "createSection": {
+      "title": "Cria a Tua Notícia",
+      "headlineLabel": "Escolhe um Título",
+      "headlineOptions": {
+        "option1": "URGENTE! Descoberta Criatura Misteriosa no Parque da Cidade!",
+        "option2": "INCRÍVEL! Criança de 10 Anos Inventou Robô que Faz os Trabalhos de Casa!",
+        "option3": "ALERTA! Escolas Vão Acabar com Férias de Verão!",
+        "option4": "NOTÍCIA BOMBA! Famoso Jogador de Futebol Vai Treinar Equipa Local!"
+      },
+      "imageLabel": "Escolhe uma Imagem",
+      "dateLabel": "Escolhe uma Data",
+      "datePlaceholder": "Hoje",
+      "dateOptions": {
+        "today": "Hoje",
+        "yesterday": "Ontem",
+        "lastWeek": "Semana passada",
+        "madeUp": "Data inventada"
+      },
+      "contentLabel": "Escolhe o Conteúdo",
+      "contentOptions": {
+        "option1": "Várias testemunhas afirmam ter visto uma criatura estranha no parque da cidade ontem à noite. Alguns dizem que parecia um alienígena, outros acham que era um animal desconhecido. As autoridades não confirmam a informação.",
+        "option2": "Um jovem estudante criou um robô que faz todos os trabalhos de casa sozinho! Os professores estão preocupados e dizem que vão proibir a invenção nas escolas. Os pais estão divididos sobre o assunto.",
+        "option3": "Fontes anónimas indicam que as escolas estão a planear acabar com as férias de verão para melhorar as notas dos alunos. A medida seria implementada já no próximo ano letivo!",
+        "option4": "Segundo informações exclusivas, uma estrela do futebol mundial estaria em negociações secretas para treinar a equipa local. O anúncio oficial deve acontecer nos próximos dias!"
+      },
+      "preview": "Pré-visualizar",
+      "publish": "Publicar Notícia"
+    },
+    "previewSection": {
+      "title": "A Tua Notícia",
+      "source": "Fonte: NotíciasInventadas.pt",
+      "shares": "Partilhas:",
+      "comments": "Comentários:",
+      "edit": "Editar",
+      "publish": "Publicar"
+    },
+    "reactionSection": {
+      "title": "Reações à Tua Notícia",
+      "shareCount": "pessoas partilharam",
+      "reactionTypes": {
+        "fear": "Medo",
+        "confusion": "Confusão",
+        "anger": "Raiva",
+        "excitement": "Entusiasmo"
+      },
+      "exampleComments": {
+        "comment1": "Isto não pode ser verdade! Vou partilhar com toda a gente!",
+        "comment2": "A minha prima disse que também viu! É verdade!",
+        "comment3": "Não acreditem em tudo o que leem na internet...",
+        "comment4": "Será que alguém verificou esta informação?",
+        "comment5": "JÁ SABIA QUE ISTO IA ACONTECER!!!"
+      },
+      "impact": {
+        "title": "Impacto da Tua Notícia",
+        "description": "Vê como a tua notícia falsa poderia espalhar-se rapidamente e causar reações fortes nas pessoas. Na vida real, notícias falsas podem:",
+        "effect1": "Causar medo ou pânico desnecessário",
+        "effect2": "Prejudicar a reputação de pessoas inocentes",
+        "effect3": "Levar a decisões erradas baseadas em informações falsas",
+        "effect4": "Diminuir a confiança em fontes de informação verdadeiras",
+        "message": "Vês como pode ser perigoso?"
+      }
+    },
+    "lessonSection": {
+      "title": "Lição Aprendida",
+      "message": "Criar notícias falsas pode parecer divertido, mas na vida real pode ter consequências sérias.",
+      "factTitle": "Factos importantes:",
+      "fact1": "Mais de 50% das pessoas não verificam se uma notícia é verdadeira antes de partilhar",
+      "fact2": "Uma notícia falsa espalha-se 6 vezes mais rápido que uma verdadeira nas redes sociais",
+      "fact3": "Notícias falsas já causaram pânico real, violência e até influenciaram eleições",
+      "whatToDo": "O que fazer antes de partilhar uma notícia:",
+      "tip1": "Verificar a fonte da notícia",
+      "tip2": "Procurar a mesma informação em sites confiáveis",
+      "tip3": "Verificar a data da publicação",
+      "tip4": "Questionar se o conteúdo parece demasiado incrível para ser verdade"
+    },
+    "continue": "Continuar",
+    "createNew": "Criar Nova Notícia",
+    "finishGame": "Finalizar Jogo",
+    "gameOver": {
+      "title": "Jogo Completo!",
+      "description": "Agora sabes como as notícias falsas são criadas e o impacto que podem ter! Lembra-te sempre de verificar a informação antes de acreditar ou partilhar.",
+      "finalScore": "Pontuação final"
+    }
+  },
+  "phishingSimulator": {
+    "gameTitle": "Simulador de Phishing",
+    "startGame": "Iniciar Jogo",
+    "score": "Pontuação",
+    "progress": "Progresso",
+    "question": "É seguro ou phishing?",
+    "buttons": {
+      "safe": "Seguro",
+      "phishing": "Phishing"
+    },
+    "instructions": {
+      "title": "Como Jogar",
+      "point1": "Serão mostrados emails, sites e pop-ups que podem ser legítimos ou tentativas de phishing.",
+      "point2": "Sua tarefa é identificar quais são seguros e quais são ataques de phishing.",
+      "point3": "Procure por pistas como URLs suspeitos, erros ortográficos ou solicitações incomuns de informações pessoais.",
+      "remember": "Lembre-se: Organizações reais nunca pressionam por ação imediata ou pedem informações sensíveis por email ou pop-ups."
+    },
+    "feedback": {
+      "correctTitle": "Muito bem!",
+      "incorrectTitle": "Tenha cuidado!",
+      "isPhishing": "Isto é uma tentativa de phishing!",
+      "isSafe": "Esta é uma comunicação legítima."
+    },
+    "tips": {
+      "phishingSignsTitle": "Sinais de alerta para observar:",
+      "phishingSigns": {
+        "1": "Endereço do remetente suspeito com nomes de domínio mal escritos",
+        "2": "Solicitações urgentes ou ameaças para criar pressão",
+        "3": "Erros de gramática ou ortografia e apresentação não profissional"
+      },
+      "safeSignsTitle": "Sinais de comunicação legítima:",
+      "safeSigns": {
+        "1": "Domínio oficial correto no endereço de email ou URL do site",
+        "2": "Sem pedidos de informações pessoais ou senhas",
+        "3": "Design profissional e gramática/ortografia correta"
+      }
+    },
+    "examples": {
+      "email1": {
+        "title": "URGENTE: Você GANHOU um Prêmio!",
+        "content": "Caro Cliente,\n\nPARABÉNS! Você foi selecionado aleatoriamente para receber um iPhone 15 Pro GRÁTIS!\n\nPara reivindicar seu prêmio, você deve AGIR RÁPIDO e clicar no link abaixo para inserir seus dados pessoais dentro de 24 HORAS ou seu prêmio será dado a outra pessoa!\n\nPrecisamos do seu nome completo, endereço, número de telefone e dados bancários para fins de verificação.\n\nClique aqui: www.reivindique-seu-premio-gratis.com",
+        "explanation": "Este é um email de phishing clássico com vários sinais de alerta: urgência para criar pressão, prêmio bom demais para ser verdade, endereço de remetente suspeito e solicitação de informações pessoais e financeiras sensíveis."
+      },
+      "email2": {
+        "title": "Atualização do Calendário Escolar",
+        "content": "Caros Pais e Responsáveis,\n\nEste é um lembrete de que o calendário escolar para o próximo ano letivo foi atualizado em nosso site oficial.\n\nVocê pode visualizar o calendário fazendo login no portal dos pais usando suas credenciais existentes.\n\nSe tiver alguma dúvida, entre em contato com a secretaria da escola.\n\nAtenciosamente,\nAdministração Escolar",
+        "explanation": "Este é um email legítimo de um domínio escolar oficial. Não pede informações pessoais, não cria urgência e orienta você a usar suas credenciais de login existentes no site oficial deles."
+      },
+      "popup1": {
+        "title": "Alerta de Segurança",
+        "content": "AVISO: Vírus detectado no seu computador!\n\nLigue para o nosso suporte técnico imediatamente: +1-800-123-4567\nCódigo de referência: MS-ALERT#45692\n\nNão desligue seu computador ou seus dados serão perdidos!",
+        "explanation": "Este é um alerta de segurança falso. Software de segurança legítimo não usa pop-ups alarmantes com números de telefone. Esta tática é usada para assustar as pessoas a ligarem para números de suporte falsos que solicitarão pagamento ou acesso remoto ao seu computador."
+      },
+      "website1": {
+        "title": "Redefinir Sua Senha do Facebook",
+        "content": "Por favor, insira seu email e senha atual para verificar sua identidade:\n\nEmail: [                    ]\nSenha Atual: [                    ]\n\n[Redefinir Senha]",
+        "explanation": "Este é um site de phishing. Note que o URL é 'faceb00k-login.com' (com zeros no lugar de 'o's). Um site legítimo nunca pediria sua senha atual ao redefinir uma senha. O domínio real do Facebook é facebook.com."
+      },
+      "email3": {
+        "title": "Sua renovação de assinatura Microsoft",
+        "content": "Olá,\n\nEsta é uma confirmação de que sua assinatura Microsoft 365 foi renovada por mais um ano. Nenhuma ação é necessária da sua parte.\n\nSe você tiver alguma dúvida sobre sua assinatura, visite nosso Centro de Ajuda em https://support.microsoft.com ou entre em contato com nossa equipe de atendimento ao cliente.\n\nObrigado por escolher a Microsoft.\n\nEquipe de Assinaturas Microsoft",
+        "explanation": "Este parece ser um email legítimo. Vem de um domínio oficial da Microsoft, não solicita nenhuma informação pessoal, inclui um link de suporte adequado para o site oficial da Microsoft e não cria urgência."
+      }
+    },
+    "nextExample": "Próximo Exemplo",
+    "finishGame": "Finalizar Jogo",
+    "gameOver": {
+      "title": "Jogo Completo!",
+      "message": "Você completou o Simulador de Phishing! Lembre-se dessas habilidades ao navegar na web e verificar seus emails.",
+      "finalScore": "Pontuação final"
+    }
+  },
+  "reportSimulator": {
+    "gameTitle": "Simulador de Denúncia",
+    "startGame": "Iniciar Jogo",
+    "score": "Pontuação",
+    "instructions": {
+      "title": "Como Jogar",
+      "point1": "Você verá postagens com conteúdo ofensivo/problemático de redes sociais.",
+      "point2": "Seu objetivo é seguir os passos corretos para denunciar o conteúdo.",
+      "point3": "Clique nos botões certos para reportar o conteúdo (começando pelo menu \"⋮\").",
+      "remember": "Lembre-se: Denunciar conteúdo inapropriado é uma forma importante de manter as redes sociais mais seguras para todos."
+    },
+    "options": {
+      "save": "Salvar",
+      "share": "Compartilhar",
+      "report": "Denunciar",
+      "cancel": "Cancelar"
+    },
+    "reportReasons": {
+      "title": "Por que está denunciando esta postagem?",
+      "hate": "Discurso de ódio",
+      "harassment": "Assédio ou bullying",
+      "violence": "Violência ou ameaças",
+      "falseInfo": "Informação falsa"
+    },
+    "reportDetails": {
+      "title": "Adicionar detalhes à sua denúncia",
+      "description": "Forneça qualquer detalhe adicional que possa ajudar a revisão (opcional):",
+      "placeholder": "Descreva por que você acredita que este conteúdo viola as diretrizes...",
+      "submit": "Enviar"
+    },
+    "reportConfirmation": {
+      "title": "Enviar esta denúncia?",
+      "description": "Sua denúncia será analisada por moderadores da plataforma. Obrigado por ajudar a manter a comunidade segura.",
+      "confirm": "Confirmar denúncia"
+    },
+    "reportSuccess": {
+      "title": "Denúncia Enviada!",
+      "message": "Obrigado por sua denúncia. A equipe de moderação irá analisar o conteúdo o mais breve possível."
+    },
+    "wrongOption": "Essa não é a opção correta para denunciar. Tente novamente!",
+    "nextPost": "Próxima postagem",
+    "finishGame": "Finalizar jogo",
+    "postCompleted": {
+      "title": "Denúncia Bem-sucedida",
+      "message": "Você já denunciou esta publicação com sucesso."
+    },
+    "gameOver": {
+      "title": "Jogo Completo!",
+      "message": "Parabéns! Você aprendeu como denunciar conteúdo problemático em redes sociais.",
+      "finalScore": "Pontuação final"
+    },
+    "posts": {
+      "post1": {
+        "content": "Esses imigrantes deviam voltar para seus países! Não queremos esse tipo de gente aqui roubando nossos empregos e trazendo seus problemas!"
+      },
+      "post2": {
+        "content": "Alguém conhece esse perdedor da Escola Central? Ouvi que ele reprovou em todas as matérias e fica chorando no banheiro todos os dias. Vamos marcar ele nos comentários! 😂"
+      },
+      "post3": {
+        "content": "AVISO URGENTE: Esta nova vacina está infectando as pessoas com um vírus mortal! O governo está escondendo os casos de morte! COMPARTILHE ANTES QUE TIREM DO AR!!!"
+      }
+    }
+  },
+  "detective": {
+    "gameTitle": "Detetive Digital",
+    "instructions": "Você é um detetive digital! Investigue esta notícia clicando nas ferramentas abaixo. Depois de coletar pistas suficientes, decida se a notícia é verdadeira ou falsa.",
+    "toolsTitle": "Ferramentas de Investigação",
+    "cluesTitle": "Pistas Descobertas",
+    "decisionTitle": "Tome Sua Decisão",
+    "decisionPrompt": "Com base na sua investigação, esta notícia é verdadeira ou falsa?",
+    "decisionFake": "É Notícia Falsa",
+    "decisionReal": "É Notícia Verdadeira",
+    "resultCorrect": "Ótimo trabalho de detetive! Você acertou!",
+    "resultWrong": "Não está bem certo... vamos revisar as evidências.",
+    "explanationFake": "Esta era uma notícia falsa. A história tem vários sinais de alerta: só aparece nas redes sociais, o autor não é verificável e a data é suspeitamente antiga.",
+    "explanationReal": "Esta era uma notícia verdadeira. A história é relatada por fontes confiáveis, tem um autor verificado e inclui fatos recentes que podem ser verificados.",
+    "story": {
+      "title": "Celebridade Famosa Envolvida em Incidente Chocante!",
+      "content": "Uma celebridade muito famosa esteve supostamente envolvida num incidente chocante ontem à noite! Várias contas de redes sociais estão partilhando esta notícia de última hora. O incidente aconteceu após um evento privado. Fontes próximas da celebridade recusaram-se a comentar."
+    },
+    "clues": {
+      "google": {
+        "name": "Pesquisar Online",
+        "content": "Você não consegue encontrar esta história em nenhum site de notícias respeitável. Ela aparece apenas em publicações de redes sociais e fóruns de fofocas."
+      },
+      "author": {
+        "name": "Verificar Autor",
+        "content": "A publicação original foi compartilhada por uma conta anônima sem histórico de reportagens."
+      },
+      "comments": {
+        "name": "Ler Comentários",
+        "content": "A maioria dos comentários expressa dúvida sobre a história. Vários usuários apontam histórias falsas semelhantes que circularam no mês passado."
+      },
+      "date": {
+        "name": "Verificar Data",
+        "content": "A publicação original é de três dias atrás, mas afirma que o incidente aconteceu 'ontem à noite' em cada dia que é compartilhada."
+      }
+    }
+  },
+  "factcheck": {
+    "gameTitle": "Fake ou Facto",
+    "instructions": "Decida se a notícia é verdadeira ou falsa! Deslize para a direita para verdadeira, esquerda para falsa - ou use os botões abaixo.",
+    "swipeInstructions": "Deslize para a direita para notícias reais, para a esquerda para notícias falsas",
+    "fakeBtnText": "Fake",
+    "realBtnText": "Real",
+    "correctAnswer": "Correto!",
+    "wrongAnswer": "Ops! Não está certo.",
+    "thisFake": "Esta notícia é FALSA.",
+    "thisReal": "Esta notícia é VERDADEIRA.",
+    "nextNews": "Próxima notícia",
+    "finishGame": "Finalizar jogo",
+    "imageNotLoaded": "Imagem não carregada",
+    "progress": "Progresso",
+    "score": "Pontuação",
+    "news": {
+      "news1": {
+        "title": "Cientistas Descobrem que Chocolate Cura Todas as Doenças",
+        "content": "Em um estudo inovador, cientistas de uma universidade prestigiada descobriram que comer 100g de chocolate diariamente pode prevenir e curar todas as doenças conhecidas, incluindo câncer e diabetes.",
+        "explanation": "Isso é claramente exagerado. Nenhum alimento pode curar todas as doenças. Avanços médicos reais são reportados com detalhes específicos sobre a pesquisa e os pesquisadores envolvidos."
+      },
+      "news2": {
+        "title": "Nova Pesquisa Mostra Benefícios do Exercício Regular",
+        "content": "De acordo com um estudo publicado no Jornal de Medicina, exercitar-se por 30 minutos pelo menos 3 vezes por semana pode reduzir o risco de doenças cardíacas em até 40%.",
+        "explanation": "Esta é uma notícia realista com detalhes específicos - menciona a publicação, fornece estatísticas razoáveis e faz afirmações que se alinham com conhecimentos médicos estabelecidos."
+      },
+      "news3": {
+        "title": "Criança se Torna Super-Herói Após Vacina COVID",
+        "content": "Um menino de 10 anos supostamente desenvolveu poderes sobrenaturais, incluindo voo e super força, após receber uma vacinação contra COVID-19 no mês passado.",
+        "explanation": "Isso é claramente falso. Vacinas não podem dar superpoderes às pessoas. Afirmações extraordinárias como essa exigiriam evidências extraordinárias e seriam notícias internacionais importantes se fossem verdadeiras."
+      },
+      "news4": {
+        "title": "Empresa de Tecnologia Anuncia Novo Modelo de Smartphone",
+        "content": "Gigante da tecnologia anuncia seu mais novo modelo de smartphone com maior duração de bateria, câmera aprimorada e processador mais rápido. O novo dispositivo estará disponível no próximo mês a partir de R$ 4.499.",
+        "explanation": "Esta é uma notícia realista sobre um lançamento de produto com detalhes específicos sobre recursos e preços que se alinham com lançamentos típicos de smartphones."
+      },
+      "news5": {
+        "title": "Programa Secreto do Governo para Controlar o Clima é Exposto",
+        "content": "Fontes anônimas revelaram que o governo tem usado satélites secretos para controlar padrões climáticos e causar desastres naturais em países inimigos.",
+        "explanation": "Isso tem características de teorias da conspiração - fontes anônimas, afirmações extraordinárias sobre capacidades governamentais e falta de consenso científico ou evidências."
+      }
+    }
+  },
+  "chat": {
+    "gameTitle": "Escolhe a Resposta",
+    "instructions": "Responda às mensagens de cyberbullying no chat. Suas escolhas fazem diferença!",
+    "participants": "Participantes",
+    "chooseAction": "Como você vai responder?",
+    "score": "Pontuação",
+    "scenarioComplete": "Cenário Concluído!",
+    "reactions": {
+      "report": {
+        "text": "Denunciar Mensagem 🚨",
+        "consequence": "Você denunciou a mensagem ofensiva. Uma notificação foi enviada aos administradores do grupo."
+      },
+      "defend": {
+        "text": "Defender João 🛡️",
+        "consequence": "Você defendeu o João. Seu apoio faz diferença na prevenção do cyberbullying."
+      },
+      "ignore": {
+        "text": "Ignorar 😶",
+        "consequence": "Você ignorou a mensagem. Embora não tenha piorado a situação, o bullying pode continuar sem intervenção."
+      },
+      "join": {
+        "text": "Juntar aos Comentários 😬",
+        "consequence": "Você se juntou ao bullying. Isso piora a situação e encoraja outros a continuarem com o bullying."
+      }
+    },
+    "scenarios": {
+      "classroom": {
+        "name": "Grupo da Turma",
+        "context": "Você está em um grupo de WhatsApp com seus colegas de classe discutindo um projeto escolar recente. Alguém começa a zombar da apresentação do João.",
+        "messages": {
+          "m1": "Todos já enviaram os slides da apresentação do projeto?",
+          "m2": "Sim, enviei o meu ontem. O prazo é amanhã, certo?",
+          "m3": "Vocês viram a apresentação do João? Foi tão ridícula! 😂",
+          "m4": "Sim, ele estava tão nervoso que nem conseguia falar direito! 🤣",
+          "m5": "Ainda estou trabalhando no meu. É difícil apresentar na frente de todos...",
+          "m6": "O João devia desistir se não consegue fazer nem uma simples apresentação lol",
+          "m7": "Talvez devêssemos fazer um meme da gagueira dele para a página da turma 📸"
+        },
+        "feedback": {
+          "good": "Excelente trabalho! Você mostrou como responder positivamente ao cyberbullying. Ao denunciar ou defender, você ajuda a criar um ambiente digital mais seguro.",
+          "medium": "Bom esforço! Você tomou algumas ações positivas, mas lembre-se que é importante se posicionar consistentemente contra o bullying para pará-lo completamente.",
+          "bad": "Pense no impacto de suas ações. Ao ignorar ou participar do cyberbullying, você permite que ele continue e cause danos reais aos outros."
+        }
+      }
+    }
+  },
+  "bullying": {
+    "gameTitle": "Detecta o Bullying",
+    "startGame": "Iniciar Jogo",
+    "instructions": {
+      "title": "Como Jogar",
+      "point1": "Observe as publicações no mural de mídia social e identifique conteúdo de bullying.",
+      "point2": "Clique em qualquer publicação que você considere que contém bullying ou conteúdo ofensivo.",
+      "point3": "Você receberá feedback após cada seleção.",
+      "remember": "Lembre-se: o bullying nem sempre é óbvio. Pode estar escondido em memes, piadas aparentemente inofensivas ou comentários passivo-agressivos.",
+      "selectAll": "Você pode selecionar quantas publicações quiser antes de finalizar o jogo."
+    },
+    "status": {
+      "postsChecked": "Publicações verificadas",
+      "score": "Pontuação"
+    },
+    "feedback": {
+      "selected": "Este comentário foi selecionado",
+      "correct": "Você está certo! Isso é bullying.",
+      "incorrect": "Isso na verdade não é bullying.",
+      "missedBullying": "Você não identificou este bullying!",
+      "correctlySkipped": "Correto! Esta publicação não contém bullying."
+    },
+    "selectAllBefore": "Selecione todas as publicações que contêm bullying antes de finalizar",
+    "finishGame": "Finalizar Jogo",
+    "gameOver": {
+      "title": "Jogo Completo!",
+      "description": "Você aprendeu a identificar diferentes tipos de bullying em publicações online. Lembre-se que reconhecer o bullying é o primeiro passo para detê-lo.",
+      "finalScore": "Sua pontuação final"
+    },
+    "posts": {
+      "post1": {
+        "author": "Alex2005",
+        "content": "Olha a nova foto de perfil do Marcos! 😂 Não acredito que ele acha que está bem com essa camiseta. #DesastreDeModa #SemFiltro",
+        "timestamp": "Ontem às 15:30",
+        "explanation": "Isso é bullying porque ridiculariza publicamente a aparência e as escolhas de roupa de alguém, usando hashtags para chamar mais atenção para a zombaria."
+      },
+      "post2": {
+        "author": "TimeEsportivo23",
+        "content": "Ótimo jogo ontem! Nossa equipe jogou de coração. Ansioso pelo próximo jogo da semana que vem!",
+        "timestamp": "Hoje às 09:15",
+        "explanation": "Esta é uma publicação positiva e de apoio sobre um time esportivo. Não visa negativamente ninguém nem contém conteúdo ofensivo."
+      },
+      "post3": {
+        "author": "GarotoCool2023",
+        "content": "Por que a Mariana está no nosso grupo? Ninguém gosta dela mesmo. Alguém pode removê-la? 🙄",
+        "timestamp": "3 horas atrás",
+        "explanation": "Isso é bullying por exclusão. A publicação está tentando isolar alguém de um grupo social e declarando publicamente que ninguém gosta dela."
+      },
+      "post4": {
+        "author": "NotíciasDaEscola",
+        "content": "Lembrete: Os projetos da feira de ciências devem ser entregues na próxima sexta-feira. Não se esqueçam de trazer seus materiais amanhã para o trabalho em sala de aula.",
+        "timestamp": "Ontem às 14:22",
+        "explanation": "Este é um simples anúncio informativo sem conteúdo de bullying. Está fornecendo informações úteis aos alunos."
+      },
+      "post5": {
+        "author": "MestreDeJogos55",
+        "content": "Acabei de ver a nota da prova da Luisa. Parece que nem todos podem ser inteligentes! 🤣 #FalhouDeNovo #TalvezDesista?",
+        "timestamp": "Ontem às 16:45",
+        "explanation": "Isso é bullying porque envergonha publicamente alguém por seu desempenho acadêmico. As hashtags tornam ainda mais doloroso ao sugerir que ela deveria desistir."
+      },
+      "post6": {
+        "author": "Anônimo123",
+        "content": "Novo grupo 'Todos menos o Rafael' criado. Entre se você for legal o suficiente 😎 Todos sabemos por que ele não foi convidado...",
+        "timestamp": "Hoje às 10:30",
+        "explanation": "Isto é cyberbullying por exclusão deliberada e criação de um ambiente onde alguém é abertamente deixado de fora. Isso pode causar isolamento e danos emocionais."
+      },
+      "post7": {
+        "author": "ClubeDeArte",
+        "content": "Exposição de arte nesta sexta-feira! Todos são bem-vindos para exibir seus trabalhos. A folha de inscrição está na cantina.",
+        "timestamp": "Hoje às 11:45",
+        "explanation": "Este é um anúncio positivo convidando todos a participarem de uma atividade escolar. É inclusivo e não visa ninguém negativamente."
+      }
+    }
+  },
+  "positivePost": {
+    "gameTitle": "Cria um Post Positivo",
+    "startGame": "Iniciar Jogo",
+    "instructions": {
+      "title": "Como Jogar",
+      "point1": "Você verá um cenário onde alguém está sendo alvo de comentários negativos.",
+      "point2": "Sua missão é criar uma mensagem de apoio para essa pessoa.",
+      "point3": "Você pode escrever sua própria mensagem ou escolher entre opções pré-definidas.",
+      "remember": "Lembre-se: palavras positivas fazem diferença na vida das pessoas!"
+    },
+    "writeYourOwn": "Escrever sua própria mensagem",
+    "orChooseOne": "Ou escolha uma das opções:",
+    "submitMessage": "Enviar Mensagem",
+    "scenarios": {
+      "fashion": {
+        "title": "Estilo Único",
+        "context": "Lucas postou uma foto com seu novo visual e está recebendo comentários negativos sobre sua roupa diferente.",
+        "negativeComments": [
+          "Que roupa ridícula! 😂",
+          "Você realmente saiu de casa assim? 🤮",
+          "Parece que você se vestiu no escuro hahaha"
+        ],
+        "victim": "Lucas",
+        "victimMessage": "Só queria mostrar meu novo estilo... 😔"
+      },
+      "hobby": {
+        "title": "Hobby Incomum",
+        "context": "Ana compartilhou seu hobby de colecionar insetos e está sendo ridicularizada por isso.",
+        "negativeComments": [
+          "Isso é tão estranho! 🐛",
+          "Quem gosta de insetos? Que nojo!",
+          "Meu Deus que menina bizarra 🤣"
+        ],
+        "victim": "Ana",
+        "victimMessage": "Amo estudar entomologia, mas talvez não devesse ter compartilhado..."
+      },
+      "grade": {
+        "title": "Nota Baixa",
+        "context": "Miguel está sendo zombado depois que sua nota baixa em matemática foi revelada por um colega.",
+        "negativeComments": [
+          "Olha o gênio que tirou 3 em matemática! 🤓",
+          "Como alguém consegue ir tão mal? 😆",
+          "Acho que temos um futuro varredor de ruas aqui!"
+        ],
+        "victim": "Miguel",
+        "victimMessage": "Estudei muito, mas matemática é difícil para mim..."
+      }
+    },
+    "presetMessages": {
+      "fashion": [
+        "Adorei seu estilo único! É ótimo ver alguém com personalidade!",
+        "Você está incrível! Continue sendo autêntico.",
+        "Eu realmente admiro sua coragem de expressar seu próprio estilo.",
+        "Seu visual é inspirador! Não ligue para comentários negativos."
+      ],
+      "hobby": [
+        "Sua coleção de insetos é fascinante! Adoraria saber mais sobre isso.",
+        "Que hobby interessante! Deve exigir muita dedicação e conhecimento.",
+        "É muito legal ver alguém apaixonado pelo que faz. Continue assim!",
+        "Isso é super interessante! Você já pensou em seguir carreira em biologia?"
+      ],
+      "grade": [
+        "Todos temos dificuldades em algumas matérias. Se precisar de ajuda, podemos estudar juntos!",
+        "Tirar uma nota baixa não define quem você é. Você é muito mais que isso!",
+        "Matemática pode ser difícil. Na próxima você vai melhorar!",
+        "Isso acontece com todos nós. Não desista, você consegue melhorar!"
+      ]
+    },
+    "impact": {
+      "title": "Impacto Positivo",
+      "description": "Sua mensagem de apoio fez toda a diferença! Quando alguém está sendo alvo de comentários negativos, um único apoio pode mudar completamente o dia dessa pessoa.",
+      "victimResponse": "Muito obrigado(a) pela sua mensagem! Isso significou muito para mim. 😊",
+      "stats": {
+        "title": "Você sabia?",
+        "fact1": "70% dos jovens que recebem mensagens de apoio relatam melhor bem-estar emocional",
+        "fact2": "Uma única mensagem positiva pode anular o efeito de até cinco comentários negativos",
+        "fact3": "Pessoas que recebem apoio online têm 3x mais chance de ajudar outros no futuro"
+      }
+    },
+    "continue": "Continuar",
+    "tryAnother": "Tentar outro cenário",
+    "finishGame": "Finalizar jogo",
+    "score": "Pontuação",
+    "gameOver": {
+      "title": "Jogo Completo!",
+      "description": "Você aprendeu como suas palavras podem ter um impacto positivo na vida dos outros. Continue compartilhando positividade no mundo digital!",
+      "finalScore": "Sua pontuação final"
+    }
+  },
+  "feedback": {
+    "positive": "Boa escolha!",
+    "negative": "Hmm, pense novamente...",
+    "neutral": "Resposta interessante...",
+    "slightlyPositive": "Boa tentativa!"
+  },
+  "results": {
+    "gameOver": "Fim de Jogo!",
+    "finalScore": "Sua pontuação final",
+    "certificates": {
+      "master": {
+        "title": "Mestre Digital",
+        "message": "Parabéns! Você demonstrou excelente compreensão sobre cidadania digital."
+      },
+      "competent": {
+        "title": "Cidadão Digital Competente",
+        "message": "Bom trabalho! Você tem bons conhecimentos sobre cidadania digital."
+      },
+      "apprentice": {
+        "title": "Aprendiz Digital",
+        "message": "Continue aprendendo! A jornada para se tornar um cidadão digital consciente está apenas começando."
+      }
+    },
+    "learned": "O que você aprendeu",
+    "learnedItems": [
+      "Como identificar e combater notícias falsas",
+      "A importância de intervir contra o cyberbullying",
+      "Como proteger seus dados pessoais online",
+      "Técnicas para verificar a confiabilidade de fontes online"
+    ],
+    "backToHome": "Voltar para o Início",
+    "playAgain": "Jogar Novamente"
+  },
+  "about": {
+    "title": "Sobre o ClickSmart",
+    "project": {
+      "title": "O Projeto",
+      "description1": "\"ClickSmart\" é um jogo educativo desenvolvido para ajudar os jovens a navegar com segurança e responsabilidade no mundo digital. Através de cenários interativos e escolhas significativas, os jogadores aprendem sobre desinformação, cyberbullying e segurança de dados de uma forma envolvente e prática.",
+      "description2": "O projeto foi criado com a missão de promover a literacia digital e formar cidadãos digitais conscientes, capazes de fazer escolhas éticas e seguras online."
+    },
+
+    "digitalCitizenship": {
+      "title": "O que é Cidadania Digital?",
+      "description": "Cidadania digital refere-se ao uso responsável, ético e seguro das tecnologias digitais. Isso inclui habilidades como:",
+      "skills": [
+        "Pensamento crítico para avaliar informações online",
+        "Comportamento ético e empatia nas interações digitais",
+        "Proteção da privacidade e segurança pessoal",
+        "Participação positiva em comunidades online",
+        "Compreensão dos direitos e responsabilidades digitais"
+      ]
+    },
+    "howItWorks": {
+      "title": "Como o Jogo Funciona",
+      "description": "Ao jogar \"ClickSmart\", você enfrenta três níveis temáticos:",
+      "levels": {
+        "misinformation": {
+          "title": "Desinformação",
+          "description": "Aprenda a identificar notícias falsas e verificar fontes confiáveis."
+        },
+        "cyberbullying": {
+          "title": "Cyberbullying",
+          "description": "Descubra como reagir e intervir em situações de assédio online."
+        },
+        "security": {
+          "title": "Segurança Digital",
+          "description": "Pratique a proteção de seus dados pessoais e reconheça tentativas de phishing."
+        },
+        "detective": {
+          "title": "Detetive Digital",
+          "description": "Investigue notícias e aprenda a encontrar pistas que revelam se uma história é verdadeira ou falsa."
+        },
+        "factcheck": {
+          "title": "Fake ou Facto",
+          "description": "Teste sua capacidade de identificar rapidamente notícias falsas com dicas visuais e feedback imediato."
+        },
+        "chat": {
+          "title": "Escolhe a Resposta",
+          "description": "Aprenda como responder ao cyberbullying em uma simulação de chat animada."
+        },
+        "bullying": {
+          "title": "Detecta o Bullying",
+          "description": "Aprenda a identificar diferentes formas de cyberbullying em posts e mensagens de redes sociais."
+        },
+        "positive": {
+          "title": "Cria um Post Positivo",
+          "description": "Aprenda a contrapor a negatividade criando mensagens de apoio que podem fazer uma diferença real."
+        },
+        "report": {
+          "title": "Simulador de Denúncia",
+          "description": "Pratique os passos para denunciar conteúdo ofensivo em plataformas de redes sociais e entenda por que denunciar é importante."
+        },
+        "phishing": {
+          "title": "Simulador de Phishing",
+          "description": "Aprenda a identificar emails, sites e pop-ups de phishing para se proteger contra golpes e roubo de identidade."
+        },
+        "password": {
+          "title": "Cria uma Palavra-Passe Forte",
+          "description": "Aprenda a criar palavras-passe fortes e seguras e entenda o que torna as senhas resistentes a tentativas de invasão."
+        },
+        "link": {
+          "title": "Caça ao Link Seguro",
+          "description": "Treine sua habilidade de identificar URLs seguros de fraudulentos para evitar ataques de phishing."
+        },
+        "simulator": {
+          "title": "Simulação: O Que Acontece Se...",
+          "description": "Veja as consequências de decisões de segurança através de simulações interativas e animações."
+        },
+        "fakenews": {
+          "title": "Cria a Tua Notícia",
+          "description": "Aprenda como notícias falsas são criadas e o impacto que podem ter ao criar uma notícia falsa de forma segura e educativa."
+        }
+      },
+      "conclusion": "Cada decisão tomada afeta sua pontuação e fornece aprendizado sobre práticas digitais seguras e responsáveis."
+    },
+    "startPlaying": "Começar a Jogar"
+  },
+  "scenarios": {
+    "misinformation": {
+      "title": "Desinformação",
+      "description": "Você está em um grupo de WhatsApp com colegas. Alguém envia uma notícia sensacionalista: \"Celebridade X morreu em um acidente!\". Há um pedido urgente para compartilhá-la.",
+      "choices": {
+        "share": {
+          "text": "Você compartilha imediatamente com seus contatos.",
+          "feedback": "Compartilhar informações sem verificação pode espalhar desinformação. É importante confirmar a veracidade das notícias antes de compartilhá-las."
+        },
+        "research": {
+          "text": "Você pesquisa a notícia em fontes oficiais.",
+          "feedback": "Excelente decisão! Verificar informações em fontes confiáveis é a melhor maneira de combater notícias falsas."
+        },
+        "ask": {
+          "text": "Você pergunta à pessoa sobre a origem da informação.",
+          "feedback": "Questionar a fonte é um bom começo, mas verificar em fontes oficiais é ainda mais eficaz."
+        },
+        "ignore": {
+          "text": "Você ignora a mensagem.",
+          "feedback": "Não espalhar informações duvidosas é positivo, mas verificar e alertar os outros poderia ser ainda melhor."
+        }
+      },
+      "quiz": {
+        "question": "Qual desses sites é mais confiável para verificar notícias?",
+        "options": {
+          "blog": "Blog pessoal sem identificação do autor",
+          "newspaper": "Jornal oficial com equipe editorial",
+          "whatsapp": "Mensagem anônima de WhatsApp",
+          "social": "Post viral em redes sociais"
+        },
+        "explanation": "Jornais oficiais com equipes editoriais têm processos de verificação de fatos antes de publicar notícias, tornando-os mais confiáveis do que fontes anônimas ou não verificadas."
+      }
+    },
+    "cyberbullying": {
+      "title": "Cyberbullying",
+      "description": "Em um chat de classe, um colega começa a ser insultado por causa das roupas que usou. Os insultos aumentam, com emojis e memes ofensivos.",
+      "choices": {
+        "ignore": {
+          "text": "Você ignora o que está acontecendo.",
+          "feedback": "Ignorar o bullying permite que ele continue. Como espectador, você tem o poder de intervir e fazer a diferença."
+        },
+        "defend": {
+          "text": "Você defende seu colega e denuncia o comportamento.",
+          "feedback": "Excelente escolha! Defender alguém que está sendo intimidado e denunciar comportamento inadequado é a melhor maneira de combater o cyberbullying."
+        },
+        "joke": {
+          "text": "Você faz uma piada para aliviar a situação.",
+          "feedback": "Tentar aliviar a situação pode ajudar momentaneamente, mas não resolve o problema. Seria melhor denunciar o comportamento ou defender diretamente seu colega."
+        },
+        "participate": {
+          "text": "Você se junta com comentários ofensivos.",
+          "feedback": "Participar de comentários ofensivos só piora a situação e contribui para o cyberbullying, causando mais danos emocionais à vítima."
+        }
+      },
+      "quiz": {
+        "question": "Qual das seguintes ações é mais eficaz contra o cyberbullying?",
+        "options": {
+          "ignore": "Ignorar completamente a situação",
+          "report": "Denunciar o comportamento a um adulto responsável ou à plataforma",
+          "insult": "Responder aos agressores com insultos também",
+          "watch": "Apenas assistir sem intervir"
+        },
+        "explanation": "Denunciar o comportamento a adultos responsáveis ou plataformas é a maneira mais eficaz de combater o cyberbullying, pois permite que autoridades competentes intervenham e tomem as medidas necessárias."
+      }
+    },
+    "security": {
+      "title": "Segurança Digital",
+      "description": "Você está em um site de sorteios que pede seu número de telefone, e um pop-up aparece dizendo que você ganhou um prêmio. Para recebê-lo, você precisa fornecer seu CPF e email.",
+      "choices": {
+        "fillData": {
+          "text": "Você preenche os dados.",
+          "feedback": "Fornecer dados pessoais a sites desconhecidos pode levar a roubo de identidade ou fraude. É importante verificar a credibilidade do site antes de compartilhar informações sensíveis."
+        },
+        "research": {
+          "text": "Você pesquisa o site online.",
+          "feedback": "Excelente escolha! Pesquisar o site antes de fornecer qualquer dado é uma prática de segurança essencial para evitar golpes e phishing."
+        },
+        "close": {
+          "text": "Você fecha imediatamente a aba.",
+          "feedback": "Fechar o site é uma boa reação inicial, mas pesquisar sobre ele pode ajudar a confirmar se é legítimo ou fraudulento, e dá conhecimento para alertar outros."
+        },
+        "askFriend": {
+          "text": "Você pergunta a um amigo mais experiente.",
+          "feedback": "Pedir ajuda a alguém mais experiente é uma boa ideia, mas é importante desenvolver suas próprias habilidades de verificação. Combine essa abordagem com pesquisa sobre o site."
+        }
+      },
+      "quiz": {
+        "question": "Qual é um sinal comum de que um site pode ser fraudulento?",
+        "options": {
+          "privacy": "O site tem uma política de privacidade detalhada",
+          "https": "O site possui certificado de segurança (cadeado HTTPS)",
+          "prizes": "O site oferece prêmios ou descontos extraordinários sem motivo aparente",
+          "contact": "O site tem uma seção de contato com endereço físico"
+        },
+        "explanation": "Ofertas boas demais para serem verdadeiras, como prêmios extraordinários sem motivo aparente, são frequentemente sinais de sites fraudulentos ou tentativas de phishing. Sempre desconfie de ofertas que parecem boas demais para serem verdadeiras."
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© {year} ClickSmart - Projeto Educacional"
+  }
+}
