@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { prisma } from '@/lib/prisma/client';
-import { getScenarios } from '@/lib/game/scenarios';
+import { getScenarios } from '../scenarios';
 
 export async function GET(request: NextRequest) {
   try {
