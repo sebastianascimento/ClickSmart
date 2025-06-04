@@ -1,0 +1,22 @@
+[
+    {
+      "id": 1,
+      "title": "Nível 1",
+      "description": "Descrição do primeiro cenário em português",
+      "options": [
+        { "id": 1, "text": "Opção 1", "isCorrect": false },
+        { "id": 2, "text": "Opção 2", "isCorrect": true },
+        { "id": 3, "text": "Opção 3", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Nível 2",
+      "description": "Descrição do segundo cenário em português",
+      "options": [
+        { "id": 1, "text": "Opção 1", "isCorrect": true },
+        { "id": 2, "text": "Opção 2", "isCorrect": false },
+        { "id": 3, "text": "Opção 3", "isCorrect": false }
+      ]
+    }
+  ]

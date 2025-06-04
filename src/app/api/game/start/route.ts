@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getScenarios } from '../scenarios';
+import { v4 as uuidv4 } from 'uuid'; // You might need to install this
+import { getScenarios } from '../scenarios'; // Path may need adjustment based on your file structure
 
 export async function GET(request: NextRequest) {
   try {
@@ -10,19 +11,12 @@ export async function GET(request: NextRequest) {
     // Get scenarios for the selected locale
     const scenarios = getScenarios(locale as 'pt' | 'en');
     
-    // Create a new game session
-    const session = await prisma.gameSession.create({
-      data: {
-        currentLevel: 1,
-        score: 0,
-        completed: false,
-        locale: locale
-      }
-    });
+    // Create a simple session ID 
+    const sessionId = uuidv4();
     
     return NextResponse.json({
       levels: scenarios,
-      sessionId: session.id
+      sessionId: sessionId
     });
   } catch (error) {
     console.error('Error starting game:', error);

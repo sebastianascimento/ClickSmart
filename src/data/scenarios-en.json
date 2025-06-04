@@ -1,0 +1,22 @@
+[
+    {
+      "id": 1,
+      "title": "Level 1",
+      "description": "Description of the first scenario in English",
+      "options": [
+        { "id": 1, "text": "Option 1", "isCorrect": false },
+        { "id": 2, "text": "Option 2", "isCorrect": true },
+        { "id": 3, "text": "Option 3", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Level 2",
+      "description": "Description of the second scenario in English",
+      "options": [
+        { "id": 1, "text": "Option 1", "isCorrect": true },
+        { "id": 2, "text": "Option 2", "isCorrect": false },
+        { "id": 3, "text": "Option 3", "isCorrect": false }
+      ]
+    }
+  ]
